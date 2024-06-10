@@ -1,7 +1,13 @@
-const HomePage = () => {
+import { AfterHero } from "./AfterHero"
+import { Hero } from "./Hero"
+import { ServicesComponent } from "./Services"
+
+const HomePage: React.FC = () => {
     return(
-        <div className="center text-4xl font-bold">
-            {/* hello world */}
+        <div className="center bg-secondary flex-col">
+            <Hero />
+            <AfterHero />
+            <ServicesComponent />
         </div>
     )
 }
