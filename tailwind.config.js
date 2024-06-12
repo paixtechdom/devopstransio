@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "hero": "linear-gradient(to right, rgb(0,0,0,0.95), rgb(0,0,0,0.8)), url('/src/assets/images/hero.jpg')",  
+        "hero": "linear-gradient(to right, rgb(0,0,0,0.9), rgb(0,0,0,0.7)), url('/src/assets/images/hero.jpg')",  
       },
       colors:{
         "primary" : "rgb(239,222,15)",
