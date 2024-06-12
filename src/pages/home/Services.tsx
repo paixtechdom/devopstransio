@@ -11,7 +11,7 @@ export const ServicesComponent = () => {
                 <div className="flex flex-col gap-[10vh]">
                     {
                         ServicesList.map((service: Services, i) => (
-                            <div key={i} className="flex bg-primary p-6 gap-6 rounded-2xl">
+                            <div key={i} className="flex flex-col lg:flex-row bg-primary p-6 gap-6 rounded-2xl">
                                 <img src={img} alt={service.title} className="rounded-xl"/>
 
 
