@@ -15,7 +15,8 @@ export const ServicesComponent = () => {
                                 <img src={img} alt={service.title} className="rounded-xl"/>
 
 
-                                <div className="flex flex-col gap-3 border-l-2 lg:border-l-0 lg:border-t-2 border-zinc-400 pl-6 lg:pl-0 pt-6 px-9">
+                                <div className="flex flex-col gap-3 border-l-0
+                                border-t-2 lg:border-l-2  lg:border-t-0 border-zinc-400 pl-0 lg:pl-6 pt-6 px-9">
                                     <h3 className="font-bold">{service.title}</h3>
                                     <p className="text-sm">{service.desc}</p>
                                     <Button text="READ MORE" navigateTo=""/>
