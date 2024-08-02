@@ -19,7 +19,7 @@ function App() {
 
 
   return (
-    <div className='App bg-secondary'>
+    <div className='App bg-secondary relative'>
         <AppRouter />
     </div>
   );

@@ -1,29 +1,40 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
+import { Button } from "./Button"
+import { useDispatch } from "react-redux"
+import { setCurrentService } from "../store/navigation/navigationSlice"
 
 interface cardInterface {
     img: string,
     title: string,
     desc: string,
-    link: string
+    index: number
 }
 
 
-export const Card:FC<cardInterface> = ({img, title, desc, link}) => {
+export const Card:FC<cardInterface> = ({img, title, desc, index}) => {
+    const dispatch = useDispatch()
+
     return(
-        <Link to={`/${link}`} className="flex bg-gradient-to-bl from-tertiary to-secondary bg-op acity-40 flex-col p-2 rounded-3xl">
-            <img src={img} alt={title} className="md:h-[50vh] lg:h-[35vh] object-cover rounded-2xl shadow"/>
+        <div className="flex border border-primary border-opacity-20 to-secondary flex-col rounded-3xl relative overflow-hidden group cursor-pointer" onClick={() => dispatch(setCurrentService(index))}>
+
+            <div className="absolute top-5 right-5 rounded-full size-4 bg-secondary border border-primary"></div>
+
+            <img src={img} alt={title} className="min-h-[45vh] lg:h-[45vh] object-cover rounded-2xl shadow m-2"/>
             
-            <div className="flex flex-col gap-3 mt-9 mb-3 px-4">
-                    <p className="size-3 rounded-full bg-tertiary"></p>
-                <div className="flex items-start gap-2">
-                    <h3 className="font-bold text-white text-xl">{title}</h3>
+            <div className="flex flex-col justify-end  mt-9 pb-5 px-6 absolute bottom-0 w-full bg-gradient-to-b h-5/6 from-transparent via-[rgb(0,0,0,0.9)] to-black transition-all duration-500 ease-in-out group group-hover:to-black group-hover:via-transparent">
+                {/* <p className="size-3 rounded-full bg-primary"></p> */}
+                <div className="flex items-start gap-2 text-primary">
+                    <h3 className="font-bold text-xl">{title}</h3>
                 </div>
-                <p className="text-gray-300">{desc}</p>
+                
+                <p className="text-zinc-300  mb-3 transition-all duration-500 ease-in-out h-14 group-hover:h-0 group-hover:opacity-0">{desc}</p>
 
-
-                <button className="uppercase bg-secondary rounded-full py-3 text-white mt-4 shadow-md shadow-tertiary">Read more</button>
+                <Button
+                    text="Read more"
+                    btnType="secondary"
+                />
             </div>
-        </Link>
+        </div>
     )
 } 

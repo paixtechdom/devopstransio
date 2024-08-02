@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
-import { delayLoad } from "./assets/Functions"
 import { HelmetProvider  } from 'react-helmet-async';
 import { PageNotFound } from './pages/PageNotFound';
 import { Navbar } from './assets/components/Navbar';
 import ContactPage from './pages/Contact/ContactPage';
 import TrainingPage from './pages/Training/TrainingPage';
+import { Footer } from './assets/components/Footer';
 
 
-const HomePage = lazy(() => delayLoad(import("./pages/home/page")))
+const HomePage = lazy(() => import("./pages/home/page"))
 
 
 export const AppRouter = () => {  
@@ -24,6 +24,7 @@ export const AppRouter = () => {
                         <Route path="/contact" element={<ContactPage />}/>
                         <Route path="/*" element={<PageNotFound />} />
                     </Routes>
+                    <Footer />
                 </Suspense>
             </Router>
         </HelmetProvider>
