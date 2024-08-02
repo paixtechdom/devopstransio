@@ -24,17 +24,17 @@ export const Navbar: React.FC = () => {
     return(
         <>
            <>
-        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000  ${scrolledDown ? `shadow-xl bg-secondary` : 'bg-transparent'}`}>
+        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000  ${scrolledDown ? `shadow-xl bg-primary` : 'bg-primary transparent'}`}>
             <div className="flex items-center justify-between w-11/12 lg:w-10/12 xl:w-9/12">
 
                 <Link to={'/'} className='w-3/12 md:w-2/12'>
-                    <p className='w-5/12 md:w-2/12 text-xl font-bold text-white'>
+                    <p className='w-5/12 md:w-2/12 text-xl font-bold text-black'>
                         devOpsTransio
                     </p>
                     {/* <img src={logo} alt="Macmay Logo" className='w-5/12 md:w-2/12'/> */}
                 </Link>
 
-                <div className={`bi bi-${showNav ? 'x-lg' : 'list'} text-blue text-3xl lg:hidden cursor-pointer text-white`}  onClick={() => dispatch(toggleShowNav())}>
+                <div className={`bi bi-${showNav ? 'x-lg' : 'list'} text-blue text-3xl lg:hidden cursor-pointer text-black`}  onClick={() => dispatch(toggleShowNav())}>
                     {
                         showNav ? 
                         <BiX /> :
@@ -50,7 +50,7 @@ export const Navbar: React.FC = () => {
                                 NavInfo?.map((nav : nav, i) => (
                                     <div key={i} className={`flex flex-col transition-all duration-1000 justify-between w-full text-blue lg:border-0 relative lg:w-fit`}>
 
-                                        <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-gray-200 bg-secondary lg:bg-transparent
+                                        <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-black bg-secondary lg:bg-transparent
                                         ${currentNav === i ? 
                                             'border-b-2 border-primary font-bold lg:bg-transparent lg:hover:border-b' 
                                         : 'hover:bg-opacity-90 lg:hover:bg-transparent border-blue lg:hover:border-b-2 lg:hover:border-primary'} hover:bg-opacity-10 hover:bg-pri mary`} 
@@ -81,8 +81,8 @@ export const Navbar: React.FC = () => {
                                         {/**** NAVS WITH SUBLINKS */}
                                         {
                                             nav.sublinks ?
-                                            <div className={`flex flex-col gap-[1px] w-full overflow-hidden transition-all duration-200 lg:duration-1000 lg:absolute lg:min-w-[250px] lg:bg-primary
-                                            ${currentDropDown == nav.title ? 'lg:left-0' : 'h-0 lg:h-fit text-[0px]  lg:left-[700%]'} lg:top-[7vh]`}>
+                                            <div className={`flex flex-col lg:grid lg:grid-cols-3 gap-[1px] w-full overflow-hidden transition-all duration-200 lg:duration-1000 lg:absolute lg:min-w-[1000%] -left-[450%] 
+                                            ${currentDropDown == nav.title ? 'lg:top-[7vh]' : 'lg:-top-[50vh] h-0 lg:h-fit text-[0px]  lg:'}  lg:bg-primary`}>
         
                                                 {   
                                                     nav?.sublinks?.map((sublink : any, j) => (

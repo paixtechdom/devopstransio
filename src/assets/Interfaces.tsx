@@ -14,5 +14,5 @@ export interface nav  {
 
 export interface button {
     text : string,
-    navigateTo : string
+    className: string
 }

@@ -7,7 +7,7 @@ import { BiChevronRight } from "react-icons/bi"
 
 export const AfterHero : React.FC =  () => {
     return(
-        <div className="w-full center -translate-y-[15vh]">
+        <div className="w-full center -translate-y-[05vh]">
             <div className="w-11/12 lg:w-9/12 flex flex-col lg:flex-row rounded-2xl bg-gray-200 p-12 gap-6">
                 {
                     servicesOverview.map((service : Services, i) => (

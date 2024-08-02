@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { AppRouter } from "./AppRouter";
 import { useDispatch } from "react-redux";
 import { toggleScrolledDown } from "./assets/store/navigation/navigationSlice";
+import "flag-icons/css/flag-icons.css"
+import "flag-icons/css/flag-icons.min.css"
 
 function App() {
   const dispatch = useDispatch()
@@ -17,7 +19,7 @@ function App() {
 
 
   return (
-    <div className='App'>
+    <div className='App bg-secondary'>
         <AppRouter />
     </div>
   );
