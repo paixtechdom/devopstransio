@@ -9,6 +9,7 @@ import TrainingPage from './pages/Training/TrainingPage';
 import { Footer } from './assets/components/Footer';
 import { BiLoaderCircle } from 'react-icons/bi';
 import AboutPage from './pages/About/AboutPage';
+import Services from './pages/services/Services';
 
 
 const HomePage = lazy(() => import("./pages/home/page"))
@@ -23,6 +24,7 @@ export const AppRouter = () => {
                     <Routes>
                         <Route path="/" element={<HomePage />}/>
                         <Route path="/about" element={<AboutPage />}/>
+                        <Route path="/services" element={<Services />}/>
                         <Route path="/trainings" element={<TrainingPage />}/>
                         <Route path="/contact" element={<ContactPage />}/>
                         <Route path="/*" element={<PageNotFound />} />

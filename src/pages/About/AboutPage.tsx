@@ -34,7 +34,7 @@ const AboutPage = () => {
         <div className="w-11/12 lg:w-10/12 flex flex-col gap-9 text-white">
 
             <div className="flex min-h-[70vh] flex-col gap-4 w-full lg:w-9/12">
-                <h1 className="text-zinc-400 font-bold text-5xl">
+                <h1 className="text-zinc-400 font-bold text-5xl mb-4">
                     About Cloud Transio
                 </h1>
                 <p className="leading-relaxed tracking-wide text-zinc-200">

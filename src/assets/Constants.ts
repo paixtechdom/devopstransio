@@ -12,48 +12,48 @@ export const NavInfo = [
         title: 'About Us',
         link: 'about',
     },
-    // {
-    //     title: 'Services',
-    //     link: 'services',
-    //     // sublinks: [
-    //     //     {
-    //     //         title: 'CI/CD Automation',
-    //     //         link: 'cicd-automation',
-    //     //     },
-    //     //     {
-    //     //         title: 'DevSecOps',
-    //     //         link: '',
-    //     //     },
-    //     //     {
-    //     //         title: '24X7 Server Monitoring and Support',
-    //     //         link: '',
-    //     //     },
-    //     //     {
-    //     //         title: 'Cloud Migration',
-    //     //         link: '',
-    //     //     },
-    //     //     {
-    //     //         title: 'Devops & CICD',
-    //     //         link: '',
-    //     //     },
-    //     //     {
-    //     //         title: 'Fault-tolerant Infrastructure',
-    //     //         link: '',
-    //     //     },
-    //     //     {
-    //     //         title: 'Load and Stress Testing',
-    //     //         link: '',
-    //     //     },
-    //     //     {
-    //     //         title: 'App Modernization',
-    //     //         link: '',
-    //     //     },
-    //     //     {
-    //     //         title: 'Cloud and Devops Upskilling',
-    //     //         link: '',
-    //     //     },
-    //     // ]
-    // },
+    {
+        title: 'Services',
+        link: 'services',
+        // sublinks: [
+        //     {
+        //         title: 'CI/CD Automation',
+        //         link: 'cicd-automation',
+        //     },
+        //     {
+        //         title: 'DevSecOps',
+        //         link: '',
+        //     },
+        //     {
+        //         title: '24X7 Server Monitoring and Support',
+        //         link: '',
+        //     },
+        //     {
+        //         title: 'Cloud Migration',
+        //         link: '',
+        //     },
+        //     {
+        //         title: 'Devops & CICD',
+        //         link: '',
+        //     },
+        //     {
+        //         title: 'Fault-tolerant Infrastructure',
+        //         link: '',
+        //     },
+        //     {
+        //         title: 'Load and Stress Testing',
+        //         link: '',
+        //     },
+        //     {
+        //         title: 'App Modernization',
+        //         link: '',
+        //     },
+        //     {
+        //         title: 'Cloud and Devops Upskilling',
+        //         link: '',
+        //     },
+        // ]
+    },
    
     {
         title: 'Trainings',

@@ -72,10 +72,10 @@ interface selectInterface {
 export const Select:FC<selectInterface> = ({setShowPopUp, showPopUp, options, formInputs, name, label, gridDisplay}) => {
    
     return(
-            <div className={`absolute w-full flex flex-col bg-secondary bg-opacity-90 backdrop-blur-3xl border border-tertiary shadow-xl rounded-xl h-fit gap-6 p-9 transition-all duration-500 ${showPopUp == name ? 'z-10' : '-z-10 opacity-[0] scale-[0.8] translate-y-32'} max-h-[70vh] overflow-y-auto`}>
+            <div className={`absolute w-full flex flex-col bg-secondary bg-opacity-90 backdrop-blur-3xl border border-primary border-opacity-30 shadow-xl rounded-xl h-fit gap-6 p-9 transition-all duration-500 ${showPopUp == name ? 'z-10' : '-z-10 opacity-[0] scale-[0.8] translate-y-32'} max-h-[70vh] overflow-y-auto`}>
 
                 <div className="w-full flex justify-between items-center cursor-pointer sticky top-0 bg-secondary bg-opacity-50 backdrop-blur-3xl z-20 p-3 px-6 rounded-full" onClick={() => {setShowPopUp(false)}}>
-                    <label htmlFor={label} className="font-bold text-gray-200">
+                    <label htmlFor={label} className="font-bold text-gray-200 text-xl">
                         {label}
                     </label>
                     <BiX className="text-3xl bg-secondary rounded-full p-1 size-8 btn"/>
@@ -152,15 +152,15 @@ export const CountriesOption:FC<any> = ({setFormInputs, setShowCountries, showCo
     }, [searchInput])
 
     return(
-            <div className={`absolute w-full z-10 flex flex-col shadow-xl rounded-xl h-fit gap-6 transition-all duration-500 max-h-[70vh] overflow-y-scroll border border-tertiary ${showCountries ? '' : 'opacity-[0] scale-[0]'}`}>
+            <div className={`absolute w-full z-10 flex flex-col shadow-xl rounded-xl h-fit gap-6 transition-all duration-500 max-h-[70vh] overflow-y-scroll border border-primary border-opacity-30 ${showCountries ? '' : 'opacity-[0] scale-[0]'}`}>
 
             <div className={`w-full center flex-col bg-secondary bg-opacity-95 backdrop-blur-3xl h-fit gap-6`}>
                 <div className="text-sm w-full flex flex-col  justify-between items-center cursor-pointer sticky top-0 bg-secondary bg-opacity-30 backdrop-blur-3xl z-20 gap-4 px-9 pt-9 pb-4" >
-                    <div className="flex justify-between items-center w-full font-bold" onClick={() => {
+                    <div className="flex justify-between items-center w-full font-bold text-xl" onClick={() => {
                     setShowCountries(false)
                 }}>
                         Select Nationality
-                        <BiX className="text-xl"/>
+                        <BiX className="text-3xl"/>
                     </div>
                     <div className="flex bg-secondary w-full rounded-full border border-primary overflow-hidden border-opacity-40">
                         <div className="p-3">

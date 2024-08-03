@@ -1,8 +1,6 @@
-import { AService } from "../Service/AService"
 import { AfterHero } from "./AfterHero"
 import { Hero } from "./Hero"
 import { Reviews } from "./Reviews"
-import { ServicesListing } from "./ServicesListing"
 
 const HomePage: React.FC = () => {
 
@@ -24,12 +22,8 @@ const HomePage: React.FC = () => {
             <Hero />
             <AfterHero />
 
-            <ServicesListing />
-
             <Reviews />
-            
-            <AService />            
-            
+                        
 
             
             <p>IT - SIWES - PROGRAMMING TRAINING</p>
