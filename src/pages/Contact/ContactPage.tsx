@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { InputField } from "../../assets/components/FormInputs"
+import { Headers } from "../../assets/components/Headers"
 
 const ContactPage = () => {
     const [ formInputs, setFormInputs ] = useState({
         fullName: "",
         email: "",
-        subject: "",
         message: ""
     })
 
@@ -18,8 +18,13 @@ const ContactPage = () => {
 
 
   return (
-    <main className='bg-secondary w-full min-h-screen center '>
-        <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-9 text-white">
+    <main className='bg-secondary w-full min-h-screen center pt-[15vh]'>
+        <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-9 text-white min-h-screen">
+
+        <Headers 
+            text="Contact Us"
+        />
+
         <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
 
             <form className="flex flex-col gap-6 w-full">
@@ -37,13 +42,6 @@ const ContactPage = () => {
                     handleChange={handleChange}
                     type="email"
                     value={formInputs.email}
-                />
-                <InputField 
-                    label="Subject"
-                    name="subject"
-                    handleChange={handleChange}
-                    type="text"
-                    value={formInputs.subject}
                 />
 
                 <div className={`flex flex-col w-full gap-2 relative`}>

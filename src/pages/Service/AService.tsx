@@ -33,11 +33,11 @@ export const AService = () => {
  
 
     return(
-        <main className={`${currentService == -1 ? "-top-[100vh]" : "top-0"} fixed h-screen overflow-y-auto overflow-x-hidden bg-secondary bg-opacity-60 backdrop-blur-xl border-primary border-opacity-60 w-full z-40 flex justify-center py-[10vh] lg:py-[15vh] transition-all duration-1000 ease-in-out`}>
+        <main className={`${currentService == -1 ? "-top-[100vh]" : "top-0"} fixed h-screen overflow-y-auto overflow-x-hidden bg-secondary bg-opacity-70 backdrop-blur-3xl border-primary border-opacity-60 w-full z-40 flex justify-center py-[10vh] lg:py-[15vh] transition-all duration-1000 ease-in-out`}>
 
-            <div className="w-11/12 lg:w-10/12 xl:w-9/12 relative">
+            <div className="w-11/12 lg:w-9/12 xl:w-8/12 relative">
 
-                <div className="flex justify-between items-center gap-3 w-full my-7 sticky top-0 bg-secondary bg-opacity-30 backdrop-blur-2xl border-primary border-opacity-60 p-4 rounded-xl pl-6">
+                <div className="flex justify-between items-center gap-3 w-full mt-4 mb-7 sticky top-0 bg-secondary bg-opacity-30 backdrop-blur-2xl border-primary border-opacity-60 p-4 rounded-xl pl-6">
  
                         <h1 className="font-bold text-2xl text-gray-100 w-11/12 uppercase">{service?.title}</h1>
 

@@ -1,4 +1,7 @@
-import img from ".//images/hero.jpg"
+import img from "./images/hero1.jpg"
+import logoImg from "./images/logo.png"
+
+export const logo = logoImg
 
 export const NavInfo = [
     {
@@ -6,47 +9,51 @@ export const NavInfo = [
         link: '',
     },
     {
-        title: 'Services',
-        link: 'services',
-        sublinks: [
-            {
-                title: 'CI/CD Automation',
-                link: 'cicd-automation',
-            },
-            {
-                title: 'DevSecOps',
-                link: '',
-            },
-            {
-                title: '24X7 Server Monitoring and Support',
-                link: '',
-            },
-            {
-                title: 'Cloud Migration',
-                link: '',
-            },
-            {
-                title: 'Devops & CICD',
-                link: '',
-            },
-            {
-                title: 'Fault-tolerant Infrastructure',
-                link: '',
-            },
-            {
-                title: 'Load and Stress Testing',
-                link: '',
-            },
-            {
-                title: 'App Modernization',
-                link: '',
-            },
-            {
-                title: 'Cloud and Devops Upskilling',
-                link: '',
-            },
-        ]
+        title: 'About Us',
+        link: 'about',
     },
+    // {
+    //     title: 'Services',
+    //     link: 'services',
+    //     // sublinks: [
+    //     //     {
+    //     //         title: 'CI/CD Automation',
+    //     //         link: 'cicd-automation',
+    //     //     },
+    //     //     {
+    //     //         title: 'DevSecOps',
+    //     //         link: '',
+    //     //     },
+    //     //     {
+    //     //         title: '24X7 Server Monitoring and Support',
+    //     //         link: '',
+    //     //     },
+    //     //     {
+    //     //         title: 'Cloud Migration',
+    //     //         link: '',
+    //     //     },
+    //     //     {
+    //     //         title: 'Devops & CICD',
+    //     //         link: '',
+    //     //     },
+    //     //     {
+    //     //         title: 'Fault-tolerant Infrastructure',
+    //     //         link: '',
+    //     //     },
+    //     //     {
+    //     //         title: 'Load and Stress Testing',
+    //     //         link: '',
+    //     //     },
+    //     //     {
+    //     //         title: 'App Modernization',
+    //     //         link: '',
+    //     //     },
+    //     //     {
+    //     //         title: 'Cloud and Devops Upskilling',
+    //     //         link: '',
+    //     //     },
+    //     // ]
+    // },
    
     {
         title: 'Trainings',
@@ -58,20 +65,20 @@ export const NavInfo = [
     },
 ]
 
-export const servicesOverview = [
+export const whyWeStandOut = [
     {
         img: img,
-        title: 'CI/CD AUTOMATION',
+        title: 'Expert Knowledge',
         desc: 'Enabling app deployment and management like never before.'
     },
     {
         img: img,
-        title: 'DEVSECOPS INTEGRATED ',
+        title: 'Automations',
         desc: 'Automation that has multi-layered security integrated.'
     },
     {
         img: img,
-        title: '24X7 CLOUD SUPPORT',
+        title: 'Security',
         desc: 'Our cloud experts are available around the clock to assist you.'
     },
 

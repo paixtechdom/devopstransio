@@ -7,6 +7,8 @@ import { Navbar } from './assets/components/Navbar';
 import ContactPage from './pages/Contact/ContactPage';
 import TrainingPage from './pages/Training/TrainingPage';
 import { Footer } from './assets/components/Footer';
+import { BiLoaderCircle } from 'react-icons/bi';
+import AboutPage from './pages/About/AboutPage';
 
 
 const HomePage = lazy(() => import("./pages/home/page"))
@@ -16,10 +18,11 @@ export const AppRouter = () => {
     return (
         <HelmetProvider>
             <Router>
-                <Suspense fallback={<>Loading</>}>
+                <Suspense fallback={<Loader />}>
                     <Navbar />
                     <Routes>
                         <Route path="/" element={<HomePage />}/>
+                        <Route path="/about" element={<AboutPage />}/>
                         <Route path="/trainings" element={<TrainingPage />}/>
                         <Route path="/contact" element={<ContactPage />}/>
                         <Route path="/*" element={<PageNotFound />} />
@@ -30,3 +33,12 @@ export const AppRouter = () => {
         </HelmetProvider>
     );
   };
+
+const Loader= () => {
+    return(
+        <div className="center h-screen w-full bg-secondary ">
+            <BiLoaderCircle  
+                className="text-5xl text-primary animate-spin"/>
+        </div>
+    )
+}

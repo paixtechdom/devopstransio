@@ -1,13 +1,14 @@
 import { AService } from "../Service/AService"
 import { AfterHero } from "./AfterHero"
 import { Hero } from "./Hero"
+import { Reviews } from "./Reviews"
 import { ServicesListing } from "./ServicesListing"
 
 const HomePage: React.FC = () => {
 
 
     return(
-        <div className="center bg-secondary flex-col relative">
+        <div className="center bg-secondary flex-col relative text-white">
             <>
             <div className="fixed w-full flex justify-end h-[70vh] bottom-[35vh] z-1">
 
@@ -22,14 +23,15 @@ const HomePage: React.FC = () => {
             </>
             <Hero />
             <AfterHero />
+
             <ServicesListing />
 
-            <AService />
+            <Reviews />
+            
+            <AService />            
+            
 
-            <p>HERO</p>
-            <p>AFTER HERO - VALUES - POINTERS - INTRO - WHAT TO EXPECT</p>
-            <p>ABOUT US</p>
-            <p>SERVICES LISTING</p>
+            
             <p>IT - SIWES - PROGRAMMING TRAINING</p>
 
             <p>ASIDE n </p>

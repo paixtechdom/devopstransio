@@ -1,4 +1,4 @@
-import { NavInfo } from "../Constants"
+import { logo, NavInfo } from "../Constants"
 import { Link, useNavigate } from "react-router-dom"
 import { BiMenu, BiX } from "react-icons/bi"
 import { RiArrowDropDownFill, RiArrowDropUpFill } from "react-icons/ri"
@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../store/AppStore"
 import { setCurrentDropDown, setCurrentNav, toggleShowNav } from "../store/navigation/navigationSlice"
 import { nav } from "../Interfaces"
+
 
 
 export const Navbar: React.FC = () => {
@@ -25,13 +26,10 @@ export const Navbar: React.FC = () => {
         <>
            <>
         <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000  ${scrolledDown ? `shadow-xl bg-primary` : 'bg-primary transparent'}`}>
-            <div className="flex items-center justify-between w-11/12 lg:w-10/12 xl:w-9/12">
+            <div className="flex items-center justify-between w-11/12 lg:w-10/12">
 
                 <Link to={'/'} className='w-3/12 md:w-2/12'>
-                    <p className='w-5/12 md:w-2/12 text-xl font-bold text-black'>
-                        devOpsTransio
-                    </p>
-                    {/* <img src={logo} alt="Macmay Logo" className='w-5/12 md:w-2/12'/> */}
+                    <img src={logo} alt="Cloud Transio's Logo" className='w-full'/>
                 </Link>
 
                 <div className={`bi bi-${showNav ? 'x-lg' : 'list'} text-blue text-3xl lg:hidden cursor-pointer text-black`}  onClick={() => dispatch(toggleShowNav())}>
@@ -44,16 +42,16 @@ export const Navbar: React.FC = () => {
                 
                 
 
-                <div className={`fixed w-full flex justify-center items-start  transition-all duration-1000 top-[8vh] md:top-[10vh] h-screen lg:relative lg:top-0 lg:w-9/12 lg:h-fit ${showNav ? ' left-0 z-40' : '-left-[100%] lg:-left-0'} bg-zinc-900 lg:bg-transparent`}>
+                <div className={`fixed w-full flex justify-center items-start  transition-all duration-1000 top-[8vh] md:top-[10vh] h-screen lg:relative lg:top-0 lg:w-9/12 lg:h-fit ${showNav ? ' left-0 z-40' : '-left-[100%] lg:-left-0'} bg-zinc-900 bg-opacity-50 backdrop-blur-3xl lg:bg-transparent`}>
                         <nav className={`flex flex-col lg:flex-row items-center w-full h-screen lg:gap-9 lg:h-fit lg:bg-transparent lg:justify-end transition-all duration-1000`}>
                             {
                                 NavInfo?.map((nav : nav, i) => (
                                     <div key={i} className={`flex flex-col transition-all duration-1000 justify-between w-full text-blue lg:border-0 relative lg:w-fit`}>
 
-                                        <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-black bg-secondary lg:bg-transparent
+                                        <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-lg
                                         ${currentNav === i ? 
-                                            'border-b-2 border-primary font-bold lg:bg-transparent lg:hover:border-b' 
-                                        : 'hover:bg-opacity-90 lg:hover:bg-transparent border-blue lg:hover:border-b-2 lg:hover:border-primary'} hover:bg-opacity-10 hover:bg-pri mary`} 
+                                            'font-bold text-primary lg:text-black' 
+                                        : 'text-white lg:text-black hover:text-primary lg:hover:text-black hover:font-bold'}`} 
 
                                         onClick={() => {
                                             if( nav.sublinks){
@@ -67,7 +65,7 @@ export const Navbar: React.FC = () => {
                                             }
                                         
                                         }}>
-                                            <p>{nav.title}</p>        
+                                            <p className="">{nav.title}</p>        
                                             {
                                                 nav.sublinks ?
                                                 currentDropDown == nav.title ?
