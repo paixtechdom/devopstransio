@@ -32,8 +32,8 @@ const Services = () => {
                 </div>
             </div>
             
-
-        </div>        <ServicesListing />
+        </div>      
+        <ServicesListing />
 
         </main>
         

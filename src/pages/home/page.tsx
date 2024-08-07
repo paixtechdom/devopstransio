@@ -5,13 +5,17 @@ import { Hero } from "./Hero"
 import { Reviews } from "./Reviews"
 import img1 from "../../assets/images/server.jpg"
 import img2 from "../../assets/images/img2.jpg"
+import { Headers } from "../../assets/components/Headers"
+import { ServicesList } from "../../assets/Constants"
+import { Services } from "../../assets/Interfaces"
+import { Link } from "react-router-dom"
 
 
 const HomePage: React.FC = () => {
 
 
     return(
-        <div className="center bg-secondary flex-col relative text-white">
+        <div className="center bg-secondary flex-col relative text-black">
             {/* <>
             <div className="fixed w-full flex justify-end h-[70vh] bottom-[35vh] z-1">
 
@@ -39,7 +43,52 @@ const HomePage: React.FC = () => {
                     />
                 }
             />
+
+
             <AfterHero />
+
+            <div className="w-full center mt-[10vh]">
+            <div className="w-11/12 lg:w-10/12 center flex-col  gap-[10vh] ">
+                <div className="flex flex-col-reverse w-full lg:flex-row justify-between gap-[50px] gap-y-12 items-center">
+                    <div className="flex flex-col gap-7 w-full">
+                        <div className="w-full">
+                            <Headers 
+                                text="Our Services"
+                            />
+                        </div>
+                        <div className="gap-3 grid grid-cols-2">
+                            {
+                                ServicesList.map((service: Services, i) => (
+                                    <div key={i} className="flex items-start gap-1">
+                                        <div className="size-3 bg-primary rounded-full mt-2">
+                                        </div>
+                                        <p>
+                                            {service.title}
+                                        </p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                        
+                        <Link to={"/services"}>
+                            <Button
+                                text="view services"
+                                btnType="primary"
+                            />
+                        </Link>
+
+                        
+                    </div>
+                    <div className="w-full lg:w-11/12 relative flex flex-col b g-red-900">
+                        <div className="rounded-3xl shadow-lg shadow-primary overflow-hidden">
+                            <img src={img1} alt="" className="w-full h-full object-cover"/>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+
+            </div>
             <Reviews />
                         
 

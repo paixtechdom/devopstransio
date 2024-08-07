@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { lazy, Suspense, useEffect } from 'react';
 
 import { HelmetProvider  } from 'react-helmet-async';
 import { PageNotFound } from './pages/PageNotFound';
@@ -19,6 +19,7 @@ export const AppRouter = () => {
     return (
         <HelmetProvider>
             <Router>
+                <ToTop />
                 <Suspense fallback={<Loader />}>
                     <Navbar />
                     <Routes>
@@ -43,4 +44,16 @@ const Loader= () => {
                 className="text-5xl text-primary animate-spin"/>
         </div>
     )
+}
+
+const ToTop = () => {
+    const location = useLocation()
+    useEffect(() => {
+        scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      })
+      }, [location])
+      
+      return(<></>)
 }

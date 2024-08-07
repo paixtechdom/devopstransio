@@ -2,6 +2,12 @@ import img from "./images/hero1.jpg"
 import logoImg from "./images/logo.png"
 import server from "./images/server.jpg"
 import benchmark from "./images/benchmark.jpg"
+import analytics from "./images/analytics.jpg"
+import gears from "./images/gears.jpg"
+import processes from "./images/processes.jpg"
+import img2 from "./images/img2.jpg"
+import comboImg from "./images/comboImg.jpg"
+import cloouHead from "./images/cloudHead.jpg"
 
 export const logo = logoImg
 
@@ -89,7 +95,7 @@ export const whyWeStandOut = [
 
 export const ServicesList = [
     {
-        img: img,
+        img: analytics,
         title: 'CI/CD Automation',
         desc: "Enabling application deployment and management easier and faster like never before",
         body: [
@@ -143,7 +149,7 @@ export const ServicesList = [
     },
 
     {
-        img: img,
+        img: server,
         title: 'DevSecOps',
         desc: "Integrating Multi-Layered Security with Automation",
         body: [
@@ -180,7 +186,7 @@ export const ServicesList = [
     },
     
     {
-        img: img,
+        img: gears,
         title: '24X7 SERVER MONITORING & SUPPORT',
         desc: "24/7 Support over 1000 servers and 300 webprojects: from small corporate sites to major online stores, media sites and complex microservices projects. Do you want to be online 24/7 and sleep well? You’re at the right place!",
         body: [
@@ -198,7 +204,7 @@ export const ServicesList = [
     },
 
     {
-        img: img,
+        img: cloouHead,
         title: 'CLOUD MIGRATION',
         desc: "In today's fast-paced digital world, keeping up means quickly and smartly adapting to new trends. As you navigate the constantly changing tech landscape, consider the huge advantages of migrating your workload from on-premise infrastructure to the cloud.",
         body: [
@@ -214,7 +220,7 @@ export const ServicesList = [
     },
 
     {
-        img: img,
+        img: processes,
         title: 'DEVOPS $ CI/CD',
         desc: 'We help companies adopt the best DevOps practices and CI/CD automation techniques to speed up development and make services more reliable in production.',
         body: [ 
@@ -247,7 +253,7 @@ export const ServicesList = [
     },
 
     {
-        img: img,
+        img: img2,
         title: 'FAULT-TOLERANT INFRASTRUCTURE',
         desc: "Your project will be exceptionally stable and resilient, capable of withstanding the failure of multiple servers. You won't need to worry, not even if a meteorite were to strike the data center.",
         body: [
@@ -277,7 +283,7 @@ export const ServicesList = [
     },
 
     {
-        img: img,
+        img: comboImg,
         title: 'LOAD & STRESS TESTING',
         desc: "We’ll help you see what your project can handle! Using specialized tools, we simulate real user behavior on your site to see how it performs. We observe where it might slow down or fail and identify the load that causes these issues. Then, we analyze the data and provide expert recommendations.",
         body: [

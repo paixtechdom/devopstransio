@@ -33,16 +33,16 @@ export const AService = () => {
  
 
     return(
-        <main className={`${currentService == -1 ? "-top-[100vh]" : "top-0"} fixed h-screen overflow-y-auto overflow-x-hidden bg-secondary bg-opacity-70 backdrop-blur-3xl border-primary border-opacity-60 w-full z-40 flex justify-center py-[10vh] lg:py-[15vh] transition-all duration-1000 ease-in-out`}>
+        <main className={`${currentService == -1 ? "-top-[100vh]" : "top-0"} fixed h-screen overflow-y-auto overflow-x-hidden bg-primary bg-opacity-70 backdrop-blur-3xl border-primary border-opacity-60 w-full z-40 flex justify-center py-[10vh] lg:py-[15vh] transition-all duration-1000 ease-in-out`}>
 
             <div className="w-11/12 lg:w-9/12 xl:w-8/12 relative">
 
-                <div className="flex justify-between items-center gap-3 w-full mt-4 mb-7 sticky top-0 bg-secondary bg-opacity-30 backdrop-blur-2xl border-primary border-opacity-60 p-4 rounded-xl pl-6">
+                <div className="flex justify-between items-center gap-3 w-full mt-4 mb-7 sticky top-0 bg-secondary bg-opacity-70 backdrop-blur-2xl border-primary border-opacity-60 p-4 rounded-xl pl-6">
  
-                        <h1 className="font-bold text-2xl text-gray-100 w-11/12 uppercase">{service?.title}</h1>
+                        <h1 className="font-bold text-2xl text-zinc-700 w-11/12 uppercase">{service?.title}</h1>
 
                         <button onClick={closeService} 
-                            className="bg-secondary border border-primary  rounded-lg size-9 center text-2xl text-gray-100 cursor-pointer hover:opacity-90 hover:scale-110">
+                            className="border border-primary  rounded-lg size-9 center text-2xl text-zinc-700 cursor-pointer hover:opacity-90 hover:scale-110">
                             <BiX />
                         </button>
                 </div>
@@ -74,7 +74,7 @@ const Serializers:FC<any> = ({content}) => {
     switch (content.type) {
         case "heading":
             return( 
-                <h2 className="text-gray-400 mb-9 font-bold text-2xl flex flex-col gap-3">
+                <h2 className="text-zinc-800 mb-9 font-bold text-2xl flex flex-col gap-3">
                    {content.content}
                 </h2>
             )                
@@ -84,7 +84,7 @@ const Serializers:FC<any> = ({content}) => {
                 <div className="flex flex-col gap-8 mb-9">
                     {
                         content.content.map((con:string, i:number) => (
-                            <p key={i} className="leading-relaxed tracking-wide text-zinc-200">{con}</p>
+                            <p key={i} className="leading-relaxed tracking-wide text-zinc-900">{con}</p>
                         ))
                     }
                 </div>
@@ -93,15 +93,15 @@ const Serializers:FC<any> = ({content}) => {
         case "ul":
             return( 
                 <div className="flex flex-col gap-3 mb-[10vh]">
-                    <h2 className="text-zinc-200 font-bold text-lg mt-6">{content.intro}</h2>
+                    <h2 className="text-zinc-800 font-bold text-lg mt-6">{content.intro}</h2>
                     <div className="flex flex-col gap-3">
                         {
                             content.li.map((l:any, i:number) => (
                                 <div key={i} className="flex flex-col gap-3">
-                                    <h3 className="text-gray-300 border-b-2 border-primary w-fit border-opacity-60 mt-4 font-bold">
+                                    <h3 className="text-zinc-700 border-b-2 border-primary w-fit border-opacity-60 mt-4 font-bold">
                                         {l.title.replace('.', "")}
                                     </h3>
-                                    <p className="leading-relaxed tracking-wide text-zinc-200">{l.content}</p>
+                                    <p className="leading-relaxed tracking-wide text-zinc-900">{l.content}</p>
                                 </div>
                             ))
                         }
@@ -113,7 +113,7 @@ const Serializers:FC<any> = ({content}) => {
         case "ol":
             return( 
                 <div className="flex flex-col gap-3 mb-9">
-                    <h2 className="text-zinc-200 font-bold text-lg">{content.intro}</h2>
+                    <h2 className="text-zinc-700 font-bold text-lg">{content.intro}</h2>
                     <div className="flex flex-col gap-3">
                         {
                             content.li.map((l:any, i:number) => (
@@ -122,18 +122,18 @@ const Serializers:FC<any> = ({content}) => {
                                         l.title ?
                                         <>
                                         <div className="flex items-center gap-2 mt-4">
-                                            <p className="leading-relaxed tracking-wide size-4 bg-secondary border border-primary border-opacity 60 rounded-full"></p>
-                                            <h3 className="text-gray-100 font-bold">
+                                            <p className="size-4 border-2 border-seconary border-opacity 60 rounded-full"></p>
+                                            <h3 className="text-zinc-800 font-bold">
                                                 {l.title}
                                             </h3>
 
                                         </div>
-                                        <p className="leading-relaxed tracking-wide text-zinc-200 ml-4">{l.content}</p>
+                                        <p className="leading-relaxed tracking-wide text-zinc-900 ml-4">{l.content}</p>
                                         </> :
                                         <>
                                         <div className="flex items-center gap-2 mt-4 ml-4">
-                                            <p className="leading-relaxed tracking-wide size-4 bg-secondary border border-primary border-opacity 60 rounded-full"></p>
-                                            <p className="leading-relaxed tracking-wide text-gray-300">{l.content}</p>
+                                            <p className="size-4 border-2 border-seconary border-opacity 60 rounded-full"></p>
+                                            <p className="leading-relaxed tracking-wide text-zinc-800">{l.content}</p>
 
                                         </div>
                                         </>

@@ -11,8 +11,8 @@ export const Hero: React.FC = () => {
         <div className="min-h-[100vh] w-full center z-6 relative mt-[5vh] lg:mt-0"> 
             <div className="w-full lg:w-10/12 flex flex-col lg:flex-row gap-y-[50px] gap-[100px] justify-center items-start">
 
-                <div className="w-full flex justify-start items-start text-gray-800 z-10 py -[10vh]">
-                    <div className="w-full lgw-9/12 xl:w-7/12 justify-center flex flex-col bg-secondary xl:bg-transparent xl:backdrop-blur-none gap-4 bg-opacity-5 backdrop-blur-2xl rounded-b-3xl p-9 shadow-xl xl:shadow-none">
+                <div className="w-full flex justify-start items-start text-gray-800 z-10">
+                    <div className="w-full lgw-9/12 xl:w-7/12 justify-center flex flex-col bg-secondary xl:bg-transparent xl:backdrop-blur-none gap-4 bg-opacity-5 backdrop-blur-2xl rounded-b-3xl p-9 shadow-xl xl:shadow-none min-h-[70vh]">
                         <p className="leading-relaxed tracking-wide text-gray-900">
                             Let’s Talk About Automation
                         </p>

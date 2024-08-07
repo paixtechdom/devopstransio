@@ -5,8 +5,10 @@ import { toggleScrolledDown } from "./assets/store/navigation/navigationSlice";
 import "flag-icons/css/flag-icons.css"
 import "flag-icons/css/flag-icons.min.css"
 
+
 function App() {
   const dispatch = useDispatch()
+  
 
 
   useEffect(() => {
@@ -14,7 +16,9 @@ function App() {
         dispatch(toggleScrolledDown(document.documentElement.scrollTop > 200 ? true : false))
     })
     document.removeEventListener('scroll', () => null)
-}, [])
+  }, [])
+
+
 
 
 

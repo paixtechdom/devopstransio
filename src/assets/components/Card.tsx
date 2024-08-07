@@ -3,7 +3,7 @@ import { Button } from "./Button"
 import { useDispatch } from "react-redux"
 import { setCurrentService } from "../store/navigation/navigationSlice"
 
-interface cardInterface {
+export interface cardInterface {
     img: string,
     title: string,
     desc: string,
