@@ -28,13 +28,13 @@ const TrainingPage = () => {
 
   return (
     <main className='bg-secondary w-full min-h-screen center py-[15vh]'>
-        <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-9 text-white">
+        <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-9 text-zinc-900">
             <div className="w-full my-9">
                 <Headers 
                     text="Registration"
                 />
 
-                <div className="flex flex-col gap-3 mt-5 text-zinc-300">
+                <div className="flex flex-col gap-3 mt-5 text-zinc-900">
                     <p className=""> REGISTER NOW FOR A PROFESSIONAL COURSE in devops cloud engineering and software engineering</p>
                     <p className="">Also available for siwes and I.T (Industrial Training) students</p>
                 </div>
@@ -42,7 +42,7 @@ const TrainingPage = () => {
 
 
         <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
-            <form className="flex flex-col gap-6 w-full">
+            <form className="flex flex-col gap-6 w-full bg-primary p-9 rounded-2xl py-[10vh]">
                 <InputField 
                     label="First Name"
                     name="firstName"
@@ -103,7 +103,7 @@ const TrainingPage = () => {
                     name="training"
                     handleChange={handleChange}
                     type="text"
-                    value={formInputs.nationality}
+                    value={formInputs.training}
                     isReadonly={true}
                     func={() => setShowPopUp("training")}
                 >
@@ -124,7 +124,7 @@ const TrainingPage = () => {
 
             </form>
 
-            <div className="w-full h-[50vh] bg-primary bg-opacity-5 border border-primary border-opacity-20 rounded-3xl sticky top-9 [20vh]"></div>
+            <div className="w-full lg:w-6/12 h-[50vh] bg-primary rounded-3xl sticky top-9 [20vh]"></div>
         </div>
 
 

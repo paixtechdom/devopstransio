@@ -29,7 +29,7 @@ const ContactPage = () => {
 
         <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
 
-            <form className="flex flex-col gap-6 w-full">
+            <form className="flex flex-col gap-6 w-full bg-primary p-9 rounded-2xl py-[10vh]">
 
                 <InputField 
                     label="Full Name"
@@ -47,23 +47,23 @@ const ContactPage = () => {
                 />
 
                 <div className={`flex flex-col w-full gap-2 relative`}>
-                    <label htmlFor={"Message"} className={`${formInputs.message !== "" ? "text-tertiary" : "text-primary"} text-sm font-bold`}>
+                    <label htmlFor={"Message"} className={`${formInputs.message !== "" ? "text-tertiary" : "text-zinc-900"} text-sm font-bold`}>
                         Message                       
                     </label>
 
-                    <div className={`flex rounded-3xl  w-full items-center relative border border-white border-opacity-30 ${formInputs.message !== "" ? "" : " border-white"}  hover:border-white cursor-pointer overflow-hidden min-h-[20vh] h-[20vh]`}>
+                    <div className={`flex rounded-3xl w-full items-center relative ${formInputs.message !== "" ? "" : "text-zinc-900"}  cursor-pointer overflow-hidden min-h-[20vh] h-[20vh] bg-secondary bg-opacity-30 shadow-2xl`}>
                         <textarea 
                             onChange={handleChange}
                             name={'message'}
                             required
                             value={formInputs.message}                            
-                            className={`bg-transparent border-none w-full outline-none px-3`}
+                            className={`bg-transparent border-none w-full h-full outline-none px-3 text-black`}
                         ></textarea>
                     </div>
                 </div>
             </form>
 
-            <div className="w-full h-[50vh] bg-tertiary top-[20vh] sticky"></div>
+            <div className="w-full lg:w-6/12 h-[50vh] bg-tertiary top-[20vh] sticky"></div>
         </div>
 
 

@@ -1,4 +1,3 @@
-import { BsCheckCircleFill } from "react-icons/bs"
 import { Button } from "../../assets/components/Button"
 import img from "../../assets/images/hero.jpg"
 import { Headers } from "../../assets/components/Headers"
@@ -30,17 +29,17 @@ const whyUsInfo = [
 
 const AboutPage = () => {
   return (
-    <main className='bg-secondary w-full min-h-screen center flex-col pt-[10vh] md:pt-[15vh]'>
+    <main className='bg-secondary w-full min-h-screen center flex-col py-[10vh] pt-[15vh] lg:pt-[20vh]'>
         <div className="w-11/12 lg:w-10/12 flex flex-col gap-9 text-white">
 
             <div className="flex min-h-[70vh] flex-col gap-4 w-full lg:w-9/12">
-                <h1 className="text-zinc-400 font-bold text-5xl mb-4">
-                    About Cloud Transio
-                </h1>
-                <p className="leading-relaxed tracking-wide text-zinc-200">
+                <Headers 
+                    text="About Cloud Transio"
+                />
+                <p className="leading-relaxed tracking-wide text-zinc-900">
                     Cloud Transio was conceived from a simple yet powerful idea: to make technology work better for businesses by simplifying complex processes. We saw the challenges companies faced with deployment, security, and server management and wanted to provide a solution that not only addressed these issues but also empowered businesses to grow and innovate.
                 </p>
-                <p className="leading-relaxed tracking-wide text-zinc-200">
+                <p className="leading-relaxed tracking-wide text-zinc-900">
                 We aim to revolutionize the tech world by offering services that enhance efficiency, security, and reliability. By automating key processes and integrating cutting-edge practices, we help businesses achieve their goals faster and more effectively. Our mission is to be the trusted partner for companies navigating the ever-evolving tech landscape, providing the tools and support they need to succeed.
                 </p>
 
@@ -60,31 +59,29 @@ const AboutPage = () => {
 
         </div>
 
-        <div className="w-full bg-primary bg-opacity-10 border-y border-primary border-opacity-60 backdrop-blur-2xl min-h-[70vh] center py-[10vh] mt-[10vh]">
+        <div className="w-full bg-primary bg-opacity-100 border-y border-primary border-opacity-60 backdrop-blur-2xl min-h-[70vh] center py-[10vh] mt-[10vh]">
             <div className="w-11/12 lg:w-10/12 flex items-center flex-col xl:flex-row gap-9 text-white">
 
                 <div className="flex flex-col gap-4 w-full xl:w-6/12">
                     {/* <h2 className="text-3xl font-bold uppercase"></h2> */}
                     <Headers 
                         text="Why choose us?"
+                        bg="primary"
                     />
-                    <p className="text-zinc-300 leading-relaxed tracking-wide">Our services stand out because we combine expert knowledge with a focus on automation and security.</p>
+                    <p className="text-zinc-900 leading-relaxed tracking-wide">Our services stand out because we combine expert knowledge with a focus on automation and security.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6 w-full">
                     {
                         whyUsInfo.map((why, i) => (
-                            <div key={i} className="flex p-7 shadow-secondary shadow-md rounded-xl min-h-[25vh] bg-secondary bg-opacity-70 backdrop-blur-3xl gap-3 items-start">
+                            <div key={i} className="flex p-7 shadow-xl rounded-xl min-h-[25vh] bg-secondary gap-3 items-start relative">
 
-                                <div className="w-fit size-9">
-                                    <BsCheckCircleFill className="text-3xl text-primary rounded-full bg-secondary "/>
-                                    {/* <img src={why.img} alt={why.title.slice(0,11)} className="h-full w-full object-cover"/> */}
-                                </div>
+                                <div className="absolute top-5 right-5 rounded-full size-4 bg-primary border border-primary"></div>
                                 <div className="flex flex-col">
                                     <h3 className="font-bold text-primary text-xl">
                                         {why.title}
                                     </h3>
-                                    <p className="leading-relaxed tracking-wide text-zinc-300">{why.desc}</p>
+                                    <p className="text-zinc-900">{why.desc}</p>
                                 </div>
                             </div>
                         ))

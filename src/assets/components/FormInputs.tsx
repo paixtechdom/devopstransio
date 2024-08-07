@@ -19,13 +19,15 @@ export interface InputFieldInterface {
 
 }
 
+
 // ******************* INPUT FIELD************************//
+
 
 
 export const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value, children, isRequired, isReadonly, func, placeholder }) => {
     return(
         <div className={`flex flex-col w-full gap-2 ${className} relative`}>
-            <label htmlFor={label} className={`${value !== "" ? "text-tertiary" : "text-primary"} font-bold text-sm`}>
+            <label htmlFor={label} className={`${value !== "" ? "text-tertiary" : "text-zinc-900"} font-bold text- sm`}>
                 {label}
                 {
                 isRequired ?
@@ -33,7 +35,7 @@ export const InputField:FC<InputFieldInterface> = ({type, label, className, hand
                 }
             </label>
 
-            <div className={`flex rounded-full  w-full items-center relative border border-white border-opacity-30 ${value !== "" ? "" : " border-white"}  hover:border-white cursor-pointer
+            <div className={`flex rounded-full  w-full items-center relative shadow-xl bg-secondary bg-opacity-30 ${value !== "" ? "" : ""} cursor-pointer
                  ${func ? 'cursor-pointer' : ''} overflow-hidden`} onClick={() => func && func()}>
                      
                     <input 
@@ -44,7 +46,7 @@ export const InputField:FC<InputFieldInterface> = ({type, label, className, hand
                         value={value}
                         readOnly={isReadonly}
                         placeholder={placeholder}
-                        className={`bg-transparent border-none w-full outline-none py-[9px] px-5 ${func && children !== undefined ? 'cursor-pointer' : ''}`}
+                        className={`bg-transparent border-none w-full outline-none py-[9px] px-5 text-black ${func && children !== undefined ? 'cursor-pointer' : ''}`}
                     />
             </div>
 
@@ -75,7 +77,7 @@ export const Select:FC<selectInterface> = ({setShowPopUp, showPopUp, options, fo
             <div className={`absolute w-full flex flex-col bg-secondary bg-opacity-90 backdrop-blur-3xl border border-primary border-opacity-30 shadow-xl rounded-xl h-fit gap-6 p-9 transition-all duration-500 ${showPopUp == name ? 'z-10' : '-z-10 opacity-[0] scale-[0.8] translate-y-32'} max-h-[70vh] overflow-y-auto`}>
 
                 <div className="w-full flex justify-between items-center cursor-pointer sticky top-0 bg-secondary bg-opacity-50 backdrop-blur-3xl z-20 p-3 px-6 rounded-full" onClick={() => {setShowPopUp(false)}}>
-                    <label htmlFor={label} className="font-bold text-gray-200 text-xl">
+                    <label htmlFor={label} className="font-bold text-zinc-900 text-xl">
                         {label}
                     </label>
                     <BiX className="text-3xl bg-secondary rounded-full p-1 size-8 btn"/>
@@ -164,7 +166,7 @@ export const CountriesOption:FC<any> = ({setFormInputs, setShowCountries, showCo
                     </div>
                     <div className="flex bg-secondary w-full rounded-full border border-primary overflow-hidden border-opacity-40">
                         <div className="p-3">
-                            <BsSearch className="text-lg text-gray-200"/>
+                            <BsSearch className="text-lg text-zinc-900"/>
                         </div>
                         <input type="text"  placeholder="Search Countries" 
                         className="bg-transparent outline-none w-full p-3" value={searchInput} onChange={(e) => setSearchInput(e.target.value)}/>
