@@ -108,11 +108,18 @@ export const Navbar: React.FC = () => {
                                 </div>
                             ))
                         }
+
+                        <Link to="/contact" className="lg:hidden w-11/12">
+                            <Button 
+                                text="Contact Us"
+                                btnType="primary"
+                            />
+                        </Link>
                     </nav>
 
                     
                 </div>
-                <Link to="/contact">
+                <Link to="/contact" className="hidden lg:block">
                     <Button 
                         text="Contact Us"
                         btnType="primary"

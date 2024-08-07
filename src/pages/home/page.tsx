@@ -3,8 +3,8 @@ import { ImageText } from "../../assets/components/ImageText"
 import { AfterHero } from "./AfterHero"
 import { Hero } from "./Hero"
 import { Reviews } from "./Reviews"
-import img1 from "../../assets/images/hero.jpg"
-import img2 from "../../assets/images/hero1.jpg"
+import img1 from "../../assets/images/server.jpg"
+import img2 from "../../assets/images/img2.jpg"
 
 
 const HomePage: React.FC = () => {
@@ -30,6 +30,7 @@ const HomePage: React.FC = () => {
                 img1={img1}
                 img2={img2}
                 header="Lorem ipsum dolor sit,"
+                span="Devops - CI/CD"
                 desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui voluptate deleniti possimus enim libero nihil facilis laudantium quod quae harum animi quos tenetur recusandae, officia omnis placeat dolorum, a veniam sunt necessitatibus ex nam, praesentium commodi voluptates? Modi, voluptatibus cupiditate."
                 btn={
                     <Button 

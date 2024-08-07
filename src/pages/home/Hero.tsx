@@ -8,40 +8,42 @@ import hero3 from "../../assets/images/server.jpg"
 
 export const Hero: React.FC = () => {
     return(
-        <div className="min-h-[110vh] w-full center z-6 relative mt-[5vh] lg:mt-0"> 
+        <div className="min-h-[100vh] w-full center z-6 relative mt-[5vh] lg:mt-0"> 
             <div className="w-full lg:w-10/12 flex flex-col lg:flex-row gap-y-[50px] gap-[100px] justify-center items-start">
 
-                <div className="w-full flex flex-col justify-center items-start text-gray-800 gap-4 z-10 bg-secondary rounded-2xl py-[10vh] bg-opacity-5 backdrop-blur-2xl px-5 lg:px-0">
-                    <p className="leading-relaxed tracking-wide text-gray-900">
-                        Let’s Talk About Automation
-                    </p>
+                <div className="w-full flex justify-start items-start text-gray-800 z-10 py -[10vh]">
+                    <div className="w-full lgw-9/12 xl:w-7/12 justify-center flex flex-col bg-secondary xl:bg-transparent xl:backdrop-blur-none gap-4 bg-opacity-5 backdrop-blur-2xl rounded-b-3xl p-9 shadow-xl xl:shadow-none">
+                        <p className="leading-relaxed tracking-wide text-gray-900">
+                            Let’s Talk About Automation
+                        </p>
 
-                    <h1 className="font-bold text-zinc-800 text-4xl lg:text-5xl leading-snug tracking-wide">
-                        LET’S LIFT YOUR BUSINESS<br />
-                         <span className="text-primary">TO THE CLOUD</span>
-                    </h1>
+                        <h1 className="font-bold text-zinc-800 text-5xl">
+                            LET’S LIFT YOUR BUSINESS<br />
+                            <span className="text-primary">TO THE CLOUD</span>
+                        </h1>
 
 
-                    <p className="text-lg text-gray-900">
-                    Re-imagining businesses for hyper performance through our Cloud and DevOps Automation technologies to deliver efficiency, innovation, and agility across multiple industries and business verticals.
+                        <p className="text-lg text-gray-900">
+                        Re-imagining businesses for hyper performance through our Cloud and DevOps Automation technologies to deliver efficiency, innovation, and agility across multiple industries and business verticals.
 
-                    </p>
+                        </p>
 
-                    <div className="flex items-center gap-4 mt-4">
-                        <Button 
-                            text={"View Services"}
-                            btnType="primary"
-                        />
+                        <div className="flex items-center gap-4 mt-4">
+                            <Button 
+                                text={"View Services"}
+                                btnType="primary"
+                            />
 
-                        <Button 
-                            text={"Contact us"}
-                            btnType="secondary"
-                        />
+                            <Button 
+                                text={"Contact us"}
+                                btnType="secondary"
+                            />
+                        </div>
+                        
                     </div>
-                    
                 </div>
 
-                <div className="lg:w-1/12 xl:w-full center min-h-[60vh] scale-[1.3] -rotate-45 translate-x-[15%] -translate-y-[50%] ">
+                <div className="absolute left-0 top-0 w-full center min-h-[60vh] scale-[1.3] -rotate-45 translate-x-[30%] -translate-y-[20%]">
                     <div className="flex flex-col gap-4">
                         <div className="flex gap-4 items-end">
                             <div className="size-[150px] overflow-hidden rounded-2xl shadow-xl">
@@ -52,8 +54,6 @@ export const Hero: React.FC = () => {
                             </div>
                             <div className="size-[200px] overflow-hidden rounded-3xl  shadow-xl">
                                 <div className="h-full w-full scale-150 bg-primary">
-
-                                    {/* <img src={hero2} alt="Dev ops2" className={`${imgClass} rotate-45`}/> */}
                                 </div>
                             </div>
                         </div>
@@ -65,8 +65,6 @@ export const Hero: React.FC = () => {
                             </div>
                             <div className="size-[250px] overflow-hidden rounded-3xl  shadow-xl">
                                 <div className="h-full w-full scale-150 bg-primary">
-                                    {/* <img src={hero3} alt="Dev ops2" className={`${imgClass} rotate-45`}/> */}
-
                                 </div>
                             </div>
                         </div>

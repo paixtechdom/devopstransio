@@ -1,6 +1,9 @@
 import { Button } from "../../assets/components/Button"
 import img from "../../assets/images/hero.jpg"
 import { Headers } from "../../assets/components/Headers"
+import { ImageText } from "../../assets/components/ImageText"
+import server from "../../assets/images/server.jpg"
+import benchmark from "../../assets/images/benchmark.jpg"
 
 
 const whyUsInfo = [
@@ -89,11 +92,24 @@ const AboutPage = () => {
                 </div>
             </div>
         </div>
+        
 
 
-            <div className="my-9 text-white uppercse text-3xl">
-                main pains of our clients
-            </div>
+        <div className="w-11/12 lg:w-10/12 flex items-center flex-col xl:flex-row gap-9 text-white">
+            <ImageText 
+                header="Desires fulfilled"
+                span="Fears swallowed"
+                img1={server}
+                img2={benchmark}
+                desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, vitae alias eum consequuntur corrupti sunt asperiores tempore officia deserunt saepe aliquam magnam quod blanditiis minima error architecto ratione amet suscipit?"
+                btn={
+                    <Button 
+                        text="Start now"
+                        btnType="primary"
+                    />
+                }
+            />
+        </div>
 
     </main>
   )

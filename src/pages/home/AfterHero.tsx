@@ -5,8 +5,8 @@ import { Services } from "../../assets/Interfaces"
 
 export const AfterHero : React.FC =  () => {
     return(
-        <div className="w-full center">
-            <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row rounded-2xl bg-primary bg-opacity-80 backdrop-blur-lg p-5 md:p-8 lg:p-12 gap-y-9 gap-3 text-white border border-primary border-opacity-10 shadow-xl">
+        <div className="w-full center my-[10vh]">
+            <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row rounded-2xl bg-primary bg-opacity-80 backdrop-blur-lg p-9 md:p-8 lg:p-12 gap-y-9 gap-3 text-white border border-primary border-opacity-10 shadow-xl">
                 {
                     whyWeStandOut.map((why : Services, i) => (
                         <div key={i} className="w-full flex flex-col gap-1 bg-secondary shadow-xl border border-primary border-opacity-90 rounded-xl p-5 relative py-8">
