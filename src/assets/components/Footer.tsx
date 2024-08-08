@@ -10,7 +10,7 @@ export const Footer = () => {
             <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row justify-between gap-x-[150px] gap-[10vh]">
 
                 <div className="flex flex-col gap-6">
-                    <img src={logo} alt="Cloud Transio Logo" className="h-fit"/>
+                    <img src={logo} alt="Cloud Transio Logo" className="h-fit w-fit"/>
                     <div className="flex flex-col gap-1">
                         <div className="mb-2 text-xl text-zinc-700 font-bold">Contact Us</div>
                         {
