@@ -369,8 +369,8 @@ export const ServicesList = [
 
 
 export const AvailableCourses = [
-    "Dev Ops",
-    "DevOps & Cloud Computing",
+    "DevOps Engineering",
+    "Cloud Computing",
     "Frontend Engineering",
     "Backend Engineering",
     "Fullstack Engineering"

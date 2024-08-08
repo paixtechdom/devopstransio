@@ -16,7 +16,7 @@ export interface InputFieldInterface {
     isRequired?: boolean, 
     isReadonly?: boolean, 
     func?: Function, 
-
+    icon?:JSX.Element
 }
 
 
@@ -24,7 +24,7 @@ export interface InputFieldInterface {
 
 
 
-export const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value, children, isRequired, isReadonly, func, placeholder }) => {
+export const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value, children, isRequired, isReadonly, func, placeholder, icon }) => {
     return(
         <div className={`flex flex-col w-full gap-2 ${className} relative`}>
             <label htmlFor={label} className={`${value !== "" ? "text-tertiary" : "text-zinc-900"} font-bold text- sm`}>
@@ -48,6 +48,8 @@ export const InputField:FC<InputFieldInterface> = ({type, label, className, hand
                         placeholder={placeholder}
                         className={`bg-transparent border-none w-full outline-none py-[12px] px-5 text-black ${func && children !== undefined ? 'cursor-pointer' : ''}`}
                     />
+
+                    {icon}
             </div>
 
 
@@ -74,9 +76,9 @@ interface selectInterface {
 export const Select:FC<selectInterface> = ({setShowPopUp, showPopUp, options, formInputs, name, label, gridDisplay}) => {
    
     return(
-            <div className={`absolute w-full flex flex-col bg-secondary bg-opacity-90 backdrop-blur-3xl border border-primary border-opacity-30 shadow-xl rounded-xl h-fit gap-6 p-9 transition-all duration-500 ${showPopUp == name ? 'z-10' : '-z-10 opacity-[0] scale-[0.8] translate-y-32'} max-h-[70vh] overflow-y-auto`}>
+            <div className={`absolute w-full flex flex-col bg-secondary bg-opacity-30 backdrop-blur-3xl border border-primary border-opacity-30 shadow-xl rounded-xl h-fit gap-6 p-9 transition-all duration-500 ${showPopUp == name ? 'z-20' : '-z-10 opacity-[0] scale-[0.8] translate-y-32'} max-h-[70vh] overflow-y-auto`}>
 
-                <div className="w-full flex justify-between items-center cursor-pointer sticky top-0 bg-secondary bg-opacity-50 backdrop-blur-3xl z-20 p-3 px-6 rounded-full" onClick={() => {setShowPopUp(false)}}>
+                <div className="w-full flex justify-between items-center cursor-pointer sticky top-0 bg-secondary bg-opacity-10 backdrop-blur-3xl z-20 p-3 px-6 rounded-full" onClick={() => {setShowPopUp(false)}}>
                     <label htmlFor={label} className="font-bold text-zinc-900 text-xl">
                         {label}
                     </label>
@@ -87,7 +89,7 @@ export const Select:FC<selectInterface> = ({setShowPopUp, showPopUp, options, fo
 
                     {
                         options?.map((o, i) => (
-                            <div key={i} className={`py-3 border border-primary border-opacity-30 px-5 w-full rounded-full cursor-pointer hover:bg-gray-900 transition-all duration-500 active:bg-gray-900 ${formInputs[name] == o ? "bg-secondary" : ""}`} onClick={() => {
+                            <div key={i} className={`py-3 border border-primary border-opacity-30 px-5 w-full rounded-full cursor-pointer hover:bg-primary transition-all duration-500 active:bg-primary ${formInputs[name] == o ? "bg-secondary" : ""}`} onClick={() => {
                                 formInputs[name] = o
                                 setShowPopUp('')
                             }}>
@@ -154,17 +156,17 @@ export const CountriesOption:FC<any> = ({setFormInputs, setShowCountries, showCo
     }, [searchInput])
 
     return(
-            <div className={`absolute w-full z-10 flex flex-col shadow-xl rounded-xl h-fit gap-6 transition-all duration-500 max-h-[70vh] overflow-y-scroll border border-primary border-opacity-30 ${showCountries ? '' : 'opacity-[0] scale-[0]'}`}>
+            <div className={`absolute w-full z-20 flex flex-col shadow-xl rounded-xl h-fit gap-6 transition-all duration-500 max-h-[70vh] overflow-y-scroll border border-primary border-opacity-50 ${showCountries ? '' : 'opacity-[0] scale-[0]'}`}>
 
-            <div className={`w-full center flex-col bg-secondary bg-opacity-95 backdrop-blur-3xl h-fit gap-6`}>
-                <div className="text-sm w-full flex flex-col  justify-between items-center cursor-pointer sticky top-0 bg-secondary bg-opacity-30 backdrop-blur-3xl z-20 gap-4 px-9 pt-9 pb-4" >
+            <div className={`w-full center flex-col bg-secondary bg-opacity-50 backdrop-blur-3xl h-fit gap-6`}>
+                <div className="text-sm w-full flex flex-col  justify-between items-center cursor-pointer sticky top-0 bg-secondary bg-opacity-0 backdrop-blur-3 xl z-20 gap-4 px-9 pt-9 pb-4" >
                     <div className="flex justify-between items-center w-full font-bold text-xl" onClick={() => {
                     setShowCountries(false)
                 }}>
-                        Select Nationality
+                        Select Country
                         <BiX className="text-3xl"/>
                     </div>
-                    <div className="flex bg-secondary w-full rounded-full border border-primary overflow-hidden border-opacity-40">
+                    <div className="flex bg-secondary bg-opacity-50 w-full rounded-full border border-primary overflow-hidden border-opacity-40">
                         <div className="p-3">
                             <BsSearch className="text-lg text-zinc-900"/>
                         </div>
@@ -179,10 +181,10 @@ export const CountriesOption:FC<any> = ({setFormInputs, setShowCountries, showCo
 
                     {
                         Countries.map((c:any, i:number) => (
-                            <div key={i} className="py-3 border border-primary px-5 w-full rounded-full border-opacity-30 text-sm cursor-pointer hover:bg-gray-900 transition-all duration-500 active:bg-gray-100 flex items-center gap-3" onClick={() => {
+                            <div key={i} className="py-3 border border-primary px-5 w-full rounded-full border-opacity-30 text-sm cursor-pointer hover:bg-primary transition-all duration-500 active:bg-primary flex items-center gap-3" onClick={() => {
                                 setFormInputs({
                                     ...formInputs,
-                                    ["nationality"]: c.country
+                                    ["country"]: c.country
                                 })
                                 setShowCountries(false)
                             }}> 

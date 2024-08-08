@@ -19,7 +19,7 @@ const ContactPage = () => {
 
 
   return (
-    <main className='bg-secondary w-full min-h-screen center pt-[15vh]'>
+    <main className='bg-secondary w-full min-h-screen center py-[15vh]'>
         <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-9 text-white">
         <div className="w-full mb-9">
 

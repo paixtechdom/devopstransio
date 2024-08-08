@@ -6,6 +6,7 @@ import { Button } from "../../assets/components/Button"
 import { ImageText } from "../../assets/components/ImageText"
 import img1 from "../../assets/images/server.jpg"
 import img2 from "../../assets/images/img2.jpg"
+import { BiChevronDown } from "react-icons/bi"
 
 const TrainingPage = () => {
     const [ formInputs, setFormInputs ] = useState({
@@ -14,8 +15,8 @@ const TrainingPage = () => {
         email: "",
         gender: "",
         age: "",
-        nationality: "",
-        training: ""
+        country: "",
+        course: ""
 
     })
     const [ showCountries, setShowCountries ] = useState(false)
@@ -38,7 +39,7 @@ const TrainingPage = () => {
                 "Upskilling in cloud and DevOps can significantly benefit your career. It opens up new job opportunities and can lead to higher salaries, as companies actively seek professionals who can manage cloud infrastructures and implement DevOps practices. Moreover, having these skills means you can contribute to faster development cycles, more reliable systems, and the ability to scale operations seamlessly. As more businesses move to the cloud and adopt DevOps, staying competitive requires keeping up with these technologies and methodologies.",
                 "To start your journey, Cloud Transio offers a robust platform for learning these essential skills. You can choose from courses on major cloud providers like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP), each with its own set of services and certifications. Cloud Transio provides engaging and informative courses for all skill levels, from beginners to advanced practitioners. Practical experience is crucial, so the platform includes labs and exercises where you can experiment with free tiers provided by cloud providers to build projects and solidify your understanding.",
                 "Certifications are a vital part of validating your skills and making you more attractive to employers. Cloud Transio prepares you for certifications from cloud providers, such as AWS Certified Solutions Architect, Microsoft Certified: Azure Fundamentals, and Google Cloud Certified - Associate Cloud Engineer. These certifications can enhance your credibility and career prospects.",
-                "In addition to cloud computing, Cloud Transio offers comprehensive DevOps training. You can start with the fundamental concepts of DevOps, including continuous integration (CI), continuous delivery (CD), and infrastructure as code (IaC). The platform also provides courses on popular DevOps tools like Jenkins, Docker, Kubernetes, Ansible, and Terraform, each playing a role in automating and streamlining different parts of the software development process. Through practical exercises, you can set up CI/CD pipelines and automate tasks to understand the power of DevOps.",
+                "In addition to cloud computing, Cloud Transio offers comprehensive DevOps course. You can start with the fundamental concepts of DevOps, including continuous integration (CI), continuous delivery (CD), and infrastructure as code (IaC). The platform also provides courses on popular DevOps tools like Jenkins, Docker, Kubernetes, Ansible, and Terraform, each playing a role in automating and streamlining different parts of the software development process. Through practical exercises, you can set up CI/CD pipelines and automate tasks to understand the power of DevOps.",
                 "DevOps is not just about tools; it’s also about culture. Cloud Transio encourages improving communication and collaboration within your team to create a more cohesive and efficient workflow. Sharing knowledge and best practices is crucial for fostering a collaborative environment.",
                 "Continuous learning is key in the ever-evolving tech industry. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps. By investing in upskilling with Cloud Transio, you're setting yourself up for greater efficiency, more innovation, and better career prospects.",
             ]
@@ -61,7 +62,7 @@ const TrainingPage = () => {
             img2={img2}
             header='Get started now'
             span='with a course in tech'
-            desc="Join our free training on DevOps and Cloud Engineering. We also offer training on Web Development. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
+            desc="Join our free course on DevOps and Cloud Engineering. We also offer course on Web Development. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
             btn={
                 <div onClick={() => document.querySelector('#registration')?.scrollIntoView({
                     behavior: "smooth"
@@ -163,32 +164,43 @@ const TrainingPage = () => {
                 />
 
                 <InputField 
-                    label="Nationality"
-                    name="nationality"
+                    label="Select Country"
+                    name="country"
                     handleChange={handleChange}
                     type="text"
-                    value={formInputs.nationality}
+                    value={formInputs.country}
                     isReadonly={true}
-                    func={() => setShowCountries(true)}
+                    func={() => {
+                        setShowPopUp('')
+                        setShowCountries(true)
+                    }}
+                    icon={
+                        <BiChevronDown className="text-4xl mr-4"/>
+                    }
                 >
                     <CountriesOption 
                         setFormInputs={setFormInputs}
                         setShowCountries={setShowCountries} 
-                        showCountries={showCountries} 
-                        searchInput={searchInput}
+                        showCountries={showCountries}                         searchInput={searchInput}
                         setSearchInput={setSearchInput}
                         formInputs={formInputs}
                     />
                 </InputField>
 
                 <InputField 
-                    label="Training"
-                    name="training"
+                    label="Select Course"
+                    name="course"
                     handleChange={handleChange}
                     type="text"
-                    value={formInputs.training}
+                    value={formInputs.course}
                     isReadonly={true}
-                    func={() => setShowPopUp("training")}
+                    func={() => {
+                        setShowCountries(false)
+                        setShowPopUp("course")
+                    }}
+                    icon={
+                        <BiChevronDown className="text-4xl mr-4"/>
+                    }
                 >
 
                     <Select 
@@ -196,8 +208,8 @@ const TrainingPage = () => {
                         showPopUp={showPopUp}
                         setShowPopUp={setShowPopUp}
                         formInputs={formInputs}
-                        name={"training"}
-                        label={"Training"}
+                        name={"course"}
+                        label={"Select Course"}
                     
                     />
                 

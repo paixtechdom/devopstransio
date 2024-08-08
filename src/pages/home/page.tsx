@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
                                 text="Our Services"
                             />
                         </div>
-                        <div className="gap-3 grid grid-cols-2">
+                        <div className="gap-3 grid md:grid-cols-2">
                             {
                                 ServicesList.map((service: Services, i) => (
                                     <div key={i} className="flex items-start gap-1">
