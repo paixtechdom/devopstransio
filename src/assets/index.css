@@ -1,4 +1,4 @@
-
+@import url(https://db.onlinewebfonts.com/c/2bf3e5ac189bddb42ce75cccf46ec2ac?family=Menoe+Grotesque+Pro+Regular);
 
 @tailwind base;
 @tailwind components;
@@ -9,5 +9,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+p, li, label, a{
+    font-family: "Menoe Grotesque Pro Regular";
 }
 

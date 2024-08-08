@@ -69,11 +69,11 @@ export const DevOpsTools = () => {
             {
               Tools.map((tool, i) => (
                 // <img key={i} src={tool.img} alt={tool.tool} />
-                <div className="flex items-center gap-2">
+                <div key={i} className="flex items-center gap-2">
                   <p className="size-4 bg-primary rounded-full">
                   </p>
 
-                  <p key={i} className="font-bold text-zinc-700">{tool.tool}</p>
+                  <p className="font-bold text-zinc-700">{tool.tool}</p>
                 </div>
               ))
             }

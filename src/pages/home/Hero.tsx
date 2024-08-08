@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
                     <div className="flex flex-col gap-4">
                         <div className="flex gap-4 items-end">
                             <div className="size-[150px] overflow-hidden rounded-2xl shadow-xl">
-                                <div className="h-full w-full scale-150 bg-primary">
+                                <div className="h-full w-full scale-150 bg-secondary lg:bg-primary">
                                     {/* <img src={hero1} alt="Dev ops2" className={`${imgClass} rotate-45`}/> */}
 
                                 </div>
@@ -59,7 +59,7 @@ export const Hero: React.FC = () => {
                         </div>
                         <div className="flex gap-4 items-start">
                             <div className="size-[250px] overflow-hidden rounded-2xl  shadow-xl">
-                                <div className="h-full w-full scale-150 bg-primary">
+                                <div className="h-full w-full scale-150 bg-secondary">
                                     <img src={hero3} alt="Dev ops2" className={`${imgClass} rotate-45`}/>
                                 </div>
                             </div>
