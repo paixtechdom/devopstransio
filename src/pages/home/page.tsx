@@ -50,7 +50,7 @@ const HomePage: React.FC = () => {
 
             <AfterHero />
 
-            <div className="w-full center mt-[15vh] lg:mt-[20vh]">
+            <div className="w-full center mt-[20vh]">
             <div className="w-11/12 lg:w-10/12 center flex-col  gap-[10vh] ">
                 <div className="flex flex-col-reverse w-full lg:flex-row justify-between gap-[50px] gap-y-12 items-center">
                     <div className="flex flex-col gap-7 w-full">

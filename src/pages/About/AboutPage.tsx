@@ -77,7 +77,7 @@ const AboutPage = () => {
                 <div className="grid md:grid-cols-2 gap-6 w-full">
                     {
                         whyUsInfo.map((why, i) => (
-                            <div key={i} className="flex p-7 shadow-xl rounded-xl min-h-[25vh] bg-secondary gap-3 items-start relative">
+                            <div key={i} className="flex p-7 shadow-xl rounded-xl lg:min-h-[25vh] bg-secondary gap-3 items-start relative">
 
                                 <div className="absolute top-5 right-5 rounded-full size-4 bg-primary border border-primary"></div>
                                 <div className="flex flex-col">

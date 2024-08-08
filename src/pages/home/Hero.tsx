@@ -8,7 +8,7 @@ import hero3 from "../../assets/images/server.jpg"
 
 export const Hero: React.FC = () => {
     return(
-        <div className="min-h-[100vh] w-full center z-6 relative mt-[5vh] lg:mt-0"> 
+        <div className="min-h-[80vh] w-full center z-6 relative mt-[5vh] lg:mt-0"> 
             <div className="w-full lg:w-10/12 flex flex-col lg:flex-row gap-y-[50px] gap-[100px] justify-center items-start">
 
                 <div className="w-full flex justify-start items-start text-gray-800 z-10">

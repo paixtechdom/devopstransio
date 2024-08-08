@@ -56,7 +56,7 @@ const TrainingPage = () => {
     ]
 
   return (
-    <main className='bg-secondary w-full min-h-screen center flex-col py-[15vh]'>
+    <main className='bg-secondary w-full min-h-screen center flex-col pb-[15vh]'>
         <ImageText 
             img1={img1}
             img2={img2}
@@ -78,7 +78,7 @@ const TrainingPage = () => {
 
 
 
-        <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-[20vh] text-zinc-900 pt-[10vh]">
+        <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-[20vh] text-zinc-900 pt-[15vh]">
 
 
             <div className="flex flex-col gap-9 w-full">
@@ -126,7 +126,7 @@ const TrainingPage = () => {
 
 
         <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
-            <form className="flex flex-col gap-6 w-full bg-primary p-9 rounded-2xl py-[10vh]">
+            <form className="flex flex-col gap-6 w-full bg-primary  px-5 md:px-9 p-9 rounded-2xl py-[10vh]">
                 <InputField 
                     label="First Name"
                     name="firstName"

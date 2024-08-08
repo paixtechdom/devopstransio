@@ -11,7 +11,7 @@ import { Button } from "../../assets/components/Button"
 
 export const ServicesListing = () => {
     return(
-        <div className="w-full center mt-[10vh]">
+        <div className="w-full center mt-[15vh]">
             <div className="w-11/12 lg:w-10/12 center flex-col  gap-[10vh] ">
                 <div className="w-full">
                     <Headers 
@@ -49,14 +49,14 @@ const ServicesComponent:FC<cardInterface> = ({img, title, desc, index}) => {
             onClick={() => 
                 dispatch(setCurrentService(index))
             } 
-            className={`cursor-pointer flex items-center relative justify-between
-            ${index % 2 == 0 ? "lg:flex-row justify-start" : "lg:flex-row-reverse justify-end"} bg- red-500
+            className={`cursor-pointer flex items-center relative lg:justify-between
+            ${index % 2 == 0 ? "lg:flex-row justify-start" : "lg:flex-row-reverse justify-end"} bg- red-500 
         `}>
             <div className="h-[50vh] lg:h-[45vh] w-full lg:w-5/12 xl:w-4/12 rounded-2xl overflow-hidden shadow-xl">
                 <img src={img} alt={title} className="object-cover h-full w-full"/>
             </div>
 
-            <div className={`flex flex-col p-6 rounded-2xl gap-6 shadow-xl w-11/12 lg:w-6/12 absolute lg:relative bg-opacity-60 backdrop-blur-2xl
+            <div className={`flex flex-col p-6 rounded-2xl gap-6 shadow-xl w-11/12 lg:w-6/12 absolute lg:relative bg-opacity-40 backdrop-blur-xl
                 ${index % 2 == 0 ? "bg-secondary lg:-translate-x-[50%]" : 
                 "bg-primary lg:translate-x-[50%]"}
                 `}>

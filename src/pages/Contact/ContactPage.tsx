@@ -30,7 +30,7 @@ const ContactPage = () => {
 
         <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
 
-            <form className="flex flex-col gap-6 w-full bg-primary p-9 rounded-2xl py-[10vh]">
+            <form className="flex flex-col gap-6 w-full bg-primary px-5 md:px-9 p-9 rounded-2xl py-[10vh]">
 
                 <InputField 
                     label="Full Name"

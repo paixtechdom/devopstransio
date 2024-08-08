@@ -7,7 +7,7 @@ export const Footer = () => {
     const dispatch = useDispatch()
     return(
         <section className="bg-primary bg-opacity-50 min-h-[40vh] center py-[15vh]">
-            <div className="w-11/12 lg:w-10/12 flex justify-between gap-x-[150px] gap-[10vh]">
+            <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row justify-between gap-x-[150px] gap-[10vh]">
 
                 <div className="flex flex-col gap-6">
                     <img src={logo} alt="Cloud Transio Logo" className="h-fit"/>
