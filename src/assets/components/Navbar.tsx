@@ -109,7 +109,13 @@ export const Navbar: React.FC = () => {
                             ))
                         }
 
-                        <Link to="/contact" className="lg:hidden w-11/12">
+                        <Link to="/contact" className="lg:hidden w-11/12" 
+                            onClick={() => {
+                                dispatch(setCurrentNav(4))
+                                dispatch(toggleShowNav())
+                                dispatch(setCurrentDropDown(""))
+                            }}
+                        >
                             <Button 
                                 text="Contact Us"
                                 btnType="primary"
