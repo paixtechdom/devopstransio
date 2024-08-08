@@ -567,6 +567,16 @@ export const countries = [
 ];
 
 
+export const contactInfo = [   
+    {
+        title: "+234 905 471 9394",
+        link: "",
+    },    
+    {
+        title: "hello@cloudtransio.com",
+        link: "",
+    },    
+]
 
 // ********************** STYLING ***********************************
 export const ButtonClass = "rounded-full px-6 py-3 min-w-[200px] font-bold uppercase"

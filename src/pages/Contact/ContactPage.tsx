@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { InputField } from "../../assets/components/FormInputs"
 import { Headers } from "../../assets/components/Headers"
+import { Button } from "../../assets/components/Button"
 
 const ContactPage = () => {
     const [ formInputs, setFormInputs ] = useState({
@@ -60,6 +61,13 @@ const ContactPage = () => {
                             className={`bg-transparent border-none w-full h-full outline-none px-3 text-black`}
                         ></textarea>
                     </div>
+                </div>
+
+                <div className="mt-5">
+                    <Button 
+                        text="Send message"
+                        btnType="secondary"
+                    />
                 </div>
             </form>
 

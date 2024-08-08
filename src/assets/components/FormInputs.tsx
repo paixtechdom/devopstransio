@@ -46,7 +46,7 @@ export const InputField:FC<InputFieldInterface> = ({type, label, className, hand
                         value={value}
                         readOnly={isReadonly}
                         placeholder={placeholder}
-                        className={`bg-transparent border-none w-full outline-none py-[9px] px-5 text-black ${func && children !== undefined ? 'cursor-pointer' : ''}`}
+                        className={`bg-transparent border-none w-full outline-none py-[12px] px-5 text-black ${func && children !== undefined ? 'cursor-pointer' : ''}`}
                     />
             </div>
 
@@ -116,7 +116,7 @@ interface radioSelectInterface {
 export const RadioSelect:FC<radioSelectInterface> = ({options, formInputs, label, name, setFormInputs }) => {
     return(
         <div className={`flex flex-col w-full gap-2 relative`}>
-            <label htmlFor={label} className={`${formInputs[name] !== "" ? "text-tertiary" : "text-primary"} font-bold text-sm`}>
+            <label htmlFor={label} className={`${formInputs[name] !== "" ? "text-tertiary" : "text-zinc-900"} font-bold text-sm`}>
                 {label}
             </label>
             <div className="flex flex-col gap-2">
@@ -128,7 +128,7 @@ export const RadioSelect:FC<radioSelectInterface> = ({options, formInputs, label
                                 [name]: o
                             })
                          }}>
-                            <div className={`size-4 transition-ll duration-1000 rounded-full ${formInputs[name] == o ? "bg-primary border-0" : "bg-secondary border border-gray-100"}`}></div>
+                            <div className={`size-5 transition-ll duration-1000 rounded-full border-2 ${formInputs[name] !== o ? "bg-primary" : "bg-secondary border border-gray-100"}`}></div>
                             <span className={`${formInputs[name] == o ? "font-bold" : "last:"}`}>{o}</span>
                         </div>
                     ))

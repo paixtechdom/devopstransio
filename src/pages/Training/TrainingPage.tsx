@@ -2,6 +2,7 @@ import { useState } from "react"
 import { CountriesOption, InputField, RadioSelect, Select } from "../../assets/components/FormInputs"
 import { AvailableCourses } from "../../assets/Constants"
 import { Headers } from "../../assets/components/Headers"
+import { Button } from "../../assets/components/Button"
 
 const TrainingPage = () => {
     const [ formInputs, setFormInputs ] = useState({
@@ -120,6 +121,12 @@ const TrainingPage = () => {
                 
                 </InputField>
                
+                <div className="mt-5">
+                    <Button 
+                        text="Submit"
+                        btnType="secondary"
+                    />
+                </div>
 
 
             </form>
