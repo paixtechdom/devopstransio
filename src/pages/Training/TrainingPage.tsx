@@ -111,7 +111,7 @@ const TrainingPage = () => {
         </div>
 
                 
-            <div className="w-11/12 lg:w-10/12 center flex-col gap-9 text-zinc-900 pt-[10vh]">
+            <div className="w-11/12 lg:w-10/12 center flex-col gap-9 text-zinc-900 pt-[15vh]">
 
             <div id="registration" className="w-full py-[15vh]">
                 <Headers 
@@ -126,7 +126,7 @@ const TrainingPage = () => {
 
 
         <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
-            <form className="flex flex-col gap-6 w-full bg-primary  px-5 md:px-9 p-9 rounded-2xl py-[10vh]">
+            <form className="flex flex-col gap-6 w-full bg-primary  px-7 md:px-9 p-9 rounded-2xl py-[10vh]">
                 <InputField 
                     label="First Name"
                     name="firstName"
