@@ -1,5 +1,5 @@
 import { Button } from "../../assets/components/Button"
-import hero1 from "../../assets/images/comboImg.jpg"
+// import hero1 from "../../assets/images/comboImg.jpg"
 // import hero2 from "../../assets/images/stress.jpg"
 import hero3 from "../../assets/images/server.jpg"
 // import hero4 from "../../assets/images/img2.jpg"
@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
             <div className="w-full lg:w-10/12 flex flex-col lg:flex-row gap-y-[50px] gap-[100px] justify-center items-start">
 
                 <div className="w-full flex justify-start items-start text-gray-800 z-10">
-                    <div className="w-full lgw-9/12 xl:w-7/12 justify-center flex flex-col bg-secondary xl:bg-transparent xl:backdrop-blur-none gap-4 bg-opacity-5 backdrop-blur-lg rounded-b-3xl p-9 shadow-xl xl:shadow-none min-h-screen">
+                    <div className="w-full lgw-9/12 xl:w-7/12 justify-center flex flex-col bg-secondary xl:bg-transparent xl:backdrop-blur-none gap-4 bg-opacity-5 backdrop-blur-lg rounded-b-3xl p-9 shadow-none lg:shadow-xl xl:shadow-none min-h-screen">
                         <p className="leading-relaxed tracking-wide text-gray-900">
                             Let’s Talk About Automation
                         </p>
@@ -48,7 +48,7 @@ export const Hero: React.FC = () => {
                         <div className="flex gap-4 items-end">
                             <div className="size-[150px] overflow-hidden rounded-2xl shadow-xl">
                                 <div className="h-full w-full scale-150 bg-primary">
-                                    <img src={hero1} alt="Dev ops2" className={`${imgClass} rotate-45`}/>
+                                    {/* <img src={hero1} alt="Dev ops2" className={`${imgClass} rotate-45`}/> */}
 
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ export const Hero: React.FC = () => {
                         </div>
                         <div className="flex gap-4 items-start">
                             <div className="size-[250px] overflow-hidden rounded-2xl  shadow-xl">
-                                <div className="h-full w-full scale-150">
+                                <div className="h-full w-full scale-150 bg-primary">
                                     <img src={hero3} alt="Dev ops2" className={`${imgClass} rotate-45`}/>
                                 </div>
                             </div>

@@ -5,6 +5,7 @@ import { ServicesList } from "../../assets/Constants"
 import { Button } from "../../assets/components/Button"
 import { setCurrentService } from "../../assets/store/navigation/navigationSlice"
 import { BiX } from "react-icons/bi"
+import { Link } from "react-router-dom"
 
 export const AService = () => {
     const navigation = useSelector((state: RootState) => state.navigation)
@@ -33,7 +34,7 @@ export const AService = () => {
  
 
     return(
-        <main className={`${currentService == -1 ? "-top-[100vh]" : "top-0"} fixed h-screen overflow-y-auto overflow-x-hidden bg-primary bg-opacity-70 backdrop-blur-3xl border-primary border-opacity-60 w-full z-40 flex justify-center py-[10vh] lg:py-[15vh] transition-all duration-1000 ease-in-out`}>
+        <main className={`${currentService == -1 ? "-top-[100vh]" : "top-0"} fixed h-screen overflow-y-auto overflow-x-hidden bg-primary bg-opacity-60 backdrop-blur-3xl border-primary border-opacity-60 w-full z-40 flex justify-center py-[10vh] lg:py-[15vh] transition-all duration-1000 ease-in-out`}>
 
             <div className="w-11/12 lg:w-9/12 xl:w-8/12 relative">
 
@@ -53,15 +54,21 @@ export const AService = () => {
                     ))
                 }
 
-                <div className="pb-[15vh] w-fit flex items-center gap-5 flex-wrap" onClick={closeService}>
-                    <Button 
-                        text={"Contact Us"}
-                        btnType="primary"
-                    />
-                    <Button 
-                        text={"Close"}
-                        btnType="secondary"
-                    />
+                <div className="pb-[15vh] w-fit flex items-center gap-5 flex-wrap">
+                    <Link to="/contact" onClick={closeService}>
+                        <Button 
+                            text={"Contact Us"}
+                            btnType="primary"
+                        />
+                    </Link>
+
+                    <div onClick={closeService}>
+
+                        <Button 
+                            text={"Close"}
+                            btnType="secondary"
+                        />
+                    </div>
                 </div>
             </div>
 

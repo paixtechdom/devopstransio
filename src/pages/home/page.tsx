@@ -38,10 +38,12 @@ const HomePage: React.FC = () => {
                 span="Devops - CI/CD"
                 desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui voluptate deleniti possimus enim libero nihil facilis laudantium quod quae harum animi quos tenetur recusandae, officia omnis placeat dolorum, a veniam sunt necessitatibus ex nam, praesentium commodi voluptates? Modi, voluptatibus cupiditate."
                 btn={
-                    <Button 
-                        text="CTA Button"
-                        btnType="primary"
-                    />
+                    <Link to={"/"}> 
+                        <Button 
+                            text="CTA Button"
+                            btnType="primary"
+                        />
+                    </Link>
                 }
             />
 
@@ -93,11 +95,25 @@ const HomePage: React.FC = () => {
 
             <DevOpsTools />
 
+            <ImageText 
+                img1={img1}
+                img2={img2}
+                header='Want to transit from'
+                span='"NON-IT" to "IT"?'
+                desc="Join our free training on DevOps and Cloud Engineering. We also offer training on Web Development. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
+                btn={
+                    <Link to={"/courses"}> 
+                        <Button 
+                            text="CTA Button"
+                            btnType="primary"
+                        />
+                    </Link>
+                }
+            />
             <Reviews />
                         
 
             
-            <p>IT - SIWES - PROGRAMMING TRAINING</p>
 
             <p>ASIDE n </p>
         </div>

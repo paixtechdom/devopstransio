@@ -64,8 +64,8 @@ export const NavInfo = [
     },
    
     {
-        title: 'Trainings',
-        link: 'trainings',        
+        title: 'Courses',
+        link: 'courses',        
     },
     // {
     //     title: 'Contact Us',
@@ -187,7 +187,7 @@ export const ServicesList = [
     
     {
         img: gears,
-        title: '24X7 SERVER MONITORING & SUPPORT',
+        title: '24X7 Server Monitoring & Support',
         desc: "24/7 Support over 1000 servers and 300 webprojects: from small corporate sites to major online stores, media sites and complex microservices projects. Do you want to be online 24/7 and sleep well? You’re at the right place!",
         body: [
             {
@@ -205,7 +205,7 @@ export const ServicesList = [
 
     {
         img: cloouHead,
-        title: 'CLOUD MIGRATION',
+        title: 'Cloud Migration',
         desc: "In today's fast-paced digital world, keeping up means quickly and smartly adapting to new trends. As you navigate the constantly changing tech landscape, consider the huge advantages of migrating your workload from on-premise infrastructure to the cloud.",
         body: [
             {
@@ -221,7 +221,7 @@ export const ServicesList = [
 
     {
         img: processes,
-        title: 'DEVOPS $ CI/CD',
+        title: 'DevOps $ CI/CD',
         desc: 'We help companies adopt the best DevOps practices and CI/CD automation techniques to speed up development and make services more reliable in production.',
         body: [ 
             {
@@ -254,7 +254,7 @@ export const ServicesList = [
 
     {
         img: img2,
-        title: 'FAULT-TOLERANT INFRASTRUCTURE',
+        title: 'Fault-Tolerant Infrastructure',
         desc: "Your project will be exceptionally stable and resilient, capable of withstanding the failure of multiple servers. You won't need to worry, not even if a meteorite were to strike the data center.",
         body: [
             {
@@ -284,7 +284,7 @@ export const ServicesList = [
 
     {
         img: comboImg,
-        title: 'LOAD & STRESS TESTING',
+        title: 'Load & Stress Testing',
         desc: "We’ll help you see what your project can handle! Using specialized tools, we simulate real user behavior on your site to see how it performs. We observe where it might slow down or fail and identify the load that causes these issues. Then, we analyze the data and provide expert recommendations.",
         body: [
             {
@@ -327,7 +327,7 @@ export const ServicesList = [
 
     {
         img: img,
-        title: "APP MODERNIZATION",
+        title: "App Modernization",
         desc: "Switching to microservices can make your app faster and more efficient. Microservices break down your app into smaller, independent parts, each handling a specific function. This allows for quicker updates, better performance, and easier scaling. Start by identifying key components of your app that can be separated, choose the right technologies, and plan a gradual transition.",
         body: [
             {
@@ -348,7 +348,7 @@ export const ServicesList = [
 
     // {
     //     img: img,
-    //     title: "CLOUD & DEVOPS UPSKILLING",
+    //     title: "Cloud & DevOps Upskilling",
     //     desc: "Cloud computing and DevOps skills are becoming essential in today's tech landscape. Cloud computing uses remote servers for data storage, management, and processing, offering flexibility, scalability, and cost savings. DevOps combines software development and IT operations to shorten the development lifecycle and deliver high-quality software continuously. Both are critical for modern businesses, making upskilling in these areas highly valuable.",
     //     body: [
     //         {

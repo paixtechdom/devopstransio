@@ -62,7 +62,7 @@ const AboutPage = () => {
 
         </div>
 
-        <div className="w-full bg-primary bg-opacity-100 border-y border-primary border-opacity-60 backdrop-blur-2xl min-h-[70vh] center py-[10vh] mt-[10vh]">
+        <div className="w-full bg-primary bg-opacity-100 border-y border-primary border-opacity-60 backdrop-blur-2xl min-h-[70vh] center py-[10vh] my-[10vh]">
             <div className="w-11/12 lg:w-10/12 flex items-center flex-col xl:flex-row gap-9 text-white">
 
                 <div className="flex flex-col gap-4 w-full xl:w-6/12">
@@ -95,7 +95,6 @@ const AboutPage = () => {
         
 
 
-        <div className="w-11/12 lg:w-10/12 flex items-center flex-col xl:flex-row gap-9 text-white">
             <ImageText 
                 header="Desires fulfilled"
                 span="Fears swallowed"
@@ -109,7 +108,6 @@ const AboutPage = () => {
                     />
                 }
             />
-        </div>
 
     </main>
   )
