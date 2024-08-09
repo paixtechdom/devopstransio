@@ -2,6 +2,7 @@ import { Button } from "../../assets/components/Button"
 import { ImageText } from "../../assets/components/ImageText"
 import { AfterHero } from "./AfterHero"
 import { Hero } from "./Hero"
+import { DevOpsTools } from "./DevOpsTools"
 import { Reviews } from "./Reviews"
 import img1 from "../../assets/images/server.jpg"
 import img2 from "../../assets/images/img2.jpg"
@@ -9,7 +10,7 @@ import { Headers } from "../../assets/components/Headers"
 import { ServicesList } from "../../assets/Constants"
 import { Services } from "../../assets/Interfaces"
 import { Link } from "react-router-dom"
-import { DevOpsTools } from "./DevOpsTools"
+import { PainsDesires } from "./PainsDesires"
 
 
 const HomePage: React.FC = () => {
@@ -34,8 +35,8 @@ const HomePage: React.FC = () => {
             <ImageText 
                 img1={img1}
                 img2={img2}
-                header="Lorem ipsum dolor sit,"
-                span="Devops - CI/CD"
+                header="Change font to FormularBlack"
+                span="or FormularBold"
                 desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui voluptate deleniti possimus enim libero nihil facilis laudantium quod quae harum animi quos tenetur recusandae, officia omnis placeat dolorum, a veniam sunt necessitatibus ex nam, praesentium commodi voluptates? Modi, voluptatibus cupiditate."
                 btn={
                     <Link to={"/"}> 
@@ -46,7 +47,6 @@ const HomePage: React.FC = () => {
                     </Link>
                 }
             />
-
 
             <AfterHero />
 
@@ -110,6 +110,10 @@ const HomePage: React.FC = () => {
                     </Link>
                 }
             />
+
+            <PainsDesires />
+
+
             <Reviews />
                         
 

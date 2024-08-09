@@ -8,7 +8,7 @@ interface buttonInterface{
 export const Button:FC<buttonInterface> = ({text, btnType}) => {
 
     return(
-        <div className={`center flex-col relative group w-[150px] cursor-pointer py-3 uppercase text-gray-900`}>
+        <div className={`center flex-col relative group min-w-[150px] w-fit cursor-pointer py-3 uppercase text-gray-900`}>
 
             <p className={`z-10 transition-all duration-500 ease-in-out font-bold ${btnType == "primary" ? "group-hover:text-black group-active:text-black" : "group-hover:text-white group-active:text-white"}`}>
                 {text}

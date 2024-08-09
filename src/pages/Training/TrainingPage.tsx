@@ -56,7 +56,7 @@ const TrainingPage = () => {
     ]
 
   return (
-    <main className='bg-secondary w-full min-h-screen center flex-col pb-[15vh]'>
+    <main className='bg-secondary w-full min-h-screen center flex-col pb-[15vh] lg:pt-[10vh]'>
         <ImageText 
             img1={img1}
             img2={img2}

@@ -1,5 +1,5 @@
 import { logo, NavInfo } from "../Constants"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { BiMenu, BiX } from "react-icons/bi"
 import { RiArrowDropDownFill, RiArrowDropUpFill } from "react-icons/ri"
 import { useDispatch, useSelector } from "react-redux"
@@ -7,6 +7,7 @@ import { RootState } from "../store/AppStore"
 import { setCurrentDropDown, setCurrentNav, toggleShowNav } from "../store/navigation/navigationSlice"
 import { nav } from "../Interfaces"
 import { Button } from "./Button"
+import { useEffect } from "react"
 
 
 
@@ -18,11 +19,29 @@ export const Navbar: React.FC = () => {
     const currentDropDownIndex = navigation.currentDropDownIndex
     const scrolledDown = navigation.scrolledDown
     const currentDropDown = navigation.currentDropDown
+    const location = useLocation()
 
 
     const navigate = useNavigate()
     
+    useEffect(() => {
+        console.log(location.pathname)
+        NavInfo.forEach((nav, index) => {
+            if(location.pathname.includes(nav.link)){
+                dispatch(setCurrentNav(index))
+                dispatch(setCurrentDropDown(""))
+            }else if(location.pathname == "/"){
+                dispatch(setCurrentNav(0))
+                dispatch(setCurrentDropDown(""))
+            }else if(location.pathname.includes("contact")){
+                dispatch(setCurrentNav(4))
+                dispatch(setCurrentDropDown(""))
+            }
+        })
+    }, [location])
 
+
+    
     return(
         <>
            <>
