@@ -5,11 +5,12 @@ import { HelmetProvider  } from 'react-helmet-async';
 import { PageNotFound } from './pages/PageNotFound';
 import { Navbar } from './assets/components/Navbar';
 import ContactPage from './pages/Contact/ContactPage';
-import TrainingPage from './pages/Training/TrainingPage';
+import CoursesPage from './pages/Courses/CoursesPage';
 import { Footer } from './assets/components/Footer';
 import { BiLoaderCircle } from 'react-icons/bi';
 import AboutPage from './pages/About/AboutPage';
 import Services from './pages/services/Services';
+import Alert from './assets/components/Alert';
 
 
 const HomePage = lazy(() => import("./pages/home/page"))
@@ -19,6 +20,7 @@ export const AppRouter = () => {
     return (
         <HelmetProvider>
             <Router>
+                <Alert />
                 <ToTop />
                 <Suspense fallback={<Loader />}>
                     <Navbar />
@@ -26,7 +28,7 @@ export const AppRouter = () => {
                         <Route path="/" element={<HomePage />}/>
                         <Route path="/about" element={<AboutPage />}/>
                         <Route path="/services" element={<Services />}/>
-                        <Route path="/courses" element={<TrainingPage />}/>
+                        <Route path="/courses" element={<CoursesPage />}/>
                         <Route path="/contact" element={<ContactPage />}/>
                         <Route path="/*" element={<PageNotFound />} />
                     </Routes>

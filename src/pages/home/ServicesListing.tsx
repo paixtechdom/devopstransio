@@ -11,7 +11,7 @@ import { Button } from "../../assets/components/Button"
 
 export const ServicesListing = () => {
     return(
-        <div className="w-full center mt-[15vh]">
+        <div id="servicesListing" className="w-full center pt-[15vh]">
             <div className="w-11/12 lg:w-10/12 center flex-col  gap-[10vh] ">
                 <div className="w-full">
                     <Headers 

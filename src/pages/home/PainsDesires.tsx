@@ -55,7 +55,7 @@ export const PainsDesires = () => {
                         {
                             Fears.map((fear, i) => (
                                 <div key={i} className="flex items-start  font-bold text-zinc-800 h-[10vh] pt-5">
-                                    <div className="size-4 bg-secondary lg:bg-primary rounded-full m-1"></div>
+                                    {/* <div className="size-4 bg-secondary lg:bg-primary rounded-full m-1"></div> */}
                                     <p>{fear}</p>
                                 </div>
                             ))
@@ -95,14 +95,13 @@ export const PainsDesires = () => {
                         And ensure your app runs smoothly
                     </div>
 
-                    <div className="bg-se condary flex flex-col divide-y-2 divide-primary gap-2">                        {
-                        Desires.map((desire, i) => (
-                            <div key={i} className="flex items-start  font-bold text-zinc-800 h-[10vh] pt-5">
-                                <div className="size-4 bg-primary rounded-full m-1"></div>
-                                <p>{desire}</p>
-                            </div>
-                        ))
-                    }
+                    <div className="bg-se condary flex flex-col divide-y-2 divide-primary gap-2">                        
+                    {Desires.map((desire, i) => (
+                        <div key={i} className="flex items-start  font-bold text-zinc-800 h-[10vh] pt-5">
+                            {/* <div className="size-4 bg-primary rounded-full m-1"></div> */}
+                            <p>{desire}</p>
+                        </div>
+                    ))}
                 </div>
                 </div>
 

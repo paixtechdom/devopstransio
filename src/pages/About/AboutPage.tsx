@@ -4,6 +4,7 @@ import { Headers } from "../../assets/components/Headers"
 import { ImageText } from "../../assets/components/ImageText"
 import server from "../../assets/images/server.jpg"
 import benchmark from "../../assets/images/benchmark.jpg"
+import { Link } from "react-router-dom"
 
 
 const whyUsInfo = [
@@ -47,22 +48,28 @@ const AboutPage = () => {
                 </p>
 
                 <div className="flex items-center gap-4 mt-4">
-                    <Button 
-                        text={"Read more"}
-                        btnType="primary"
-                    />
+                    <div onClick={() => document.querySelector("#whyus")?.scrollIntoView({
+                        behavior: "smooth"
+                    })}>
+                        <Button 
+                            text={"Read more"}
+                            btnType="primary"
+                        />
+                    </div>
 
-                    <Button 
-                        text={"Contact us"}
-                        btnType="secondary"
-                    />
+                    <Link to="/contact">
+                        <Button 
+                            text={"Contact us"}
+                            btnType="secondary"
+                        />
+                    </Link>
                 </div>
             </div>
             
 
         </div>
 
-        <div className="w-full bg-primary bg-opacity-100 border-y border-primary border-opacity-60 backdrop-blur-2xl min-h-[70vh] center py-[15vh] my-[10vh]">
+        <div id="whyus" className="w-full bg-primary bg-opacity-100 border-y border-primary border-opacity-60 backdrop-blur-2xl min-h-[70vh] center py-[15vh] my-[10vh]">
             <div className="w-11/12 lg:w-10/12 flex items-center flex-col xl:flex-row gap-9 text-white">
 
                 <div className="flex flex-col gap-4 w-full xl:w-6/12">
@@ -102,10 +109,12 @@ const AboutPage = () => {
                 img2={benchmark}
                 desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, vitae alias eum consequuntur corrupti sunt asperiores tempore officia deserunt saepe aliquam magnam quod blanditiis minima error architecto ratione amet suscipit?"
                 btn={
-                    <Button 
-                        text="Start now"
-                        btnType="primary"
-                    />
+                    <Link to="/contact">
+                        <Button 
+                            text="Start now"
+                            btnType="primary"
+                        />
+                    </Link>
                 }
             />
 

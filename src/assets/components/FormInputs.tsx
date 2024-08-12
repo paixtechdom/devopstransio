@@ -26,7 +26,7 @@ export interface InputFieldInterface {
 
 export const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value, children, isRequired, isReadonly, func, placeholder, icon }) => {
     return(
-        <div className={`flex flex-col w-full gap-2 ${className} relative`}>
+        <div id={name} className={`flex flex-col w-full gap-2 ${className} relative`}>
             <label htmlFor={label} className={`${value !== "" ? "text-tertiary" : "text-zinc-900"} font-bold text- sm`}>
                 {label}
                 {

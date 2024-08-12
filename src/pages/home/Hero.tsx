@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Button } from "../../assets/components/Button"
 // import hero1 from "../../assets/images/comboImg.jpg"
 // import hero2 from "../../assets/images/stress.jpg"
@@ -30,14 +31,16 @@ export const Hero: React.FC = () => {
 
                         <div className="flex items-center gap-4 mt-4">
                             <Button 
-                                text={"View Services"}
+                                text={"Read more"}
                                 btnType="primary"
                             />
 
-                            <Button 
-                                text={"Contact us"}
-                                btnType="secondary"
-                            />
+                            <Link to="/contact">
+                                <Button 
+                                    text={"Contact us"}
+                                    btnType="secondary"
+                                />
+                            </Link>
                         </div>
                         
                     </div>

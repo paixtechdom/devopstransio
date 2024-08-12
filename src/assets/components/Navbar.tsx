@@ -25,7 +25,6 @@ export const Navbar: React.FC = () => {
     const navigate = useNavigate()
     
     useEffect(() => {
-        console.log(location.pathname)
         NavInfo.forEach((nav, index) => {
             if(location.pathname.includes(nav.link)){
                 dispatch(setCurrentNav(index))

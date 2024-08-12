@@ -24,15 +24,25 @@ const Services = () => {
                 </p>
 
                 <div className="flex items-center gap-4 mt-4">
-                    <Button 
-                        text={"Read more"}
-                        btnType="primary"
-                    />
 
-                    <Button 
-                        text={"Contact us"}
-                        btnType="secondary"
-                    />
+                    <div onClick={() => {
+                        document.querySelector("#servicesListing")?.scrollIntoView({
+                            behavior: "smooth"
+                        })
+                    }}>
+                        <Button 
+                            text={"Read more"}
+                            btnType="primary"
+                        />
+                    </div>
+
+                    <Link to="/contact">
+                        <Button 
+                            text={"Contact us"}
+                            btnType="secondary"
+                        />
+                    </Link>
+
                 </div>
             </div>
             
@@ -51,7 +61,7 @@ const Services = () => {
             btn={
                 <Link to={"/courses"}> 
                     <Button 
-                        text="CTA Button"
+                        text="start now"
                         btnType="primary"
                     />
                 </Link>

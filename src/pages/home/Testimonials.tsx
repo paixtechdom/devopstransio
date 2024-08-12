@@ -33,7 +33,7 @@ let reviews = [
     },
 ]
 
-export const Reviews = () => {
+export const Testimonials = () => {
     const [ currentReview, setCurrentReview ] = useState(0)
     useEffect(() => {
 
@@ -60,7 +60,7 @@ export const Reviews = () => {
     }
 
     return(
-        <main className="w-full bg-primary min-h-[70vh] center flex-col py-[10vh] my-[15vh]">
+        <main className="w-full bg-primary min-h-[70vh] center flex-col py-[10vh] mt-[15vh]">
             <div className="w-11/12 lg:w-9/12  flex items-center flex-col gap-9 text-black">
 
                 <div className="flex flex-col gap-2 w-full">
@@ -83,13 +83,11 @@ export const Reviews = () => {
                     }}>
 
                         {reviews.map((review, i) =>(                                    
-                            <div key={i} className={`transition-all duration-1000 w-screen`}>
+                            <div key={i} className={`transition-all duration-1000 w-screen center`}>
                                 <div className="flex w-screen gap-3 center">
+                                    <div className="w-full center">
 
-                                    <div className="flex w-10/12 md:w-8/12 lg:w-6/12 xl:w-5/12 gap-3 items-start bg-secondary shadow-xl rounded-xl p-7 py-9 min-h-[30vh]">
-
-                                        <div className="w-fit size-9">
-                                        </div>
+                                    <div className="flex w-9/12 md:w-8/12 lg:w-6/12 xl:w-5/12 gap-3 items-start bg-secondary shadow-xl rounded-2xl p-7 py-12 min-h-[30vh]">
 
                                         <div className="flex flex-col gap-3">
                                             <h3 className="font-bold text-primary text-xl">
@@ -99,6 +97,8 @@ export const Reviews = () => {
                                         </div>
 
                                     </div>
+                                    </div>
+
                                 </div>
                             </div>
                         ))}
@@ -116,6 +116,8 @@ export const Reviews = () => {
                     </button>
                 </div>
             </div>
+
+            
         </main>
     )
 }

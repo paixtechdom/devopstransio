@@ -12,22 +12,4 @@ data type for e in input handling :  ChangeEvent<HTMLInputElement>
 
 
 
-React.FC meaning
-
-interface props {
-    name: string,
-    id: number
-}
-
-
-const TypesProps: React.FC<props> = ({ name, id }) => {
-    
-    return (
-      <div>
-        <p>Name: {name}</p>
-        <p>ID: {id}</p>
-      </div>
-    );
-  };
-
 
