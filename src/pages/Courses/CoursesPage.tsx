@@ -28,10 +28,10 @@ const courses = [
     {
         title: "Web Development",
         body: [
-            "Frontend with html, css, javascript, react and next js -  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsam eum aliquam! Repellat deleniti rem dicta ab minima! Eius architecto a beatae quae provident eos asperiores. Accusamus, fugit iusto dolore quo aliquam vitae recusandae numquam nulla dolor, nemo autem adipisci qui commodi itaque? Accusantium ea debitis a commodi, autem quae laborum aperiam, corrupti quia iure incidunt maxime animi omnis quidem.",
-            "Backend with Php, sql - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsam eum aliquam! Repellat deleniti rem dicta ab minima! Eius architecto a beatae quae provident eos asperiores. Accusamus, fugit iusto dolore quo aliquam vitae recusandae numquam nulla dolor, nemo autem adipisci qui commodi itaque? Accusantium ea debitis a commodi, autem quae laborum aperiam, corrupti quia iure incidunt maxime animi omnis quidem.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsam eum aliquam! Repellat deleniti rem dicta ab minima! Eius architecto a beatae quae provident eos asperiores. Accusamus, fugit iusto dolore quo aliquam vitae recusandae numquam nulla dolor, nemo autem adipisci qui commodi itaque? Accusantium ea debitis a commodi, autem quae laborum aperiam, corrupti quia iure incidunt maxime animi omnis quidem.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsam eum aliquam! Repellat deleniti rem dicta ab minima! Eius architecto a beatae quae provident eos asperiores. Accusamus, fugit iusto dolore quo aliquam vitae recusandae numquam nulla dolor, nemo autem adipisci qui commodi itaque? Accusantium ea debitis a commodi, autem quae laborum aperiam, corrupti quia iure incidunt maxime animi omnis quidem."
+            "In today’s digital world, web development skills are in high demand. Whether you're looking to build visually stunning websites or robust web applications, mastering both frontend and backend technologies is crucial. Our courses are designed to equip you with the skills needed to excel in modern web development, covering everything from the basics to advanced techniques.",
+            "Learn how to create engaging and responsive user interfaces with HTML, CSS, JavaScript, React, and Next.js. These technologies are the backbone of frontend development, allowing you to design and build websites that not only look great but also provide seamless user experiences. Through our hands-on courses, you'll gain practical knowledge in building dynamic web pages, managing state with React, and optimizing your applications with Next.js for better performance and SEO.",
+            "Dive into the world of backend development with our comprehensive courses on PHP and SQL. These technologies are essential for creating the server-side logic and databases that power your web applications. You'll learn how to manage data, build APIs, and ensure secure and efficient communication between the frontend and backend. With PHP and SQL, you’ll be able to create dynamic and data-driven websites that meet the demands of modern users.",
+            "Our web development courses offer a blend of theory and practice, ensuring you understand the underlying principles while gaining hands-on experience. Whether you're a beginner or looking to advance your skills, our structured learning path will guide you through each stage of development, preparing you for a successful career in web development."
         ]
     }
 ]
@@ -224,14 +224,14 @@ const CoursesPage = () => {
         </div>
 
                 
-        <div className="w-11/12 lg:w-10/12 center flex-col gap-9 text-zinc-900 pt-[15vh]">
+        <div className="w-11/12 lg:w-10/12 center flex-col text-zinc-900 pt-[15vh]">
 
             <div id="registration" className="w-full py-[15vh]">
                 <Headers 
                     text="Register now"
                 />
 
-                <div className="flex flex-col gap-3 mt-5 text-zinc-900">
+                <div className="flex flex-col gap-3 mt-9 text-zinc-900">
                     <p className=""> REGISTER NOW FOR A PROFESSIONAL COURSE in devops cloud engineering and software engineering</p>
                     <p className="">Also available for siwes and I.T (Industrial Training) students</p>
                 </div>
@@ -239,7 +239,7 @@ const CoursesPage = () => {
 
 
             <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
-                <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full bg-primary  px-7 md:px-9 p-9 rounded-2xl py-[10vh]">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full bg-primary  px-7 md:px-9 p-9 rounded-2xl py-[5vh]">
                     <InputField 
                         label="First Name"
                         name="firstName"

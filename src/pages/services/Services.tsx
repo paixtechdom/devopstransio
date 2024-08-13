@@ -15,12 +15,13 @@ const Services = () => {
 
             <div className="flex min-h-[70vh] flex-col gap-4 w-full lg:w-9/12">
                 <Headers 
-                text="What we do"/>
+                    text="What we do"
+                />
                 <p className="leading-relaxed tracking-wide text-zinc-900">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nam voluptatem distinctio rerum, fuga, est pariatur tempore ipsum animi earum recusandae voluptate doloribus, eos dolore magnam voluptates sequi illo consequatur.
+                At [DevOps Company Name], we specialize in transforming your operations through cutting-edge DevOps practices. From CI/CD automation that accelerates your deployment processes to robust DevSecOps integrations, 24/7 server monitoring, and cloud migration, we ensure your systems are secure, efficient, and scalable. 
                 </p>
                 <p className="leading-relaxed tracking-wide text-zinc-900">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laboriosam. Labore tenetur eligendi, consequuntur ducimus soluta deleniti animi fuga veniam doloribus dicta et doloremque facilis natus placeat aperiam consequatur necessitatibus sequi quo esse accusantium, nulla ea mollitia recusandae nihil. Tenetur dolorum dolore recusandae vero voluptatibus atque maxime laborum delectus impedit.
+                Whether you need fault-tolerant infrastructure, load testing, or app modernization, our comprehensive services are designed to optimize performance and keep your business ahead of the curve. Explore our offerings and see how we can elevate your operations to the next level.
                 </p>
 
                 <div className="flex items-center gap-4 mt-4">

@@ -103,15 +103,21 @@ const AboutPage = () => {
 
 
             <ImageText 
-                header="Desires fulfilled"
-                span="Fears swallowed"
+                header="Understanding Your Challenges,"
+                span="Delivering Solutions"
                 img1={server}
                 img2={benchmark}
-                desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, vitae alias eum consequuntur corrupti sunt asperiores tempore officia deserunt saepe aliquam magnam quod blanditiis minima error architecto ratione amet suscipit?"
+                desc="At Cloud Transio, we understand the challenges you face—downtime, security risks, and the need for efficient, cost-effective operations. We’re here to meet your needs for a reliable online presence, fast deployment, and scalable solutions, all while ensuring enhanced security and minimizing costs."
+                /*
+                    Images:
+
+                    Image 1: A visual representation of a secure, stable server environment.
+                    Image 2: A depiction of a fast and efficient deployment process with a focus on security.
+                */
                 btn={
-                    <Link to="/contact">
+                    <Link to="/services">
                         <Button 
-                            text="Start now"
+                            text="Discover more"
                             btnType="primary"
                         />
                     </Link>

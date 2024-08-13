@@ -1,59 +1,75 @@
 import { Headers } from "../../assets/components/Headers"
+import linux from "../../assets/images/tools/linux.png"
+import git from "../../assets/images/tools/git.png"
+import github from "../../assets/images/tools/github.png"
+import maven from "../../assets/images/tools/maven.png"
+import jenkins from "../../assets/images/tools/jenkins.png"
+import dependencyCheck from "../../assets/images/tools/dependencyCheck.png"
+import sonarQube from "../../assets/images/tools/sonarQube.png"
+import docker from "../../assets/images/tools/docker.png"
+import kubernetes from "../../assets/images/tools/kubernetes.png"
+import terraform from "../../assets/images/tools/terraform.png"
+import ansible from "../../assets/images/tools/ansible.png"
+import grafana from "../../assets/images/tools/grafana.png"
+import prometheus from "../../assets/images/tools/prometheus.png"
+
 
 const Tools = [
   {
     tool: "Linux",
-    img: "linux"
+    img: linux
   },
   {
     tool: "Git",
-    img: "git"
+    img: git
   },
   {
     tool: "Github",
-    img: "github"
-  },
-  {
-    tool: "Maven",
-    img: "maven"
-  },
-  {
-    tool: "jenkins",
-    img: "jenkins"
-  },
-  {
-    tool: "Dependency",
-    img: "dependency"
-  },
-  {
-    tool: "Sonar Qube",
-    img: "sonarQube"
+    img: github
   },
   {
     tool: "Docker",
-    img: "docker"
+    img: docker
+  },
+  {
+    tool: "Maven",
+    img: maven
+  },
+  {
+    tool: "Dependency-check",
+    img: dependencyCheck
+  },
+  {
+    tool: "Sonar Qube",
+    img: sonarQube
   },
   {
     tool: "Kubernetes",
-    img: "kubernetes"
+    img: kubernetes
   },
   {
     tool: "Terraform",
-    img: "terraform"
+    img: terraform
   },
   {
     tool: "Ansible",
-    img: "ansible"
+    img: ansible
   },
   {
     tool: "Grafana",
-    img: "grafana"
+    img: grafana
   },
   {
-    tool: "Prametheus",
-    img: "prametheus"
+    tool: "Prometheus",
+    img: prometheus
+  },
+  {
+    tool: "jenkins",
+    img: jenkins
   },
 ]
+
+
 export const DevOpsTools = () => {
   return (
     <section className='center w-full my-[20vh] lg:mt-[35vh]'>
@@ -65,16 +81,10 @@ export const DevOpsTools = () => {
             />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-9 w-full">
+          <div className="grid grid-cols-4 md:grid-cols-5 place-items-center gap-y-9 gap-9 w-full">
             {
               Tools.map((tool, i) => (
-                // <img key={i} src={tool.img} alt={tool.tool} />
-                <div key={i} className="flex items-center gap-2">
-                  <p className="size-4 bg-primary rounded-full">
-                  </p>
-
-                  <p className="font-bold text-zinc-700">{tool.tool}</p>
-                </div>
+                <img key={i} src={tool.img} alt={tool.tool} className="w-10/12 bg-prim ary"/>
               ))
             }
           </div>

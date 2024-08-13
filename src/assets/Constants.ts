@@ -67,10 +67,10 @@ export const NavInfo = [
         title: 'Courses',
         link: 'courses',        
     },
-    // {
-    //     title: 'Contact Us',
-    //     link: 'contact',
-    // },
+    {
+        title: 'Blogs',
+        link: 'blogs',
+    },
 ]
 
 export const whyWeStandOut = [
@@ -584,4 +584,54 @@ export const ButtonClass = "rounded-full px-6 py-3 min-w-[200px] font-bold upper
 
 
 
-// 1. reviews, what makes your service different, features you consider makes you stand out , the pains of your clients - summary
+export const Blogs = [
+    {
+        id: "0",
+        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        date: "12-34-2045",
+        excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
+        img: server
+    },
+    {
+        id: "1",
+        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        date: "12-34-2045",
+        excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
+        img: analytics
+    },
+    {
+        id: "2",
+        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        date: "12-34-2045",
+        excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
+        img: processes
+    },
+    {
+        id: "3",
+        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        date: "12-34-2045",
+        excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
+        img: gears
+    },
+    {
+        id: "4",
+        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        date: "12-34-2045",
+        excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
+        img: cloouHead
+    },
+    {
+        id: "5",
+        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        date: "12-34-2045",
+        excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
+        img: comboImg
+    },
+    {
+        id: "6",
+        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        date: "12-34-2045",
+        excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
+        img: benchmark
+    },
+]

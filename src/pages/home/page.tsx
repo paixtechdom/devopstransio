@@ -7,10 +7,11 @@ import { Testimonials } from "./Testimonials"
 import img1 from "../../assets/images/server.jpg"
 import img2 from "../../assets/images/img2.jpg"
 import { Headers } from "../../assets/components/Headers"
-import { ServicesList } from "../../assets/Constants"
+import { Blogs, ServicesList } from "../../assets/Constants"
 import { Services } from "../../assets/Interfaces"
 import { Link } from "react-router-dom"
 import { PainsDesires } from "./PainsDesires"
+import { BlogListing } from "../blogs/BlogListing"
 
 
 const HomePage: React.FC = () => {
@@ -32,12 +33,18 @@ const HomePage: React.FC = () => {
             </> */}
             <Hero />
             
+            {/* 
+                Images:
+
+                A dynamic image of a cloud infrastructure with interconnected nodes representing cloud migration and DevOps integration.
+                A close-up shot of a developer’s hands typing code on a laptop, symbolizing CI/CD automation and continuous improvement.
+            */}
             <ImageText 
                 img1={img1}
                 img2={img2}
-                header="Animated images"
-                span="get them oooo"
-                desc="Change font to FormularBlack or formular bold for the h1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui voluptate deleniti possimus enim libero nihil facilis laudantium quod quae harum animi quos tenetur recusandae, officia omnis placeat dolorum, a veniam sunt necessitatibus ex nam, praesentium commodi voluptates? Modi, voluptatibus cupiditate."
+                header="Empowering Your Digital"
+                span="Transformation"
+                desc="At Cloud Transio, we drive your business forward with advanced DevOps practices, CI/CD automation, and secure, scalable cloud solutions. From seamless cloud migrations to 24/7 server monitoring, we optimize your digital infrastructure, empowering your journey to digital excellence."
                 btn={
                     <Link to={"/contact"}> 
                         <Button 
@@ -50,7 +57,7 @@ const HomePage: React.FC = () => {
 
             <AfterHero />
 
-            <div className="w-full center mt-[20vh]">
+            <section className="w-full center mt-[20vh]">
             <div className="w-11/12 lg:w-10/12 center flex-col  gap-[10vh] ">
                 <div className="flex flex-col-reverse w-full lg:flex-row justify-between gap-[50px] gap-y-12 items-center">
                     <div className="flex flex-col gap-7 w-full">
@@ -91,7 +98,7 @@ const HomePage: React.FC = () => {
                 </div>
                 </div>
 
-            </div>
+            </section>
 
             <DevOpsTools />
 
@@ -115,6 +122,31 @@ const HomePage: React.FC = () => {
 
 
             <Testimonials />
+
+
+            <section className="w-full center my-[20vh]">
+                <div className="justify-between w-11/12 lg:w-10/12 center flex-col  gap-[10vh] gap-y-12 items-center">
+                
+                        
+                    <div className="w-full">
+                        <Headers 
+                            text="Inspiring Articles"
+                        />
+                    </div>       
+
+                    <BlogListing 
+                        blogs={Blogs.filter((a, i) => i < 3 && a)}
+                    />
+                    <Link to="/blogs" className="w-full">
+                        <Button
+                            text={"view all"}
+                            btnType="primary"
+                        />
+                    </Link>
+
+                </div>
+            </section>
+
                         
             {/* <p>ASIDE n </p> */}
 
