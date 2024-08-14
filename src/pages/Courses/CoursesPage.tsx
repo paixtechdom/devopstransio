@@ -11,7 +11,7 @@ import { BsExclamationCircleFill } from "react-icons/bs"
 import { useDispatch } from "react-redux"
 import { setAlertMessage, setAlertType, toggleShowAlert } from "../../assets/store/AlertSlice"
 import { Helmet } from "react-helmet-async"
-// import axios from "axios"
+import axios from "axios"
 
 const courses = [
     {
@@ -84,71 +84,58 @@ const CoursesPage = () => {
             return;
         }
         setEmptyFieldsError(false)
-        // const subject = 'Important! New User Registration'
+        const subject = 'Important! New User Registration'
         console.log(cleanedInputs)
-        // sendContactEmail(subject)        
+        sendContactEmail(subject)        
 
     }
 
 
 
-    // const sendContactEmail = (subject:string) => {
-
-    //     axios.post(`registrationemail.php`, {
-    //         subject: subject,
-            
-    //         from: cleanedInputs.email,
-    //         name: cleanedInputs.fullName,
-
-    //         firstName: cleanedInputs.firstName,
-    //         lastName: cleanedInputs.lastName,
-    //         email: cleanedInputs.email,
-    //         gender: cleanedInputs.gender,
-    //         age: cleanedInputs.age,
-    //         phoneNumber: cleanedInputs.phoneNumber,
-    //         country: cleanedInputs.country,
-    //         course: cleanedInputs.course
-
-    //       }, {
-    //         headers: {
-    //           'Content-Type': 'application/json',
-    //         },
-    //       })
-    //         .then((response) => {
-    //             if(response.data.success == true){
-    //                 dispatch(setAlertType("success"))
-    //                 dispatch(toggleShowAlert(true))
-    //                 dispatch(setAlertMessage("Message sent successfully!"))
-    //                 clearForm()
+    const sendContactEmail = (subject:string) => {
+        cleanedInputs.subject = subject
+        axios.post(`http://localhost:80/api/registrationemail.php`, {
+            data: cleanedInputs
+          }, {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+            .then((response) => {
+                if(response.data.success == true){
+                    dispatch(setAlertType("success"))
+                    dispatch(toggleShowAlert(true))
+                    dispatch(setAlertMessage("Message sent successfully!"))
+                    clearForm()
                 
-    //             }else{
-    //                 isError()
-    //             }
-    //         })
-    //         .catch(() => {
-    //             isError()
-    //         });
-    //         setLoading(false)
-    // }
+                }else{
+                    isError()
+                }
+            })
+            .catch(() => {
+                isError()
+            });
+            setLoading(false)
+    }
 
-    // const isError = () => {
-    //     dispatch(toggleShowAlert(true))
-    //     dispatch(setAlertMessage("Failed to send message!"))
-    //     dispatch(setAlertType("error"))
-    // }
+    const isError = () => {
+        dispatch(toggleShowAlert(true))
+        dispatch(setAlertMessage("Failed to send message!"))
+        dispatch(setAlertType("error"))
+    }
 
-    // const clearForm = () => {
-    //     setFormInputs({
-    //         firstName: "",
-    //         lastName: "",
-    //         email: "",
-    //         gender: "",
-    //         age: "",
-    //         phoneNumber: "",
-    //         country: "",
-    //         course: ""
-    //     })
-    // }
+    const clearForm = () => {
+        setFormInputs({
+            firstName: "",
+            lastName: "",
+            email: "",
+            gender: "",
+            age: "",
+            phoneNumber: "",
+            country: "",
+            course: ""
+        })
+    }
 
 
 

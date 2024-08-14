@@ -4,7 +4,7 @@ import { Headers } from "../../assets/components/Headers"
 import { Button } from "../../assets/components/Button"
 import { useDispatch } from "react-redux"
 import { setAlertMessage, setAlertType, toggleShowAlert } from "../../assets/store/AlertSlice"
-// import axios from "axios"
+import axios from "axios"
 import { BsExclamationCircleFill } from "react-icons/bs"
 import { BiLoaderAlt } from "react-icons/bi"
 import { Helmet } from "react-helmet-async"
@@ -50,54 +50,60 @@ const ContactPage = () => {
             return;
         }
         setEmptyFieldsError(false)
-        // const subject = 'Message from ' + cleanedInputs.fullName + ' to Cloud Transio'
-        // sendContactEmail(subject)        
+        cleanedInputs['subject'] = 'Message from ' + cleanedInputs.fullName + ' to Cloud Transio'
+        sendContactEmail()        
 
     }
 
 
 
-    // const sendContactEmail = (subject:string) => {
-    //     cleanedInputs.message = cleanedInputs.message.replace(/\n/g, '<br>')
-    //     cleanedInputs.subject = subject
+    const sendContactEmail = () => {
+        
+        console.log(cleanedInputs.message)
 
-    //     axios.post(`http://localhost:80/api/contactemail.php`, {
-    //         data: cleanedInputs
-    //       }, {
-    //         headers: {
-    //           'Content-Type': 'application/json',
-    //         },
-    //       })
-    //         .then((response) => {
-    //             if(response.data.success == true){
-    //                 dispatch(setAlertType("success"))
-    //                 dispatch(toggleShowAlert(true))
-    //                 dispatch(setAlertMessage("Message sent successfully!"))
-    //                 clearForm()
+        cleanedInputs['message'] = cleanedInputs.message.replace(/\n/g, '<br>')
+
+        console.log(cleanedInputs.message)
+         
+
+
+        axios.post(`http://localhost:80/api/contactemail.php`, {
+            data: cleanedInputs
+          }, {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+            .then((response) => {
+                if(response.data.success == true){
+                    dispatch(setAlertType("success"))
+                    dispatch(toggleShowAlert(true))
+                    dispatch(setAlertMessage("Message sent successfully!"))
+                    clearForm()
                 
-    //             }else{
-    //                 isError()
-    //             }
-    //         })
-    //         .catch(() => {
-    //             isError()
-    //         });
-    //         setLoading(false)
-    // }
+                }else{
+                    isError()
+                }
+            })
+            .catch(() => {
+                isError()
+            });
+            setLoading(false)
+    }
 
-    // const isError = () => {
-    //     dispatch(toggleShowAlert(true))
-    //     dispatch(setAlertMessage("Failed to send message!"))
-    //     dispatch(setAlertType("error"))
-    // }
+    const isError = () => {
+        dispatch(toggleShowAlert(true))
+        dispatch(setAlertMessage("Failed to send message!"))
+        dispatch(setAlertType("error"))
+    }
 
-    // const clearForm = () => {
-    //     setFormInputs({
-    //         fullName: "",
-    //         email: "",            
-    //         message: "",
-    //     })
-    // }
+    const clearForm = () => {
+        setFormInputs({
+            fullName: "",
+            email: "",            
+            message: "",
+        })
+    }
 
   return (
     <>  
@@ -143,7 +149,8 @@ const ContactPage = () => {
                                 onChange={handleChange}
                                 name={'message'}
                                 required
-                                value={formInputs.message}                            
+                                value={formInputs.message}   
+
                                 className={`bg-transparent border-none w-full h-full outline-none px-3 text-black`}
                             ></textarea>
                         </div>

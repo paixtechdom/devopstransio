@@ -13,7 +13,6 @@ export interface InputFieldInterface {
     placeholder?: string,
     formInputs?: string,
     children?: JSX.Element,
-    isRequired?: boolean, 
     isReadonly?: boolean, 
     func?: Function, 
     icon?:JSX.Element
@@ -24,15 +23,11 @@ export interface InputFieldInterface {
 
 
 
-export const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value, children, isRequired, isReadonly, func, placeholder, icon }) => {
+export const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value, children, isReadonly, func, placeholder, icon }) => {
     return(
         <div id={name} className={`flex flex-col w-full gap-2 ${className} relative`}>
             <label htmlFor={label} className={`${value !== "" ? "text-tertiary" : "text-zinc-900"} font-bold text- sm`}>
                 {label}
-                {
-                isRequired ?
-                <span className="text-red-600 ml-1">*</span> : ''
-                }
             </label>
 
             <div className={`flex rounded-full  w-full items-center relative shadow-xl bg-secondary bg-opacity-30 ${value !== "" ? "" : ""} cursor-pointer

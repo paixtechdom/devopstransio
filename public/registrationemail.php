@@ -12,24 +12,36 @@ require_once 'config.php';
 // Get data from the React app
 $fetchedData = json_decode(file_get_contents('php://input'), true);
 
-$to = "management@onidsontravels.com";
+$to = "management@cloudtransio.com";
 $data = $fetchedData['data'];
 
+// var_dump ($data);
+
 $subject= $data['subject'];
-$message = $data['message'];
-$email = $data['email'];
-$fullName = $data['fullName'];
+$firstName= $data['firstName'];
+$lastName= $data['lastName'];
+$email= $data['email'];
+$gender= $data['gender'];
+$age= $data['age'];
+$phoneNumber= $data['phoneNumber'];
+$country= $data['country'];
+$course= $data['course'];
 
 
+$details = "";
 
+foreach ($data as $key => $value) {
+    if($key !== 'subject'){
+        $details = $details . "<p><b>$key:</b> $value </p>";
+    }
+}
 
-
-$message = '
+$message = "
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
     <head>
-        <meta charset="UTF-8">
-        <meta fullName="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset='UTF-8'>
+        <meta fullName='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Email to Onidson Travels and Logistics Ltd</title>
         <style>
             body{
@@ -85,27 +97,19 @@ $message = '
         </style>
     </head>
     <body>
-        <div class="container">
-            <!-- <div class="image">
-                <img src="../../assets/images/favicon.ico"/>
+        <div class='container'>
+            <!-- <div class='image'>
+                <img src='../../assets/images/favicon.ico'/>
             </div> -->
             <hr>
             <br>
-            <h2 class="primary font-bold">' . $subject .' </h2>  
-            <hr>
-            
-            <p class="message">Name : '.  $fullName . '</p>
-
-            <p class="message">Email: '.  $email . '</p> <br>
-
-            <p class=""><b> Message </b></p> 
-            <p class="message p">'.  $message . '</p> <br>
-
-            <a href="mailto:'.$email.'" class="a">Click to Reply mail</a>
+            <h2 class='primary font-bold'> $subject</h2>  
+            <hr>          
+            $details
             <br>
             <br>
             <hr>
-            <a href="https://cloudtransio.com" class="a font-bold">
+            <a href='https://cloudtransio.com' class='a font-bold'>
                 <h2>  CLOUD TRANSIO </h2>
             </a> <br> <br>
 
@@ -113,42 +117,43 @@ $message = '
         </div>
     </body>
 </html>
-';
+";
 
 
 echo $message;  
 
 
-$url = 'https://api.elasticemail.com/v2/email/send';
 
-try{
-        $post = array('from' => $to,
-        'fromName' => $fullName,
-        'apikey' => API_KEY,
-        'subject' => $subject,
-        'to' => $to,
-        'bodyHtml' => $message,
-        'bodyText' => 'Nessage Body',
-        'isTransactional' => false);
+// $url = 'https://api.elasticemail.com/v2/email/send';
+
+// try{
+//         $post = array('from' => $to,
+//         'fromName' => $fullName,
+//         'apikey' => API_KEY,
+//         'subject' => $subject,
+//         'to' => $to,
+//         'bodyHtml' => $message,
+//         'bodyText' => 'Nessage Body',
+//         'isTransactional' => false);
         
-        $ch = curl_init();
-        curl_setopt_array($ch, array(
-            CURLOPT_URL => $url,
-            CURLOPT_POST => true,
-            CURLOPT_POSTFIELDS => $post,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_HEADER => false,
-            CURLOPT_SSL_VERIFYPEER => false
-        ));
+//         $ch = curl_init();
+//         curl_setopt_array($ch, array(
+//             CURLOPT_URL => $url,
+//             CURLOPT_POST => true,
+//             CURLOPT_POSTFIELDS => $post,
+//             CURLOPT_RETURNTRANSFER => true,
+//             CURLOPT_HEADER => false,
+//             CURLOPT_SSL_VERIFYPEER => false
+//         ));
         
-        $result=curl_exec ($ch);
-        curl_close ($ch);
+//         $result=curl_exec ($ch);
+//         curl_close ($ch);
         
-        echo $result;	
-}
-catch(Exception $ex){
-    echo $ex->getMessage();
-}
+//         echo $result;	
+// }
+// catch(Exception $ex){
+//     echo $ex->getMessage();
+// }
    
 
 
