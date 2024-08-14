@@ -1,39 +1,52 @@
 import { FC } from "react"
-import { Button } from "./Button"
-import { useDispatch } from "react-redux"
-import { setCurrentService } from "../store/navigation/navigationSlice"
+import { Link } from "react-router-dom"
+import { BsArrowRight } from "react-icons/bs"
 
-export interface cardInterface {
+export interface blogInterface {
     img: string,
     title: string,
-    desc: string,
-    index: number
+    excerpt: string,
+    date: string,
+    id: string
 }
+interface cardInterface {
+    blog: blogInterface
+}   
 
 
-export const Card:FC<cardInterface> = ({img, title, desc, index}) => {
-    const dispatch = useDispatch()
+export const Card:FC<cardInterface> = ({blog}) => {
+    
 
     return(
-        <div className="flex border border-primary border-opacity-20 to-secondary flex-col rounded-3xl relative overflow-hidden group cursor-pointer" onClick={() => dispatch(setCurrentService(index))}>
+        <Link to={`/blogs/${blog.id}`} className="flex flex-col rounded-xl relative overflow-hidden cursor-pointer w-full gap-7">
 
-            <div className="absolute top-5 right-5 rounded-full size-4 bg-secondary border border-primary"></div>
+            <div className="absolute top-5 right-5 rounded-full size-4 bg-primary border border-secondary"></div>
 
-            <img src={img} alt={title} className="min-h-[45vh] lg:h-[45vh] object-cover rounded-2xl shadow m-2"/>
+            <img src={blog.img} alt={blog.title} className="min-h-[40vh] lg:h-[40vh] object-cover rounded-xl shadow m- 2"/>
             
-            <div className="flex flex-col justify-end  mt-9 pb-5 px-6 absolute bottom-0 w-full bg-gradient-to-b h-5/6 from-transparent via-[rgb(0,0,0,0.9)] to-black transition-all duration-500 ease-in-out group group-hover:to-black group-hover:via-transparent">
-                {/* <p className="size-3 rounded-full bg-primary"></p> */}
+            <div className="flex flex-col justify-end p-1 w-full">
+
+                <p className="text-sm italic">
+                    {blog.date}
+                </p>
+
                 <div className="flex items-start gap-2 text-primary">
-                    <h3 className="font-bold text-xl">{title}</h3>
+                    <h3 className="font-bold text-xl capitalize">{blog.title}</h3>
                 </div>
                 
-                <p className="text-zinc-300  mb-3 transition-all duration-500 ease-in-out h-14 group-hover:h-0 group-hover:opacity-0">{desc}</p>
-
-                <Button
-                    text="Read more"
+                <p className="text-zinc-900  my-2">
+                    {blog.excerpt.slice(0, 100)}... 
+                    <span className="flex items-center gap-2 capitalize">
+                        <b>read more</b> <BsArrowRight />
+                    </span>
+                </p>
+{/* 
+                <Button 
+                    text={"read more"}
                     btnType="secondary"
-                />
+                /> */}
             </div>
-        </div>
+
+        </Link>
     )
 } 

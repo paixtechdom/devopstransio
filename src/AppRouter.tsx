@@ -12,6 +12,7 @@ import AboutPage from './pages/About/AboutPage';
 import Services from './pages/services/Services';
 import Alert from './assets/components/Alert';
 import BlogsPage from './pages/blogs/BlogsPage';
+import BlogPage from './pages/blogs/BlogPage';
 
 
 const HomePage = lazy(() => import("./pages/home/page"))
@@ -31,6 +32,7 @@ export const AppRouter = () => {
                         <Route path="/services" element={<Services />}/>
                         <Route path="/courses" element={<CoursesPage />}/>
                         <Route path="/blogs" element={<BlogsPage />}/>
+                        <Route path="/blogs/:id" element={<BlogPage />}/>
                         <Route path="/contact" element={<ContactPage />}/>
                         <Route path="/*" element={<PageNotFound />} />
                     </Routes>
