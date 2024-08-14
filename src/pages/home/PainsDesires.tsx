@@ -34,7 +34,7 @@ export const PainsDesires = () => {
 
 
     return(
-        <section className="w-full center my-[15vh] lg:my-[20vh] min-h-[70vh]">
+        <section className="w-full center my-[15vh] min-h-[70vh]">
             <div className="flex flex-col lg:flex-row w-11/12 lg:w-10/12 bg-primary bg-opacity-50 rounded-2xl relative h-full py-0 pb-[5vh] lg:py-[5vh] gap-9 lg:gap-0">
 
                 <div className={`transition-all duration-500 center p-7 absolute lg:w-6/12 top-0 h-full ${
@@ -47,7 +47,7 @@ export const PainsDesires = () => {
                 
                 <div className={`flex flex-col gap-5 lg:m-4 p-7 pt-[7vh] lg:pt-7 rounded-t-2xl lg:rounded-t-none z-10 w-full 
                     ${showFears ? "" : "lg:hidden"} bg-primary lg:bg-transparent`}>
-                    <div className={`text-zinc-800 text-2xl font-bold w-full`}>
+                    <div className={`text-zinc-800 text-2xl capitalize  font-bold w-full`}>
                         We eliminate your fears
                     </div>
 
@@ -66,7 +66,7 @@ export const PainsDesires = () => {
                 <div className={`lg:m-4 rounded-2xl p-7 z-10 cursor-pointer b g-red-500 w-full ${showFears ? "hidden lg:flex lg:justify-center lg:items-center" : "hidden"} `} onClick={
                     () => toggleDisplay()}>
                     <div className="flex flex-col">
-                        <div className="text-2xl text-zinc-800 font-bold mb-4">
+                        <div className="text-2xl capitalize  text-zinc-800 font-bold mb-4">
                             And ensure your app runs smmothly
                         </div>
                         <Button 
@@ -80,7 +80,7 @@ export const PainsDesires = () => {
                 <div className={`lg:m-4 rounded-2xl p-7 z-10 w-full cursor-pointer b g-red-500 ${showFears ? "hidden" : "hidden lg:flex lg:justify-cen ter lg:items-center"}`}
                 onClick={() => toggleDisplay()}>
                     <div className="flex flex-col w-full m-3">
-                        <div className="text-2xl text-zinc-800 font-bold mb-4">
+                        <div className="text-2xl capitalize text-zinc-800 font-bold mb-4">
                             We eliminate your fears
                         </div>
                         <Button 
@@ -91,7 +91,7 @@ export const PainsDesires = () => {
                 </div>
                 
                 <div className={`flex flex-col gap-5 lg:m-4 p-7 z-10 w-full center ${showFears ? "lg:hidden" : ""}`}>
-                    <div className="text-zinc-800 text-2xl font-bold w-full">
+                    <div className="text-zinc-800 text-2xl capitalize font-bold w-full">
                         And ensure your app runs smoothly
                     </div>
 

@@ -6,10 +6,15 @@ import { ServicesListing } from '../home/ServicesListing'
 import { AService } from '../Service/AService'
 import img1 from "../../assets/images/server.jpg"
 import img2 from "../../assets/images/img2.jpg"
+import { Helmet } from 'react-helmet-async'
 
 const Services = () => {
   return (
     <>
+        <Helmet>
+            <title>Our Services | Cloud Transio</title>
+            <meta name="description" content="" />
+        </Helmet>
         <main className='bg-secondary w-full min-h-screen center flex-col py-[10vh] pt-[15vh] lg:pt-[20vh]'>
         <div className="w-11/12 lg:w-10/12 flex flex-col gap-9 text-">
 

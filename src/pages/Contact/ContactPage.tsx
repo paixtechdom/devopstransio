@@ -7,6 +7,7 @@ import { setAlertMessage, setAlertType, toggleShowAlert } from "../../assets/sto
 // import axios from "axios"
 import { BsExclamationCircleFill } from "react-icons/bs"
 import { BiLoaderAlt } from "react-icons/bi"
+import { Helmet } from "react-helmet-async"
 
 
 
@@ -99,75 +100,81 @@ const ContactPage = () => {
     // }
 
   return (
-    <main className='bg-secondary w-full min-h-screen center py-[15vh]'>
-        <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-9 text-white">
-        <div className="w-full mb-9">
+    <>  
+        <Helmet>
+            <title>Contact | Cloud Transio</title>
+            <meta name="description" content="" />
+        </Helmet>
+        <main className='bg-secondary w-full min-h-screen center py-[15vh]'>
+            <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-9 text-white">
+            <div className="w-full mb-9">
 
-            <Headers 
-                text="Contact Us"
-            />
-        </div>
-
-        <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
-
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full bg-primary px-7 md:px-9 p-9 rounded-2xl py-[10vh]">
-
-                <InputField 
-                    label="Full Name"
-                    name="fullName"
-                    handleChange={handleChange}
-                    type="text"
-                    value={formInputs.fullName}
+                <Headers 
+                    text="Contact Us"
                 />
-                <InputField 
-                    label="Email Address"
-                    name="email"
-                    handleChange={handleChange}
-                    type="email"
-                    value={formInputs.email}
-                />
+            </div>
 
-                <div className={`flex flex-col w-full gap-2 relative`}>
-                    <label htmlFor={"Message"} className={`${formInputs.message !== "" ? "text-tertiary" : "text-zinc-900"} text-sm font-bold`}>
-                        Message                       
-                    </label>
+            <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
 
-                    <div className={`flex rounded-3xl w-full items-center relative ${formInputs.message !== "" ? "" : "text-zinc-900"}  cursor-pointer overflow-hidden min-h-[20vh] h-[20vh] bg-secondary bg-opacity-30 shadow-2xl pt-3 p-2`}>
-                        <textarea 
-                            onChange={handleChange}
-                            name={'message'}
-                            required
-                            value={formInputs.message}                            
-                            className={`bg-transparent border-none w-full h-full outline-none px-3 text-black`}
-                        ></textarea>
-                    </div>
-                </div>
+                <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full bg-primary px-7 md:px-9 p-9 rounded-2xl py-[10vh]">
 
-                {emptyFieldsError ? 
-                    <div className="text-red-900 text-lg flex gap-2 items-center col-span-2"><BsExclamationCircleFill /> Please, fill out all fields
-                    </div> 
-                    : ""
-                }
-
-                <div className="mt-5" onClick={(e ) => !loading && handleSubmit(e)}>
-                    <Button 
-                        text={loading ? 
-                            <>
-                                <span>Sending</span>
-                                <BiLoaderAlt className="animate-spin ml-2 text-xl" />
-                            </> 
-                            : <>Send message</>}
-                        btnType="secondary"
+                    <InputField 
+                        label="Full Name"
+                        name="fullName"
+                        handleChange={handleChange}
+                        type="text"
+                        value={formInputs.fullName}
                     />
-                </div>
-            </form>
+                    <InputField 
+                        label="Email Address"
+                        name="email"
+                        handleChange={handleChange}
+                        type="email"
+                        value={formInputs.email}
+                    />
 
-            <div className="w-full lg:w-6/12 h-[50vh] bg-tertiary top-[20vh] sticky"></div>
-        </div>
+                    <div className={`flex flex-col w-full gap-2 relative`}>
+                        <label htmlFor={"Message"} className={`${formInputs.message !== "" ? "text-tertiary" : "text-zinc-900"} text-sm font-bold`}>
+                            Message                       
+                        </label>
+
+                        <div className={`flex rounded-3xl w-full items-center relative ${formInputs.message !== "" ? "" : "text-zinc-900"}  cursor-pointer overflow-hidden min-h-[20vh] h-[20vh] bg-secondary bg-opacity-30 shadow-2xl pt-3 p-2`}>
+                            <textarea 
+                                onChange={handleChange}
+                                name={'message'}
+                                required
+                                value={formInputs.message}                            
+                                className={`bg-transparent border-none w-full h-full outline-none px-3 text-black`}
+                            ></textarea>
+                        </div>
+                    </div>
+
+                    {emptyFieldsError ? 
+                        <div className="text-red-900 text-lg flex gap-2 items-center col-span-2"><BsExclamationCircleFill /> Please, fill out all fields
+                        </div> 
+                        : ""
+                    }
+
+                    <div className="mt-5" onClick={(e ) => !loading && handleSubmit(e)}>
+                        <Button 
+                            text={loading ? 
+                                <>
+                                    <span>Sending</span>
+                                    <BiLoaderAlt className="animate-spin ml-2 text-xl" />
+                                </> 
+                                : <>Send message</>}
+                            btnType="secondary"
+                        />
+                    </div>
+                </form>
+
+                <div className="w-full lg:w-6/12 h-[50vh] bg-tertiary top-[20vh] sticky"></div>
+            </div>
 
 
-        </div>       
-    </main>
+            </div>       
+        </main>
+    </>
   )
 }
 

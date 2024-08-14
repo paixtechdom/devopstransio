@@ -4,6 +4,7 @@ import { Blogs } from "../../assets/Constants"
 import { Headers } from "../../assets/components/Headers"
 import { BlogListing } from "./BlogListing"
 import { Button } from "../../assets/components/Button"
+import { Helmet } from "react-helmet-async"
 
 
 const BlogPage = () => {
@@ -30,53 +31,59 @@ const BlogPage = () => {
 
 
   return (
-    <main className="center py-[15vh]">
-      <div className="flex flex-col w-11/12 lg:w-10/12">
+    <>  
+      <Helmet>
+          <title>{`${blog?.title || "Reading Blog "}`} | Cloud Transio</title>
+          <meta name="description" content="" />
+      </Helmet>
+      <main className="center py-[15vh]">
+        <div className="flex flex-col w-11/12 lg:w-10/12">
 
-        <div className="flex flex-col lg:flex-row items-center gap-[50px] w-full">
-          <div className="flex flex-col">
+          <div className="flex flex-col lg:flex-row items-center gap-[50px] w-full">
+            <div className="flex flex-col">
 
-            <p className="text-sm ">{blog?.date}</p>
-            <h1 className="text-4xl font-bold capitalize text-zinc-800">{blog?.title}</h1>
-            <p className="mt-7">{blog?.excerpt}</p>
+              <p className="text-sm ">{blog?.date}</p>
+              <h1 className="text-4xl font-bold capitalize text-zinc-800">{blog?.title}</h1>
+              <p className="mt-7">{blog?.excerpt}</p>
 
+            </div>
+
+
+            <img src={blog?.img} alt={blog.title} className="object-cover lg:h-[50vh] w-full rounded-xl"/>
           </div>
 
 
-          <img src={blog?.img} alt={blog.title} className="object-cover lg:h-[50vh] w-full rounded-xl"/>
+          <section className="flex flex-col gap-9 mt-[15vh]">
+            {body.map((b, i) => (
+              <p key={i}>{b}</p>
+            ))}
+          </section>
+
+
+          <section className="justify-between w-full center flex-col mt-[20vh] gap-[10vh] gap-y-12 items-center">
+          
+                  
+              <div className="w-full">
+                  <Headers 
+                      text="Related Articles"
+                  />
+              </div>       
+
+              <BlogListing 
+                  blogs={Blogs.filter((a, i) => i < 3 && a)}
+              />
+              <Link to="/blogs" className="w-full">
+                  <Button
+                      text={"view all"}
+                      btnType="primary"
+                  />
+              </Link>
+
+          </section>
+          
         </div>
-
-
-        <section className="flex flex-col gap-9 mt-[15vh]">
-          {body.map((b, i) => (
-            <p key={i}>{b}</p>
-          ))}
-        </section>
-
-
-        <section className="justify-between w-full center flex-col mt-[20vh] gap-[10vh] gap-y-12 items-center">
-        
-                
-            <div className="w-full">
-                <Headers 
-                    text="Related Articles"
-                />
-            </div>       
-
-            <BlogListing 
-                blogs={Blogs.filter((a, i) => i < 3 && a)}
-            />
-            <Link to="/blogs" className="w-full">
-                <Button
-                    text={"view all"}
-                    btnType="primary"
-                />
-            </Link>
-
-        </section>
-        
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
 

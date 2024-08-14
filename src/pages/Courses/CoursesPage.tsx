@@ -10,6 +10,7 @@ import { BiChevronDown, BiLoaderAlt } from "react-icons/bi"
 import { BsExclamationCircleFill } from "react-icons/bs"
 import { useDispatch } from "react-redux"
 import { setAlertMessage, setAlertType, toggleShowAlert } from "../../assets/store/AlertSlice"
+import { Helmet } from "react-helmet-async"
 // import axios from "axios"
 
 const courses = [
@@ -152,217 +153,223 @@ const CoursesPage = () => {
 
 
   return (
-    <main className='bg-secondary w-full min-h-screen center flex-col pb-[15vh] lg:pt-[10vh]'>
+    <>  
+        <Helmet>
+            <title>Courses | Cloud Transio</title>
+            <meta name="description" content="" />
+        </Helmet>
+        <main className='bg-secondary w-full min-h-screen center flex-col pb-[15vh] lg:pt-[10vh]'>
 
 
-        <ImageText 
-            img1={img1}
-            img2={img2}
-            header='Get started now'
-            span='with a course in tech'
-            desc="Join our free course on DevOps and Cloud Engineering. We also offer course on Web Development. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
-            btn={
-                <div className="flex items-center gap-4 mt-4">
+            <ImageText 
+                img1={img1}
+                img2={img2}
+                header='Get started now'
+                span='with a course in tech'
+                desc="Join our free course on DevOps and Cloud Engineering. We also offer course on Web Development. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
+                btn={
+                    <div className="flex items-center gap-4 mt-4">
 
-                    <div onClick={() => document.querySelector('#registration')?.scrollIntoView({
-                        behavior: "smooth"
-                    })}>
+                        <div onClick={() => document.querySelector('#registration')?.scrollIntoView({
+                            behavior: "smooth"
+                        })}>
 
-                        <Button 
-                            text="Start now"
-                            btnType="primary"
-                        />
+                            <Button 
+                                text="Start now"
+                                btnType="primary"
+                            />
+                        </div>
+
+
+                        <div onClick={() => document.querySelector('#coursesintro')?.scrollIntoView({
+                            behavior: "smooth"
+                        })}>
+
+                            <Button 
+                                text="Read more"
+                                btnType="secondary"
+                            />
+                        </div>
+
+
                     </div>
+                }
+            />
 
 
-                    <div onClick={() => document.querySelector('#coursesintro')?.scrollIntoView({
-                        behavior: "smooth"
-                    })}>
-
-                        <Button 
-                            text="Read more"
-                            btnType="secondary"
-                        />
-                    </div>
+            <div id="coursesintro" className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-[20vh] text-zinc-900 pt-[15vh]">
 
 
-                </div>
-            }
-        />
-
-
-        <div id="coursesintro" className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-[20vh] text-zinc-900 pt-[15vh]">
-
-
-            <div className="flex flex-col gap-9 w-full">
-                <Headers 
-                    text={courses[0].title}
-                />
-                <div className="flex flex-col gap-5 text-black">
-                    {
-                        courses[0].body.map((p, i) => (
-                            <p key={i}>{p}</p>
-
-                        ))
-                    }
-                </div>
-            </div>
-
-            <div className="flex flex-col gap-9 w-full">
-                <Headers 
-                    text={courses[1].title}
-                />
-                <div className="flex flex-col gap-5 text-black">
-                    {
-                        courses[1].body.map((p, i) => (
-                            <p key={i}>{p}</p>
-
-                        ))
-                    }
-                </div>
-            </div>
-        </div>
-
-                
-        <div className="w-11/12 lg:w-10/12 center flex-col text-zinc-900 pt-[15vh]">
-
-            <div id="registration" className="w-full py-[15vh]">
-                <Headers 
-                    text="Register now"
-                />
-
-                <div className="flex flex-col gap-3 mt-9 text-zinc-900">
-                    <p className=""> REGISTER NOW FOR A PROFESSIONAL COURSE in devops cloud engineering and software engineering</p>
-                    <p className="">Also available for siwes and I.T (Industrial Training) students</p>
-                </div>
-            </div>
-
-
-            <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
-                <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full bg-primary  px-7 md:px-9 p-9 rounded-2xl py-[5vh]">
-                    <InputField 
-                        label="First Name"
-                        name="firstName"
-                        handleChange={handleChange}
-                        type="text"
-                        value={formInputs.firstName}
+                <div className="flex flex-col gap-9 w-full">
+                    <Headers 
+                        text={courses[0].title}
                     />
-                    <InputField 
-                        label="Last Name"
-                        name="lastName"
-                        handleChange={handleChange}
-                        type="text"
-                        value={formInputs.lastName}
-                    />
-                    <RadioSelect 
-                        options={["Male", "Female", "Rather Not say"]}
-                        formInputs={formInputs}
-                        label={"Gender"}
-                        name={"gender"}
-                        setFormInputs={setFormInputs}
-                    />
-                    <InputField 
-                        label="Age"
-                        name="age"
-                        handleChange={handleChange}
-                        type="string"
-                        value={formInputs.age}
-                    />
-                    <InputField 
-                        label="Email Address"
-                        name="email"
-                        handleChange={handleChange}
-                        type="email"
-                        value={formInputs.email}
-                    />
-                    <InputField 
-                        label="Phone Number"
-                        name="phoneNumber"
-                        handleChange={handleChange}
-                        type="tel"
-                        value={formInputs.phoneNumber}
-                    />
-                    
-                    <InputField 
-                        label="Select Country"
-                        name="country"
-                        handleChange={handleChange}
-                        type="text"
-                        value={formInputs.country}
-                        isReadonly={true}
-                        func={() => {
-                            setShowPopUp('')
-                            setShowCountries(true)
-                        }}
-                        icon={
-                            <BiChevronDown className="text-4xl mr-4"/>
+                    <div className="flex flex-col gap-5 text-black">
+                        {
+                            courses[0].body.map((p, i) => (
+                                <p key={i}>{p}</p>
+
+                            ))
                         }
-                    >
-                        <CountriesOption 
+                    </div>
+                </div>
+
+                <div className="flex flex-col gap-9 w-full">
+                    <Headers 
+                        text={courses[1].title}
+                    />
+                    <div className="flex flex-col gap-5 text-black">
+                        {
+                            courses[1].body.map((p, i) => (
+                                <p key={i}>{p}</p>
+
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+
+                    
+            <div className="w-11/12 lg:w-10/12 center flex-col text-zinc-900 pt-[15vh]">
+
+                <div id="registration" className="w-full py-[15vh]">
+                    <Headers 
+                        text="Register now"
+                    />
+
+                    <div className="flex flex-col gap-3 mt-9 text-zinc-900">
+                        <p className=""> REGISTER NOW FOR A PROFESSIONAL COURSE in devops cloud engineering and software engineering</p>
+                        <p className="">Also available for siwes and I.T (Industrial Training) students</p>
+                    </div>
+                </div>
+
+
+                <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full bg-primary  px-7 md:px-9 p-9 rounded-2xl py-[5vh]">
+                        <InputField 
+                            label="First Name"
+                            name="firstName"
+                            handleChange={handleChange}
+                            type="text"
+                            value={formInputs.firstName}
+                        />
+                        <InputField 
+                            label="Last Name"
+                            name="lastName"
+                            handleChange={handleChange}
+                            type="text"
+                            value={formInputs.lastName}
+                        />
+                        <RadioSelect 
+                            options={["Male", "Female", "Rather Not say"]}
+                            formInputs={formInputs}
+                            label={"Gender"}
+                            name={"gender"}
                             setFormInputs={setFormInputs}
-                            setShowCountries={setShowCountries} 
-                            showCountries={showCountries}                         
-                            searchInput={searchInput}
-                            setSearchInput={setSearchInput}
-                            formInputs={formInputs}
                         />
-                    </InputField>
-
-                    <InputField 
-                        label="Select Course"
-                        name="course"
-                        handleChange={handleChange}
-                        type="text"
-                        value={formInputs.course}
-                        isReadonly={true}
-                        func={() => {
-                            setShowCountries(false)
-                            setShowPopUp("course")
-                        }}
-                        icon={
-                            <BiChevronDown className="text-4xl mr-4"/>
-                        }
-                    >
-
-                        <Select 
-                            options={AvailableCourses}
-                            showPopUp={showPopUp}
-                            setShowPopUp={setShowPopUp}
-                            formInputs={formInputs}
-                            name={"course"}
-                            label={"Select Course"}
+                        <InputField 
+                            label="Age"
+                            name="age"
+                            handleChange={handleChange}
+                            type="string"
+                            value={formInputs.age}
+                        />
+                        <InputField 
+                            label="Email Address"
+                            name="email"
+                            handleChange={handleChange}
+                            type="email"
+                            value={formInputs.email}
+                        />
+                        <InputField 
+                            label="Phone Number"
+                            name="phoneNumber"
+                            handleChange={handleChange}
+                            type="tel"
+                            value={formInputs.phoneNumber}
+                        />
                         
-                        />
+                        <InputField 
+                            label="Select Country"
+                            name="country"
+                            handleChange={handleChange}
+                            type="text"
+                            value={formInputs.country}
+                            isReadonly={true}
+                            func={() => {
+                                setShowPopUp('')
+                                setShowCountries(true)
+                            }}
+                            icon={
+                                <BiChevronDown className="text-4xl mr-4"/>
+                            }
+                        >
+                            <CountriesOption 
+                                setFormInputs={setFormInputs}
+                                setShowCountries={setShowCountries} 
+                                showCountries={showCountries}                         
+                                searchInput={searchInput}
+                                setSearchInput={setSearchInput}
+                                formInputs={formInputs}
+                            />
+                        </InputField>
+
+                        <InputField 
+                            label="Select Course"
+                            name="course"
+                            handleChange={handleChange}
+                            type="text"
+                            value={formInputs.course}
+                            isReadonly={true}
+                            func={() => {
+                                setShowCountries(false)
+                                setShowPopUp("course")
+                            }}
+                            icon={
+                                <BiChevronDown className="text-4xl mr-4"/>
+                            }
+                        >
+
+                            <Select 
+                                options={AvailableCourses}
+                                showPopUp={showPopUp}
+                                setShowPopUp={setShowPopUp}
+                                formInputs={formInputs}
+                                name={"course"}
+                                label={"Select Course"}
+                            
+                            />
+                        
+                        </InputField>
+
+                        {emptyFieldsError ? 
+                            <div className="text-red-900 text-lg flex gap-2 items-center col-span-2"><BsExclamationCircleFill /> Please, fill out all fields
+                            </div> 
+                            : ""
+                        }
                     
-                    </InputField>
+                        <div className="mt-5" onClick={(e) => !loading && handleSubmit(e)}>
+                            <Button 
+                                text={loading ? 
+                                    <>
+                                        <span>Submitting</span>
+                                        <BiLoaderAlt className="animate-spin ml-2 text-xl" />
+                                    </> 
+                                    : <>Submit</>}
+                                btnType="secondary"
+                            />
+                        </div>
 
-                    {emptyFieldsError ? 
-                        <div className="text-red-900 text-lg flex gap-2 items-center col-span-2"><BsExclamationCircleFill /> Please, fill out all fields
-                        </div> 
-                        : ""
-                    }
-                
-                    <div className="mt-5" onClick={(e) => !loading && handleSubmit(e)}>
-                        <Button 
-                            text={loading ? 
-                                <>
-                                    <span>Submitting</span>
-                                    <BiLoaderAlt className="animate-spin ml-2 text-xl" />
-                                </> 
-                                : <>Submit</>}
-                            btnType="secondary"
-                        />
+
+                    </form>
+
+                    <div className="w-full lg:w-6/12 h-[50vh] bg-primary rounded-3xl sticky top-9 [20vh]">
                     </div>
-
-
-                </form>
-
-                <div className="w-full lg:w-6/12 h-[50vh] bg-primary rounded-3xl sticky top-9 [20vh]">
                 </div>
-            </div>
 
-        </div>       
-    </main>
+            </div>       
+        </main>
+    </>
   )
 }
 
