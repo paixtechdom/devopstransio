@@ -15,11 +15,10 @@ export const Parallax: FC<ParallaxInterface> = ({ id, children, className, type 
       const element = document.querySelector(`#${id}`);
       if (element) {
         let pos = element.getBoundingClientRect();
+        // if (pos.top < 800 && pos.top > -100) {
         if (pos.top < 800) {
           setIsPosMatch(true);
-          // console.log(id)
         } else {
-          // console.log(id)
           setIsPosMatch(false);
         }
       }

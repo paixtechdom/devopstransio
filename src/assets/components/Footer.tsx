@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import { contactInfo, logo, NavInfo, ServicesList } from "../Constants"
 import { useDispatch } from "react-redux"
 import { setCurrentService } from "../store/navigation/navigationSlice"
+import { Parallax } from "./Parallax"
+import { TrimText } from "../Functions"
 
 export const Footer = () => {
     const dispatch = useDispatch()
@@ -15,11 +17,36 @@ export const Footer = () => {
                         <div className="mb-2 text-xl text-zinc-700 font-bold">Contact Us</div>
                         {
                             contactInfo.map((contact, i ) => (
-                                <a target="_blank" key={i} href={`/${contact.link}`} className="text-base">
-                                    {contact.title}
-                                </a>
+                                <Parallax key={i} id={TrimText(contact.title)} type={
+                                    i % 2 == 0 ? "right" : "left"
+                                }>
+                                    <a target="_blank" href={`/${contact.link}`} className="text-base">
+                                        {contact.title}
+                                    </a>
+                                </Parallax>
                             ))
                         }
+                    </div>
+                </div>
+
+                
+                <div className="flex flex-col gap-3">
+                    <div className="mb-3 text-xl text-zinc-700 font-bold">Our Services</div>
+                    <div className="grid  gap-3">
+
+                    {
+                        ServicesList.map((service, i) => (
+                            <Parallax key={i} id={"footerServiceList"} type={
+                                i % 2 == 0 ? "right" : "left"
+                            }>
+                                <Link to={"/services"}  className="text-base cursor-pointer"
+                                onClick={() => dispatch(setCurrentService(i))} 
+                                >
+                                    {service.title}
+                                </Link>
+                            </Parallax>
+                        ))
+                    }
                     </div>
                 </div>
 
@@ -28,32 +55,21 @@ export const Footer = () => {
                     <div className="mb-3 text-xl text-zinc-700 font-bold">Links</div>
                     {
                         NavInfo.map((nav, i ) => (
-                            <Link key={i} to={`/${nav.link}`} className="text-base">
-                                {nav.title}
-                            </Link>
+                            <Parallax key={i} id={TrimText(nav.title)} type={
+                                i % 2 == 0 ? "right" : "left"
+                            }>
+
+                                <Link to={`/${nav.link}`} className="text-base">
+                                    {nav.title}
+                                </Link>
+                            </Parallax>
                         ))
                     }
                 </div>
 
-
-                <div className="flex flex-col gap-3">
-                    <div className="mb-3 text-xl text-zinc-700 font-bold">Our Services</div>
-                    <div className="grid md:grid-cols- 2 gap-3">
-
-                    {
-                        ServicesList.map((service, i ) => (
-                            <Link to={"/services"} key={i}  className="text-base cursor-pointer"
-                            onClick={() => dispatch(setCurrentService(i))} 
-                            >
-                                {service.title}
-                            </Link>
-                        ))
-                    }
-                    </div>
-                </div>
             </div>
 
-            <div className="center flex-col bg-zinc-900 text-secondary h-[15vh] w-full">
+            <div className="center flex-col bg-zinc-900 text-secondary h-[10vh] md:h-[15vh] w-full">
                 <p className="flex gap-1">
                     All rights reserved <span className="text-primary">{new Date().getFullYear()}</span>
                 </p>

@@ -6,8 +6,6 @@ import { Button } from "../../assets/components/Button"
 import { setCurrentService } from "../../assets/store/navigation/navigationSlice"
 import { BiX } from "react-icons/bi"
 import { Link } from "react-router-dom"
-import { Parallax } from "../../assets/components/Parallax"
-import { TrimText } from "../../assets/Functions"
 
 export const AService = () => {
     const navigation = useSelector((state: RootState) => state.navigation)

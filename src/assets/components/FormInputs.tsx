@@ -154,7 +154,7 @@ export const CountriesOption:FC<any> = ({setFormInputs, setShowCountries, showCo
             <div className={`absolute w-full z-20 flex flex-col shadow-xl rounded-xl h-fit gap-6 transition-all duration-500 max-h-[70vh] overflow-y-scroll border border-primary border-opacity-50 ${showCountries ? '' : 'opacity-[0] scale-[0]'}`}>
 
             <div className={`w-full center flex-col bg-secondary bg-opacity-50 backdrop-blur-3xl h-fit gap-6`}>
-                <div className="text-sm w-full flex flex-col  justify-between items-center cursor-pointer sticky top-0 bg-secondary bg-opacity-0 backdrop-blur-3 xl z-20 gap-4 px-9 pt-9 pb-4" >
+                <div className="text-sm w-full flex flex-col  justify-between items-center cursor-pointer sticky top-0 bg-primary bg-opacity-80 backdrop-blur-xl z-20 gap-4 px-9 pt-9 pb-4" >
                     <div className="flex justify-between items-center w-full font-bold text-xl" onClick={() => {
                     setShowCountries(false)
                 }}>

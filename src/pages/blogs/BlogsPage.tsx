@@ -14,7 +14,7 @@ const BlogsPage = () => {
           <meta name="description" content="" />
       </Helmet>
       <main className="min-h-screen pb-[10vh]">
-        <section className="min-h-[80vh] center w-full gap-[50px] pt-[15vh]">
+        <section className="min-h-[45vh] md:min-h-[60vh] lg:min-h-[80vh] center w-full gap-[50px] pt-[15vh]">
           <div className="flex flex-col w-11/12 lg:w-9/12 gap-5 lg:items-center">
             <Parallax id="blogsHeroHeader" type="left" className="w-full lg:w-8/12">
               <h1 className="text-4xl lg:text-5xl font-bold text-zinc-900 w-full lg:text-center">

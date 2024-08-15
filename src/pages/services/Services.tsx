@@ -25,7 +25,7 @@ const Services = () => {
                 />
                 <Parallax id="servicesHeroUpperText" type="left">
                     <p className="leading-relaxed tracking-wide text-zinc-900">
-                    At [DevOps Company Name], we specialize in transforming your operations through cutting-edge DevOps practices. From CI/CD automation that accelerates your deployment processes to robust DevSecOps integrations, 24/7 server monitoring, and cloud migration, we ensure your systems are secure, efficient, and scalable. 
+                    At Cloud Transio, we specialize in transforming your operations through cutting-edge DevOps practices. From CI/CD automation that accelerates your deployment processes to robust DevSecOps integrations, 24/7 server monitoring, and cloud migration, we ensure your systems are secure, efficient, and scalable. 
                     </p>
                 </Parallax>
                 <Parallax id="servicesHeroLowerText" type="right">
