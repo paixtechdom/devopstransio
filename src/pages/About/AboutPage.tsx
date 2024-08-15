@@ -6,6 +6,8 @@ import server from "../../assets/images/server.jpg"
 import benchmark from "../../assets/images/benchmark.jpg"
 import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet-async"
+import { Parallax } from "../../assets/components/Parallax"
+import { TrimText } from "../../assets/Functions"
 
 
 const whyUsInfo = [
@@ -46,30 +48,36 @@ const AboutPage = () => {
                     <Headers 
                         text="About Cloud Transio"
                     />
-                    <p className="leading-relaxed tracking-wide text-zinc-900">
-                        Cloud Transio was conceived from a simple yet powerful idea: to make technology work better for businesses by simplifying complex processes. We saw the challenges companies faced with deployment, security, and server management and wanted to provide a solution that not only addressed these issues but also empowered businesses to grow and innovate.
-                    </p>
-                    <p className="leading-relaxed tracking-wide text-zinc-900">
-                    We aim to revolutionize the tech world by offering services that enhance efficiency, security, and reliability. By automating key processes and integrating cutting-edge practices, we help businesses achieve their goals faster and more effectively. Our mission is to be the trusted partner for companies navigating the ever-evolving tech landscape, providing the tools and support they need to succeed.
-                    </p>
+                    <Parallax id={"aboutHeroUpperText"} type="left">
+                        <p className="leading-relaxed tracking-wide text-zinc-900">
+                            Cloud Transio was conceived from a simple yet powerful idea: to make technology work better for businesses by simplifying complex processes. We saw the challenges companies faced with deployment, security, and server management and wanted to provide a solution that not only addressed these issues but also empowered businesses to grow and innovate.
+                        </p>
+                    </Parallax>
+                    <Parallax id={"aboutHeroLowerText"} type="right">
+                        <p className="leading-relaxed tracking-wide text-zinc-900">
+                        We aim to revolutionize the tech world by offering services that enhance efficiency, security, and reliability. By automating key processes and integrating cutting-edge practices, we help businesses achieve their goals faster and more effectively. Our mission is to be the trusted partner for companies navigating the ever-evolving tech landscape, providing the tools and support they need to succeed.
+                        </p>
+                    </Parallax>
 
-                    <div className="flex items-center gap-4 mt-4">
-                        <div onClick={() => document.querySelector("#whyus")?.scrollIntoView({
-                            behavior: "smooth"
-                        })}>
-                            <Button 
-                                text={"Read more"}
-                                btnType="primary"
-                            />
+                    <Parallax id={"aboutHeroButtons"}>
+                        <div className="flex items-center gap-4 mt-4">
+                            <div onClick={() => document.querySelector("#whyus")?.scrollIntoView({
+                                behavior: "smooth"
+                            })}>
+                                <Button 
+                                    text={"Read more"}
+                                    btnType="primary"
+                                />
+                            </div>
+
+                            <Link to="/contact">
+                                <Button 
+                                    text={"Contact us"}
+                                    btnType="secondary"
+                                />
+                            </Link>
                         </div>
-
-                        <Link to="/contact">
-                            <Button 
-                                text={"Contact us"}
-                                btnType="secondary"
-                            />
-                        </Link>
-                    </div>
+                    </Parallax>
                 </div>
                 
 
@@ -84,22 +92,28 @@ const AboutPage = () => {
                             text="Why choose us?"
                             bg="primary"
                         />
-                        <p className="text-zinc-900 leading-relaxed tracking-wide">Our services stand out because we combine expert knowledge with a focus on automation and security.</p>
+                        <Parallax id="whydesc">
+                            <p className="text-zinc-900 leading-relaxed tracking-wide">Our services stand out because we combine expert knowledge with a focus on automation and security.</p>
+                        </Parallax>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6 w-full">
                         {
                             whyUsInfo.map((why, i) => (
-                                <div key={i} className="flex p-7 shadow-xl rounded-xl lg:min-h-[25vh] bg-secondary gap-3 items-start relative">
+                                <Parallax id={TrimText(why.title)} type={
+                                    i % 2 == 0 ? "left" : "right"
+                                }>
+                                    <div key={i} className="flex p-7 shadow-xl rounded-xl lg:min-h-[25vh] bg-secondary gap-3 items-start relative">
 
-                                    <div className="absolute top-5 right-5 rounded-full size-4 bg-primary border border-primary"></div>
-                                    <div className="flex flex-col">
-                                        <h3 className="font-bold text-primary text-xl">
-                                            {why.title}
-                                        </h3>
-                                        <p className="text-zinc-900">{why.desc}</p>
+                                        <div className="absolute top-5 right-5 rounded-full size-4 bg-primary border border-primary"></div>
+                                        <div className="flex flex-col">
+                                            <h3 className="font-bold text-primary text-xl">
+                                                {why.title}
+                                            </h3>
+                                            <p className="text-zinc-900">{why.desc}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </Parallax>
                             ))
                         }
                     </div>

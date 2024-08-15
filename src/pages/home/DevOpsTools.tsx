@@ -12,6 +12,8 @@ import terraform from "../../assets/images/tools/terraform.png"
 import ansible from "../../assets/images/tools/ansible.png"
 import grafana from "../../assets/images/tools/grafana.png"
 import prometheus from "../../assets/images/tools/prometheus.png"
+import { Parallax } from "../../assets/components/Parallax"
+import { TrimText } from "../../assets/Functions"
 
 
 const Tools = [
@@ -70,21 +72,27 @@ const Tools = [
 ]
 
 
+
 export const DevOpsTools = () => {
   return (
     <section className='center w-full my-[20vh] lg:mt-[35vh]'>
         <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center gap-y-[50px] gap-[150px]">
           <div className="w-full lg:w-6/12">
-
             <Headers 
-            text="Tools we use" 
-            />
+              text="Tools we use" 
+              />
           </div>
 
           <div className="grid grid-cols-4 md:grid-cols-5 place-items-center gap-y-9 gap-9 w-full">
             {
               Tools.map((tool, i) => (
-                <img key={i} src={tool.img} alt={tool.tool} className="w-10/12 bg-prim ary"/>
+                <Parallax key={i} className="w-fit" id={TrimText(tool.tool)}
+                type={
+                  i % 2 == 0 ? "right"
+                  : "left"
+                }>
+                <img src={tool.img} alt={tool.tool} className="w-10/12 bg-prim ary"/>
+                </Parallax>
               ))
             }
           </div>

@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
                 dispatch(setCurrentNav(0))
                 dispatch(setCurrentDropDown(""))
             }else if(location.pathname.includes("contact")){
-                dispatch(setCurrentNav(4))
+                dispatch(setCurrentNav(NavInfo.length))
                 dispatch(setCurrentDropDown(""))
             }
         })

@@ -13,6 +13,8 @@ import { Link } from "react-router-dom"
 import { PainsDesires } from "./PainsDesires"
 import { BlogListing } from "../blogs/BlogListing"
 import { Helmet } from "react-helmet-async"
+import { Parallax } from "../../assets/components/Parallax"
+import { TrimText } from "../../assets/Functions"
 
 
 const HomePage: React.FC = () => {
@@ -56,38 +58,46 @@ const HomePage: React.FC = () => {
                 <div className="w-11/12 lg:w-10/12 center flex-col  gap-[10vh] ">
                     <div className="flex flex-col-reverse w-full lg:flex-row justify-between gap-[50px] gap-y-12 items-center">
                         <div className="flex flex-col gap-7 w-full">
-                            <div className="w-full">
-                                <Headers 
-                                    text="Our Services"
-                                />
-                            </div>
+                            <Headers 
+                                text="Our Services"
+                            />
+                           
                             <div className="gap-3 grid md:grid-cols-2">
                                 {
                                     ServicesList.map((service: Services, i) => (
-                                        <div key={i} className="flex items-start gap-1">
-                                            <div className="size-3 bg-primary rounded-full mt-2">
+                                        <Parallax key={i} id={TrimText(service.title)} 
+                                        type={
+                                            i %2 == 0 ? "right" : "left"
+                                        }>
+                                            <div className="flex items-start gap-1">
+                                                <div className="size-3 bg-primary rounded-full mt-2">
+                                                </div>
+                                                <p>
+                                                    {service.title}
+                                                </p>
                                             </div>
-                                            <p>
-                                                {service.title}
-                                            </p>
-                                        </div>
+                                        </Parallax>
                                     ))
                                 }
                             </div>
-                            
-                            <Link to={"/services"}>
-                                <Button
-                                    text="view All"
-                                    btnType="primary"
-                                />
-                            </Link>
+                            <Parallax id="homeServicesListingBtn">
+
+                                <Link to={"/services"}>
+                                    <Button
+                                        text="view All"
+                                        btnType="primary"
+                                        />
+                                </Link>
+                            </Parallax>
 
                             
                         </div>
-                        <div className="w-full lg:w-11/12 relative flex flex-col b g-red-900">
-                            <div className="rounded-3xl shadow-lg shadow-primary overflow-hidden">
-                                <img src={img1} alt="" className="w-full h-full object-cover"/>
-                            </div>
+                        <div className="w-full lg:w-11/12 relative ">
+                            <Parallax id={"homeServicesListingImg"} type="right">
+                                <div className="rounded-3xl shadow-lg shadow-primary overflow-hidden">
+                                    <img src={img1} alt="" className="w-full h-full object-cover"/>
+                                </div>
+                            </Parallax>
                         </div>
 
                     </div>

@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { Button } from "../../assets/components/Button"
+import { Parallax } from "../../assets/components/Parallax"
+import { TrimText } from "../../assets/Functions"
 
 
 const Fears = [
@@ -47,17 +49,23 @@ export const PainsDesires = () => {
                 
                 <div className={`flex flex-col gap-5 lg:m-4 p-7 pt-[7vh] lg:pt-7 rounded-t-2xl lg:rounded-t-none z-10 w-full 
                     ${showFears ? "" : "lg:hidden"} bg-primary lg:bg-transparent`}>
-                    <div className={`text-zinc-800 text-2xl capitalize  font-bold w-full`}>
-                        We eliminate your fears
-                    </div>
+                    <Parallax id={"eliminateFear"}>
+                        <div className={`text-zinc-800 text-2xl capitalize font-bold w-full`}>
+                            We eliminate your fears
+                        </div>
+                    </Parallax>
 
                     <div className="flex flex-col divide-y-2 divide-secondary lg:divide-primary gap-2">
                         {
                             Fears.map((fear, i) => (
-                                <div key={i} className="flex items-start  font-bold text-zinc-800 h-[10vh] pt-5">
-                                    {/* <div className="size-4 bg-secondary lg:bg-primary rounded-full m-1"></div> */}
-                                    <p>{fear}</p>
-                                </div>
+                                <Parallax key={i} id={TrimText(fear)} 
+                                type={
+                                    i % 2 == 0 ? "right" : "left"
+                                }>
+                                    <div key={i} className="flex items-start  font-bold text-zinc-800 h-[10vh] pt-5">
+                                        <p>{fear}</p>
+                                    </div>
+                                </Parallax>
                             ))
                         }
                     </div>
@@ -65,42 +73,52 @@ export const PainsDesires = () => {
 
                 <div className={`lg:m-4 rounded-2xl p-7 z-10 cursor-pointer b g-red-500 w-full ${showFears ? "hidden lg:flex lg:justify-center lg:items-center" : "hidden"} `} onClick={
                     () => toggleDisplay()}>
+                    <Parallax id={"toogleSmooth"}>
                     <div className="flex flex-col">
-                        <div className="text-2xl capitalize  text-zinc-800 font-bold mb-4">
-                            And ensure your app runs smmothly
-                        </div>
+                            <div className="text-2xl capitalize  text-zinc-800 font-bold mb-4">
+                                And ensure your app runs smmothly
+                            </div>
                         <Button 
                             text="Read more"
                             btnType="seconda2ry"
-                        />
+                            />
                     </div>
+                    </Parallax>
                 </div>
 
 
                 <div className={`lg:m-4 rounded-2xl p-7 z-10 w-full cursor-pointer b g-red-500 ${showFears ? "hidden" : "hidden lg:flex lg:justify-cen ter lg:items-center"}`}
                 onClick={() => toggleDisplay()}>
+                    <Parallax id={"toogleFears"}>
                     <div className="flex flex-col w-full m-3">
-                        <div className="text-2xl capitalize text-zinc-800 font-bold mb-4">
-                            We eliminate your fears
-                        </div>
+                            <div className="text-2xl capitalize text-zinc-800 font-bold mb-4">
+                                We eliminate your fears
+                            </div>
                         <Button 
                             text="Read more"
                             btnType="seconda2ry"
-                        />
+                            />
                     </div>                  
+                    </Parallax>
                 </div>
                 
                 <div className={`flex flex-col gap-5 lg:m-4 p-7 z-10 w-full center ${showFears ? "lg:hidden" : ""}`}>
-                    <div className="text-zinc-800 text-2xl capitalize font-bold w-full">
-                        And ensure your app runs smoothly
-                    </div>
+                    <Parallax id={"runsSmoothly"}>
+                        <div className="text-zinc-800 text-2xl capitalize font-bold w-full">
+                            And ensure your app runs smoothly
+                        </div>
+                    </Parallax>
 
                     <div className="bg-se condary flex flex-col divide-y-2 divide-primary gap-2">                        
                     {Desires.map((desire, i) => (
-                        <div key={i} className="flex items-start  font-bold text-zinc-800 h-[10vh] pt-5">
-                            {/* <div className="size-4 bg-primary rounded-full m-1"></div> */}
-                            <p>{desire}</p>
-                        </div>
+                        <Parallax key={i} id={TrimText(desire)} 
+                        type={
+                            i % 2 == 0 ? "right" : "left"
+                        }>
+                            <div key={i} className="flex items-start  font-bold text-zinc-800 h-[10vh] pt-5">
+                                <p>{desire}</p>
+                            </div>
+                        </Parallax>
                     ))}
                 </div>
                 </div>

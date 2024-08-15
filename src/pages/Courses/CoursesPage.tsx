@@ -12,6 +12,8 @@ import { useDispatch } from "react-redux"
 import { setAlertMessage, setAlertType, toggleShowAlert } from "../../assets/store/AlertSlice"
 import { Helmet } from "react-helmet-async"
 import axios from "axios"
+import { Parallax } from "../../assets/components/Parallax"
+import { TrimText } from "../../assets/Functions"
 
 const courses = [
     {
@@ -31,7 +33,7 @@ const courses = [
         body: [
             "In today’s digital world, web development skills are in high demand. Whether you're looking to build visually stunning websites or robust web applications, mastering both frontend and backend technologies is crucial. Our courses are designed to equip you with the skills needed to excel in modern web development, covering everything from the basics to advanced techniques.",
             "Learn how to create engaging and responsive user interfaces with HTML, CSS, JavaScript, React, and Next.js. These technologies are the backbone of frontend development, allowing you to design and build websites that not only look great but also provide seamless user experiences. Through our hands-on courses, you'll gain practical knowledge in building dynamic web pages, managing state with React, and optimizing your applications with Next.js for better performance and SEO.",
-            "Dive into the world of backend development with our comprehensive courses on PHP and SQL. These technologies are essential for creating the server-side logic and databases that power your web applications. You'll learn how to manage data, build APIs, and ensure secure and efficient communication between the frontend and backend. With PHP and SQL, you’ll be able to create dynamic and data-driven websites that meet the demands of modern users.",
+            "Dive into the world of backend development with our comprehensive courses on Node.js, PHP or Python. These technologies are essential for creating the server-side logic and databases that power your web applications. You'll learn how to manage data, build APIs, and ensure secure and efficient communication between the frontend and backend. With Node.js, PHP or Python, you’ll be able to create dynamic and data-driven websites that meet the demands of modern users.",
             "Our web development courses offer a blend of theory and practice, ensuring you understand the underlying principles while gaining hands-on experience. Whether you're a beginner or looking to advance your skills, our structured learning path will guide you through each stage of development, preparing you for a successful career in web development."
         ]
     }
@@ -84,7 +86,7 @@ const CoursesPage = () => {
             return;
         }
         setEmptyFieldsError(false)
-        const subject = 'Important! New User Registration'
+        const subject = 'Important! New Student Registration'
         console.log(cleanedInputs)
         sendContactEmail(subject)        
 
@@ -185,39 +187,31 @@ const CoursesPage = () => {
 
 
             <div id="coursesintro" className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-[20vh] text-zinc-900 pt-[15vh]">
+                {
+                    courses.map((course, i) => (
+                    <div key={i} className="flex flex-col gap-9 w-full">
+                        <Headers 
+                            text={course.title}
+                        />
+                        <div className="flex flex-col gap-5 text-black">
+                            {
+                                course.body.map((p, i) => (
+                                    <Parallax id={TrimText(p)} type={
+                                        i % 2 == 0 ? "left" : "right"
+                                    }>
+                                        <p key={i}>{p}</p>
+                                    </Parallax>
 
-
-                <div className="flex flex-col gap-9 w-full">
-                    <Headers 
-                        text={courses[0].title}
-                    />
-                    <div className="flex flex-col gap-5 text-black">
-                        {
-                            courses[0].body.map((p, i) => (
-                                <p key={i}>{p}</p>
-
-                            ))
-                        }
+                                ))
+                            }
+                        </div>
                     </div>
-                </div>
-
-                <div className="flex flex-col gap-9 w-full">
-                    <Headers 
-                        text={courses[1].title}
-                    />
-                    <div className="flex flex-col gap-5 text-black">
-                        {
-                            courses[1].body.map((p, i) => (
-                                <p key={i}>{p}</p>
-
-                            ))
-                        }
-                    </div>
-                </div>
+                    ))
+                }
             </div>
 
                     
-            <div className="w-11/12 lg:w-10/12 center flex-col text-zinc-900 pt-[15vh]">
+            <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col text-zinc-900 pt-[15vh]">
 
                 <div id="registration" className="w-full py-[15vh]">
                     <Headers 
@@ -231,8 +225,8 @@ const CoursesPage = () => {
                 </div>
 
 
-                <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full bg-primary  px-7 md:px-9 p-9 rounded-2xl py-[5vh]">
+                <div className="flex flex-col lg:flex-row cent er w-full gap-[50px] gap-x-[150px] relative">
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full md:w-9/12 lg:w-9/12 xl:w-8/12 bg-primary  px-7 md:px-9 p-9 rounded-2xl py-[5vh]">
                         <InputField 
                             label="First Name"
                             name="firstName"
@@ -349,9 +343,6 @@ const CoursesPage = () => {
 
 
                     </form>
-
-                    <div className="w-full lg:w-6/12 h-[50vh] bg-primary rounded-3xl sticky top-9 [20vh]">
-                    </div>
                 </div>
 
             </div>       

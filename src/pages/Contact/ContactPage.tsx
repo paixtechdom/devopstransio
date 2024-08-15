@@ -122,7 +122,7 @@ const ContactPage = () => {
 
             <div className="flex flex-col lg:flex-row w-full gap-[50px] gap-x-[150px] relative">
 
-                <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full bg-primary px-7 md:px-9 p-9 rounded-2xl py-[10vh]">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full md:w-9/12 lg:w-9/12 xl:w-8/12 bg-primary px-7 md:px-9 p-9 rounded-2xl py-[10vh]">
 
                     <InputField 
                         label="Full Name"
@@ -174,8 +174,6 @@ const ContactPage = () => {
                         />
                     </div>
                 </form>
-
-                <div className="w-full lg:w-6/12 h-[50vh] bg-tertiary top-[20vh] sticky"></div>
             </div>
 
 

@@ -1,4 +1,6 @@
 import { FC } from "react"
+import { Parallax } from "./Parallax"
+import { TrimText } from "../Functions"
 
 interface ImageTextInterface {
     img1: string,
@@ -17,9 +19,13 @@ export const ImageText:FC<ImageTextInterface> = ({img1, img2, header, desc, btn,
     <section className="w-full center my-[15vh] mb-[25vh]">
         <div className="flex flex-col-reverse w-11/12 lg:w-10/12 lg:flex-row justify-between gap-[50px] gap-y-12">
             <div className="w-full lg:w-11/12 relative flex flex-col">
-                <div className="h-fit lg:h-[35vh] w-9/12 rounded-3xl shadow-lg shadow-primary overflow-hidden">
-                    <img src={img1} alt="" className="w-full h-full object-cover"/>
-                </div>
+                <Parallax id={TrimText(header)+"img"} type="left">
+                    <div className="h-fit lg:h-[35vh] w-9/12 rounded-3xl shadow-lg shadow-primary overflow-hidden">
+                        <img src={img1} alt="" className="w-full h-full object-cover"/>
+                    </div>
+                </Parallax>
+
+                    
                 <div className="h-fit lg:h-[35vh] w-9/12 absolute top-[50%] right-0 rounded-3xl shadow-lg shadow-primary overflow-hidden center">
                     <div className="w-full h-full">
                         <img src={img2} alt="" className="w-full h-full object-cover"/>
@@ -28,14 +34,19 @@ export const ImageText:FC<ImageTextInterface> = ({img1, img2, header, desc, btn,
             </div>
 
             <div className="flex flex-col gap-3 w-full">
-                <h2 className="text-zinc-900 font-bold text-4xl">{header} <br />
-                    {
-                        span && <span className="text-primary">{span}</span>
-                    }
-                </h2>
-                <p className="tracking-wide leading-relaxed text-zinc-900">{desc}</p>
-
-                {btn}
+                <Parallax id={TrimText(header)} type="right">
+                    <h2 className="text-zinc-900 font-bold text-4xl relative">{header} <br />
+                        {
+                            span && <span className="text-primary">{span}</span>
+                        }
+                    </h2>
+                </Parallax>
+                <Parallax id={TrimText(header)+'desc'} type="left">
+                    <p className="tracking-wide leading-relaxed text-zinc-900">{desc}</p>
+                </Parallax>
+                <Parallax id={TrimText(header)+'btn'}>
+                    {btn}
+                </Parallax>
             </div>
         </div>
     </section>

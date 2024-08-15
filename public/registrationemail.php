@@ -32,7 +32,7 @@ $details = "";
 
 foreach ($data as $key => $value) {
     if($key !== 'subject'){
-        $details = $details . "<p><b>$key:</b> $value </p>";
+        $details = $details . "<p><b>strtoupper($key):</b> $value </p>";
     }
 }
 
@@ -105,6 +105,7 @@ $message = "
             <br>
             <h2 class='primary font-bold'> $subject</h2>  
             <hr>          
+            <h2 class='primary font-bold'> Student Details</h2>  
             $details
             <br>
             <br>

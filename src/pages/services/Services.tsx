@@ -7,6 +7,7 @@ import { AService } from '../Service/AService'
 import img1 from "../../assets/images/server.jpg"
 import img2 from "../../assets/images/img2.jpg"
 import { Helmet } from 'react-helmet-async'
+import { Parallax } from '../../assets/components/Parallax'
 
 const Services = () => {
   return (
@@ -22,34 +23,39 @@ const Services = () => {
                 <Headers 
                     text="What we do"
                 />
-                <p className="leading-relaxed tracking-wide text-zinc-900">
-                At [DevOps Company Name], we specialize in transforming your operations through cutting-edge DevOps practices. From CI/CD automation that accelerates your deployment processes to robust DevSecOps integrations, 24/7 server monitoring, and cloud migration, we ensure your systems are secure, efficient, and scalable. 
-                </p>
-                <p className="leading-relaxed tracking-wide text-zinc-900">
-                Whether you need fault-tolerant infrastructure, load testing, or app modernization, our comprehensive services are designed to optimize performance and keep your business ahead of the curve. Explore our offerings and see how we can elevate your operations to the next level.
-                </p>
+                <Parallax id="servicesHeroUpperText" type="left">
+                    <p className="leading-relaxed tracking-wide text-zinc-900">
+                    At [DevOps Company Name], we specialize in transforming your operations through cutting-edge DevOps practices. From CI/CD automation that accelerates your deployment processes to robust DevSecOps integrations, 24/7 server monitoring, and cloud migration, we ensure your systems are secure, efficient, and scalable. 
+                    </p>
+                </Parallax>
+                <Parallax id="servicesHeroLowerText" type="right">
+                    <p className="leading-relaxed tracking-wide text-zinc-900">
+                    Whether you need fault-tolerant infrastructure, load testing, or app modernization, our comprehensive services are designed to optimize performance and keep your business ahead of the curve. Explore our offerings and see how we can elevate your operations to the next level.
+                    </p>
+                </Parallax>
+                <Parallax id="servicesHeroButtons">
+                    <div className="flex items-center gap-4 mt-4">
 
-                <div className="flex items-center gap-4 mt-4">
+                        <div onClick={() => {
+                            document.querySelector("#servicesListing")?.scrollIntoView({
+                                behavior: "smooth"
+                            })
+                        }}>
+                            <Button 
+                                text={"Read more"}
+                                btnType="primary"
+                            />
+                        </div>
 
-                    <div onClick={() => {
-                        document.querySelector("#servicesListing")?.scrollIntoView({
-                            behavior: "smooth"
-                        })
-                    }}>
-                        <Button 
-                            text={"Read more"}
-                            btnType="primary"
-                        />
+                        <Link to="/contact">
+                            <Button 
+                                text={"Contact us"}
+                                btnType="secondary"
+                            />
+                        </Link>
+
                     </div>
-
-                    <Link to="/contact">
-                        <Button 
-                            text={"Contact us"}
-                            btnType="secondary"
-                        />
-                    </Link>
-
-                </div>
+                </Parallax>
             </div>
             
         </div>    

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Headers } from "../../assets/components/Headers"
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
+import { Parallax } from "../../assets/components/Parallax"
 
 let reviews = [
     {
@@ -59,17 +60,20 @@ export const Testimonials = () => {
         setCurrentReview(prev => prev == 0 ? reviews.length - 1 : prev - 1)
     }
 
+
     return(
         <main className="w-full bg-primary min-h-[70vh] center flex-col py-[10vh] mt-[15vh]">
             <div className="w-11/12 lg:w-9/12  flex items-center flex-col gap-9 text-black">
 
                 <div className="flex flex-col gap-2 w-full">
-                    
                     <Headers 
                         text="Testimonials"
                         bg="primary"
                     />
-                    <p className="text-zinc-900 leading-relaxed tracking-wide">What people say about us</p>
+                    
+                    <Parallax id={"testimonialsheading"} type="right">
+                        <p className="text-zinc-900 leading-relaxed tracking-wide">What people say about us</p>
+                    </Parallax>
                 </div>
             </div>
                 
@@ -107,13 +111,16 @@ export const Testimonials = () => {
                 </div>
 
                 <div className="flex center gap-9 mt-9">
-
-                    <button disabled={currentReview == 0} className={`${arrowClass}`} onClick={() => prevSlide()}>
-                        <BiChevronLeft />
-                    </button>
-                    <button className={`${arrowClass}`} onClick={() => slide()}>
-                        <BiChevronRight />
-                    </button>
+                    <Parallax id={"testimonialsbutton"} type="left">
+                        <button disabled={currentReview == 0} className={`${arrowClass}`} onClick={() => prevSlide()}>
+                            <BiChevronLeft />
+                        </button>
+                    </Parallax>
+                    <Parallax id={"testimonialsbutton"} type="right">
+                        <button className={`${arrowClass}`} onClick={() => slide()}>
+                            <BiChevronRight />
+                        </button>
+                    </Parallax>
                 </div>
             </div>
 

@@ -587,49 +587,49 @@ export const ButtonClass = "rounded-full px-6 py-3 min-w-[200px] font-bold upper
 export const Blogs = [
     {
         id: "0",
-        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        title: "Blog zero Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
         img: server
     },
     {
         id: "1",
-        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        title: "Blog one Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
         img: analytics
     },
     {
         id: "2",
-        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        title: "Blog two Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
         img: processes
     },
     {
         id: "3",
-        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        title: "Blog three Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
         img: gears
     },
     {
         id: "4",
-        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        title: "Blog  four Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
         img: cloouHead
     },
     {
         id: "5",
-        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        title: "Blog five Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
         img: comboImg
     },
     {
         id: "6",
-        title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        title: "Blog six Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
         img: benchmark

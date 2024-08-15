@@ -1,11 +1,12 @@
 import { ServicesList } from "../../assets/Constants"
 import { Services } from "../../assets/Interfaces"
-import { cardInterface } from "../../assets/components/Card"
 import { Headers } from "../../assets/components/Headers"
 import { FC } from "react"
 import { useDispatch } from "react-redux"
 import { setCurrentService } from "../../assets/store/navigation/navigationSlice"
 import { Button } from "../../assets/components/Button"
+import { Parallax } from "../../assets/components/Parallax"
+import { TrimText } from "../../assets/Functions"
 
 
 
@@ -39,9 +40,14 @@ export const ServicesListing = () => {
 }
 
 
+interface serviceInterface {
+    img: string,
+    title: string,
+    desc: string,
+    index: number
+}
 
-
-const ServicesComponent:FC<cardInterface> = ({img, title, desc, index}) => {
+const ServicesComponent:FC<serviceInterface> = ({img, title, desc, index}) => {
     const dispatch = useDispatch()
 
     return(        
@@ -52,10 +58,11 @@ const ServicesComponent:FC<cardInterface> = ({img, title, desc, index}) => {
             className={`cursor-pointer flex items-center relative lg:justify-between
             ${index % 2 == 0 ? "lg:flex-row justify-start" : "lg:flex-row-reverse justify-end"} bg- red-500 
         `}>
-            <div className="h-[50vh] lg:h-[45vh] w-full lg:w-5/12 xl:w-4/12 rounded-2xl overflow-hidden shadow-xl">
-                <img src={img} alt={title} className="object-cover h-full w-full"/>
-            </div>
-
+            <Parallax id={TrimText(title)} type={index % 2 == 0 ? "left" : "right"} className="w-full lg:w-5/12 xl:w-4/12">
+                <div className="h-[50vh] lg:h-[45vh] w-full  rounded-2xl overflow-hidden shadow-xl"> 
+                    <img src={img} alt={title} className="object-cover h-full w-full"/>
+                </div>
+            </Parallax>
             <div className={`flex flex-col p-6 rounded-2xl gap-6 shadow-xl w-11/12 lg:w-6/12 absolute lg:relative bg-opacity-40 backdrop-blur-xl
                 ${index % 2 == 0 ? "bg-secondary lg:-translate-x-[50%]" : 
                 "bg-primary lg:translate-x-[50%]"}
@@ -67,6 +74,7 @@ const ServicesComponent:FC<cardInterface> = ({img, title, desc, index}) => {
                     btnType={index % 2 == 0 ? "primary" : "secondary"}
                 />
             </div>
+            
         </div>
     )
 
