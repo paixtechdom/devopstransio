@@ -4,6 +4,7 @@ import server from "./images/server.jpg"
 import benchmark from "./images/benchmark.jpg"
 import analytics from "./images/analytics.jpg"
 import gears from "./images/gears.jpg"
+import six from "./images/six.jpg"
 import three from "./images/three.jpg"
 import stress from "./images/stress.jpg"
 import comboImg from "./images/comboImg.jpg"
@@ -12,7 +13,7 @@ import serverMonitoring from "./images/serverMonitoring.jpg"
 import cloudMigration from "./images/cloudMigration.jpg"
 import processes from "./images/processes.jpg"
 import appModernization from "./images/appModernization.jpg"
-import cloudHead from "./images/cloudHead.jpg"
+import cloudHead from "./images/programmer.jpg"
 
 export const logo = logoImg
 
@@ -85,7 +86,7 @@ export const whyWeStandOut = [
         desc: 'Enabling app deployment and management like never before.'
     },
     {
-        img: gears,
+        img: six,
         title: 'Automations',
         desc: 'Automation that has multi-layered security integrated.'
     },
