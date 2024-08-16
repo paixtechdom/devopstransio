@@ -4,8 +4,8 @@ import { Headers } from '../../assets/components/Headers'
 import { ImageText } from '../../assets/components/ImageText'
 import { ServicesListing } from '../home/ServicesListing'
 import { AService } from '../Service/AService'
-import img1 from "../../assets/images/server.jpg"
-import img2 from "../../assets/images/img2.jpg"
+import programmer from "../../assets/images/programmer.jpg"
+import programmer2 from "../../assets/images/programmer2.jpg"
 import { Helmet } from 'react-helmet-async'
 import { Parallax } from '../../assets/components/Parallax'
 
@@ -65,8 +65,8 @@ const Services = () => {
         <div className="mt-[15vh] lg:mt-[20vh]"></div>
 
         <ImageText 
-            img1={img1}
-            img2={img2}
+            img1={programmer2}
+            img2={programmer}
             header='Want to transit from'
             span='"NON-IT" to "IT"?'
             desc="Join our free training on DevOps and Cloud Engineering. We also offer training on Web Development. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { Button } from "../../assets/components/Button"
 // import hero1 from "../../assets/images/comboImg.jpg"
 // import hero2 from "../../assets/images/stress.jpg"
-import hero3 from "../../assets/images/server.jpg"
+import hero3 from "../../assets/images/img2.jpg"
 import { Parallax } from "../../assets/components/Parallax"
 // import hero4 from "../../assets/images/img2.jpg"
 
@@ -62,8 +62,6 @@ export const Hero: React.FC = () => {
                             <div className="flex gap-4 items-end">
                                 <div className="size-[150px] overflow-hidden rounded-2xl shadow-xl">
                                     <div className="h-full w-full scale-150 bg-secondary lg:bg-primary">
-                                        {/* <img src={hero1} alt="Dev ops2" className={`${imgClass} rotate-45`}/> */}
-
                                     </div>
                                 </div>
                                 <div className="size-[200px] overflow-hidden rounded-3xl  shadow-xl">
@@ -72,8 +70,8 @@ export const Hero: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex gap-4 items-start">
-                                <div className="size-[250px] overflow-hidden rounded-2xl  shadow-xl">
-                                    <div className="h-full w-full scale-150 bg-secondary">
+                                <div className="size-[250px] overflow-hidden rounded-2xl shadow-xl">
+                                    <div className="h-full w-full scale-[1.4] bg-secondary">
                                         <img src={hero3} alt="Dev ops2" className={`${imgClass} rotate-45`}/>
                                     </div>
                                 </div>

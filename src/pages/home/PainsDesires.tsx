@@ -49,7 +49,7 @@ export const PainsDesires = () => {
                 
                 <div className={`flex flex-col gap-5 lg:m-4 p-7 pt-[7vh] lg:pt-7 rounded-t-2xl lg:rounded-t-none z-10 w-full 
                     ${showFears ? "" : "lg:hidden"} bg-primary lg:bg-transparent`}>
-                    <Parallax id={"eliminateFear"}>
+                    <Parallax id={"eliminateFear"} className="w-full">
                         <div className={`text-zinc-800 text-2xl capitalize font-bold w-full`}>
                             We eliminate your fears
                         </div>
@@ -103,7 +103,7 @@ export const PainsDesires = () => {
                 </div>
                 
                 <div className={`flex flex-col gap-5 lg:m-4 p-7 z-10 w-full center ${showFears ? "lg:hidden" : ""}`}>
-                    <Parallax id={"runsSmoothly"}>
+                    <Parallax id={"runsSmoothly"} className="w-full">
                         <div className="text-zinc-800 text-2xl capitalize font-bold w-full">
                             And ensure your app runs smoothly
                         </div>

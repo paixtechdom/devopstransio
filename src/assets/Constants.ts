@@ -1,13 +1,18 @@
-import img from "./images/hero1.jpg"
+import cloudSecurity from "./images/cloudSecurity.jpg"
 import logoImg from "./images/logo.png"
 import server from "./images/server.jpg"
 import benchmark from "./images/benchmark.jpg"
 import analytics from "./images/analytics.jpg"
 import gears from "./images/gears.jpg"
-import processes from "./images/processes.jpg"
-import img2 from "./images/img2.jpg"
+import three from "./images/three.jpg"
+import stress from "./images/stress.jpg"
 import comboImg from "./images/comboImg.jpg"
 import cloouHead from "./images/cloudHead.jpg"
+import serverMonitoring from "./images/serverMonitoring.jpg"
+import cloudMigration from "./images/cloudMigration.jpg"
+import processes from "./images/processes.jpg"
+import appModernization from "./images/appModernization.jpg"
+import cloudHead from "./images/cloudHead.jpg"
 
 export const logo = logoImg
 
@@ -75,17 +80,17 @@ export const NavInfo = [
 
 export const whyWeStandOut = [
     {
-        img: server,
+        img: cloudHead,
         title: 'Expert Knowledge',
         desc: 'Enabling app deployment and management like never before.'
     },
     {
-        img: benchmark,
+        img: gears,
         title: 'Automations',
         desc: 'Automation that has multi-layered security integrated.'
     },
     {
-        img: img,
+        img: cloudSecurity,
         title: 'Security',
         desc: 'Our cloud experts are available around the clock to assist you.'
     },
@@ -186,7 +191,7 @@ export const ServicesList = [
     },
     
     {
-        img: gears,
+        img: serverMonitoring,
         title: '24X7 Server Monitoring & Support',
         desc: "24/7 Support over 1000 servers and 300 webprojects: from small corporate sites to major online stores, media sites and complex microservices projects. Do you want to be online 24/7 and sleep well? You’re at the right place!",
         body: [
@@ -204,7 +209,7 @@ export const ServicesList = [
     },
 
     {
-        img: cloouHead,
+        img: cloudMigration,
         title: 'Cloud Migration',
         desc: "In today's fast-paced digital world, keeping up means quickly and smartly adapting to new trends. As you navigate the constantly changing tech landscape, consider the huge advantages of migrating your workload from on-premise infrastructure to the cloud.",
         body: [
@@ -220,7 +225,7 @@ export const ServicesList = [
     },
 
     {
-        img: processes,
+        img: three,
         title: 'DevOps $ CI/CD',
         desc: 'We help companies adopt the best DevOps practices and CI/CD automation techniques to speed up development and make services more reliable in production.',
         body: [ 
@@ -253,7 +258,7 @@ export const ServicesList = [
     },
 
     {
-        img: img2,
+        img: processes,
         title: 'Fault-Tolerant Infrastructure',
         desc: "Your project will be exceptionally stable and resilient, capable of withstanding the failure of multiple servers. You won't need to worry, not even if a meteorite were to strike the data center.",
         body: [
@@ -283,7 +288,7 @@ export const ServicesList = [
     },
 
     {
-        img: comboImg,
+        img: stress,
         title: 'Load & Stress Testing',
         desc: "We’ll help you see what your project can handle! Using specialized tools, we simulate real user behavior on your site to see how it performs. We observe where it might slow down or fail and identify the load that causes these issues. Then, we analyze the data and provide expert recommendations.",
         body: [
@@ -326,7 +331,7 @@ export const ServicesList = [
     },
 
     {
-        img: img,
+        img: appModernization,
         title: "App Modernization",
         desc: "Switching to microservices can make your app faster and more efficient. Microservices break down your app into smaller, independent parts, each handling a specific function. This allows for quicker updates, better performance, and easier scaling. Start by identifying key components of your app that can be separated, choose the right technologies, and plan a gradual transition.",
         body: [
@@ -622,7 +627,7 @@ export const Blogs = [
     },
     {
         id: "5",
-        title: "Blog five Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        title: "Blog cloudMigration Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
         img: comboImg

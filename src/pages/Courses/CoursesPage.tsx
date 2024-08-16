@@ -4,8 +4,8 @@ import { AvailableCourses } from "../../assets/Constants"
 import { Headers } from "../../assets/components/Headers"
 import { Button } from "../../assets/components/Button"
 import { ImageText } from "../../assets/components/ImageText"
-import img1 from "../../assets/images/server.jpg"
-import img2 from "../../assets/images/img2.jpg"
+import training from "../../assets/images/training.jpg"
+import training2 from "../../assets/images/training2.jpg"
 import { BiChevronDown, BiLoaderAlt } from "react-icons/bi"
 import { BsExclamationCircleFill } from "react-icons/bs"
 import { useDispatch } from "react-redux"
@@ -151,8 +151,8 @@ const CoursesPage = () => {
 
 
             <ImageText 
-                img1={img1}
-                img2={img2}
+                img1={training}
+                img2={training2}
                 header='Get started now'
                 span='with a course in tech'
                 desc="Join our free course on DevOps and Cloud Engineering. We also offer course on Web Development. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
@@ -211,7 +211,7 @@ const CoursesPage = () => {
             </div>
 
                     
-            <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col text-zinc-900 pt-[15vh]">
+            <div className="w-11/12 lg:w-10/12 xl:w-9/122 center flex-col text-zinc-900 pt-[15vh]">
 
                 <div id="registration" className="w-full py-[15vh]">
                     <Headers 

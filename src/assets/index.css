@@ -11,7 +11,12 @@
     justify-content: center;
 }
 
+h1, h2, h3, h4{
+    font-family: "Formular Black", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 p, li, label, a{
-    font-family: "Menoe Grotesque Pro Regular";
+    font-family: "Menoe Grotesque Pro Regular", 'Times New Roman', Times, serif;
 }
 

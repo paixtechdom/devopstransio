@@ -4,8 +4,6 @@ import { WhyUs } from "./WhyUs"
 import { Hero } from "./Hero"
 import { DevOpsTools } from "./DevOpsTools"
 import { Testimonials } from "./Testimonials"
-import img1 from "../../assets/images/server.jpg"
-import img2 from "../../assets/images/img2.jpg"
 import { Headers } from "../../assets/components/Headers"
 import { Blogs, ServicesList } from "../../assets/Constants"
 import { Services } from "../../assets/Interfaces"
@@ -15,6 +13,11 @@ import { BlogListing } from "../blogs/BlogListing"
 import { Helmet } from "react-helmet-async"
 import { Parallax } from "../../assets/components/Parallax"
 import { TrimText } from "../../assets/Functions"
+import eight from "../../assets/images/eight.jpg"
+import stress from "../../assets/images/stress.jpg"
+import programmer from "../../assets/images/programmer.jpg"
+import programmer2 from "../../assets/images/programmer2.jpg"
+import three from "../../assets/images/three.jpg"
 
 
 const HomePage: React.FC = () => {
@@ -37,11 +40,11 @@ const HomePage: React.FC = () => {
                     A close-up shot of a developer’s hands typing code on a laptop, symbolizing CI/CD automation and continuous improvement.
                 */}
                 <ImageText 
-                    img1={img1}
-                    img2={img2}
+                    img1={eight}
                     header="Empowering Your Digital"
                     span="Transformation"
                     desc="At Cloud Transio, we drive your business forward with advanced DevOps practices, CI/CD automation, and secure, scalable cloud solutions. From seamless cloud migrations to 24/7 server monitoring, we optimize your digital infrastructure, empowering your journey to digital excellence."
+                    img2={stress}
                     btn={
                         <Link to={"/contact"}> 
                             <Button 
@@ -95,7 +98,7 @@ const HomePage: React.FC = () => {
                         <div className="w-full lg:w-11/12 relative ">
                             <Parallax id={"homeServicesListingImg"} type="right">
                                 <div className="rounded-3xl shadow-lg shadow-primary overflow-hidden">
-                                    <img src={img1} alt="" className="w-full h-full object-cover"/>
+                                    <img src={three} alt="" className="w-full h-full object-cover"/>
                                 </div>
                             </Parallax>
                         </div>
@@ -111,8 +114,8 @@ const HomePage: React.FC = () => {
                 <PainsDesires />
 
                 <ImageText 
-                    img1={img1}
-                    img2={img2}
+                    img1={programmer}
+                    img2={programmer2}
                     header='Want to transit from'
                     span='"NON-IT" to "IT"?'
                     desc="Join our free training on DevOps and Cloud Engineering. We also offer training on Web Development. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."

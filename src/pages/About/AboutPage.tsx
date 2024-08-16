@@ -2,8 +2,8 @@ import { Button } from "../../assets/components/Button"
 import img from "../../assets/images/hero.jpg"
 import { Headers } from "../../assets/components/Headers"
 import { ImageText } from "../../assets/components/ImageText"
-import server from "../../assets/images/server.jpg"
-import benchmark from "../../assets/images/benchmark.jpg"
+import devOpsTeam from "../../assets/images/devOpsTeam.jpg"
+import solution from "../../assets/images/solution.jpg"
 import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet-async"
 import { Parallax } from "../../assets/components/Parallax"
@@ -125,13 +125,13 @@ const AboutPage = () => {
                 <ImageText 
                     header="Understanding Your Challenges,"
                     span="Delivering Solutions"
-                    img1={server}
-                    img2={benchmark}
+                    img1={devOpsTeam}
+                    img2={solution}
                     desc="At Cloud Transio, we understand the challenges you face—downtime, security risks, and the need for efficient, cost-effective operations. We’re here to meet your needs for a reliable online presence, fast deployment, and scalable solutions, all while ensuring enhanced security and minimizing costs."
                     /*
                         Images:
 
-                        Image 1: A visual representation of a secure, stable server environment.
+                        Image 1: A visual representation of a secure, stable devOpsTeam environment.
                         Image 2: A depiction of a fast and efficient deployment process with a focus on security.
                     */
                     btn={
