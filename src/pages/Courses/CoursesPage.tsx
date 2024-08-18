@@ -29,12 +29,12 @@ const courses = [
         ]
     },
     {
-        title: "Web Development",
+        title: "Software Engineering",
         body: [
-            "In today’s digital world, web development skills are in high demand. Whether you're looking to build visually stunning websites or robust web applications, mastering both frontend and backend technologies is crucial. Our courses are designed to equip you with the skills needed to excel in modern web development, covering everything from the basics to advanced techniques.",
+            "In today’s digital world, software engineering skills are in high demand. Whether you're looking to build visually stunning websites or robust web applications, mastering both frontend and backend technologies is crucial. Our courses are designed to equip you with the skills needed to excel in modern software enginering, covering everything from the basics to advanced techniques.",
             "Learn how to create engaging and responsive user interfaces with HTML, CSS, JavaScript, React, and Next.js. These technologies are the backbone of frontend development, allowing you to design and build websites that not only look great but also provide seamless user experiences. Through our hands-on courses, you'll gain practical knowledge in building dynamic web pages, managing state with React, and optimizing your applications with Next.js for better performance and SEO.",
             "Dive into the world of backend development with our comprehensive courses on Node.js, PHP or Python. These technologies are essential for creating the server-side logic and databases that power your web applications. You'll learn how to manage data, build APIs, and ensure secure and efficient communication between the frontend and backend. With Node.js, PHP or Python, you’ll be able to create dynamic and data-driven websites that meet the demands of modern users.",
-            "Our web development courses offer a blend of theory and practice, ensuring you understand the underlying principles while gaining hands-on experience. Whether you're a beginner or looking to advance your skills, our structured learning path will guide you through each stage of development, preparing you for a successful career in web development."
+            "Our software engineering courses offer a blend of theory and practice, ensuring you understand the underlying principles while gaining hands-on experience. Whether you're a beginner or looking to advance your skills, our structured learning path will guide you through each stage of development, preparing you for a successful career in software engineering."
         ]
     }
 ]
@@ -155,7 +155,7 @@ const CoursesPage = () => {
                 img2={training2}
                 header='Get started now'
                 span='with a course in tech'
-                desc="Join our free course on DevOps and Cloud Engineering. We also offer course on Web Development. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
+                desc="Join our free course on DevOps and Cloud Engineering. We also offer course on software engineeringt. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
                 btn={
                     <div className="flex items-center gap-4 mt-4">
 
@@ -211,7 +211,7 @@ const CoursesPage = () => {
             </div>
 
                     
-            <div className="w-11/12 lg:w-10/12 xl:w-9/122 center flex-col text-zinc-900 pt-[15vh]">
+            <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col text-zinc-900 pt-[15vh]">
 
                 <div id="registration" className="w-full py-[15vh]">
                     <Headers 

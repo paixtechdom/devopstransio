@@ -48,7 +48,7 @@ const HomePage: React.FC = () => {
                     btn={
                         <Link to={"/contact"}> 
                             <Button 
-                                text="CTA Button"
+                                text="START NOW"
                                 btnType="primary"
                             />
                         </Link>
@@ -132,7 +132,7 @@ const HomePage: React.FC = () => {
                 <Testimonials />
 
 
-                <section className="w-full center my-[20vh]">
+                {/* <section className="w-full center my-[20vh]">
                     <div className="justify-between w-11/12 lg:w-10/12 center flex-col  gap-[10vh] gap-y-12 items-center">
                     
                             
@@ -153,7 +153,7 @@ const HomePage: React.FC = () => {
                         </Link>
 
                     </div>
-                </section>    
+                </section>     */}
                 
             </main>
         </>

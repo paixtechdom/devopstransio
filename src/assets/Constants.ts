@@ -73,10 +73,10 @@ export const NavInfo = [
         title: 'Courses',
         link: 'courses',        
     },
-    {
-        title: 'Blogs',
-        link: 'blogs',
-    },
+    // {
+    //     title: 'Blogs',
+    //     link: 'blogs',
+    // },
 ]
 
 export const whyWeStandOut = [
