@@ -18,6 +18,7 @@ import stress from "../../assets/images/stress.jpg"
 import programmer from "../../assets/images/programmer.jpg"
 import programmer2 from "../../assets/images/programmer2.jpg"
 import three from "../../assets/images/three.jpg"
+import { SVGS } from "../../assets/SVGS"
 
 
 const HomePage: React.FC = () => {
@@ -31,6 +32,7 @@ const HomePage: React.FC = () => {
             </Helmet>
             <main className="center bg-secondary flex-col relative text-black">
                 
+                <SVGS />
                 <Hero />
                 
                 {/* 

@@ -1,0 +1,30 @@
+.animate-vertically{
+    animation: 2s animate-vertically ease-in-out infinite;
+}
+
+.animate-vertically-inversely{
+    animation: 2s animate-vertically ease-in-out infinite;
+}
+
+@keyframes animate-vertically {
+    from {
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(10px);
+    }
+}
+@keyframes animate-vertically-inversely {
+    from {
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
