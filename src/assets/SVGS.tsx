@@ -2953,7 +2953,7 @@ export const SceneSupport:FC<any> = ({i}) => {
                 </g>
             </g>
             <g id="main" transform="translate(56.000000, 70.000000)">
-                <g className={`${currentHoveredService== i ? "animate-vertically" : "animate-vertically lg:animate-none"}`}>
+                <g className={`${currentHoveredService== i ? "animate-vertically-inversely" : "animate-vertically-inversely lg:animate-none"}`}>
                     <g id="server2" transform="translate(320.000000, 53.000000)">
                         <g id="obj" transform="translate(0.092348, 0.430000)" style={{transform: `translateY(0.847px)`}}>
                             <polygon id="Path" fill="#000000" fillRule="nonzero" points="38.1376519 12.82 41.5076519 12.82 40.7076519 3.68 38.9376519 3.68" />

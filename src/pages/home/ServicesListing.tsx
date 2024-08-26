@@ -282,7 +282,7 @@ export const ServicesListing = () => {
                 </div>
 
 
-                <div className="w-11/12 flex flex-col gap-y-[10vh] xl:gap-y-[15vh] lg:gap-[2 0vh]">
+                <div className="w-full lg:w-11/12 flex flex-col gap-y-[10vh] xl:gap-y-[15vh] lg:gap-[2 0vh]">
                     {
                         ServicesList.map((service: Services, i) => (
                             <ServicesComponent 
@@ -329,7 +329,7 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
             className={`cursor-pointer flex items-center relative lg:justify-between flex-col
             ${index % 2 == 0 ? "lg:flex-row justify-start" : "lg:flex-row-reverse justify-end"} w-full`}>
                 
-            <Parallax id={TrimText(title)} type={index % 2 == 0 ? "left" : "right"} className="w-fit ">
+            <Parallax id={TrimText(title)} type={index % 2 == 0 ? "left" : "right"} className="w-fit">
                 <div className="h-fit [50vh] lg:h- [45vh] w-full  rounded-2xl overflow-hidden shadow-xl bg-primary  lg:scale-[1]"> 
                     {svg}
                 </div>
