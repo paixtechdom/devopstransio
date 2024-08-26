@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
-import { contactInfo, logo, NavInfo, ServicesList } from "../Constants"
+import { contactInfo, logo, NavInfo } from "../Constants"
 import { useDispatch } from "react-redux"
 import { setCurrentService } from "../store/navigation/navigationSlice"
 import { Parallax } from "./Parallax"
 import { TrimText } from "../Functions"
+import { ServicesList } from "../../pages/home/ServicesListing"
 
 export const Footer = () => {
     const dispatch = useDispatch()

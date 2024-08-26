@@ -3,28 +3,104 @@
 }
 
 .animate-vertically-inversely{
-    animation: 2s animate-vertically ease-in-out infinite;
+    animation: 2s animate-vertically-inversely ease-in-out infinite;
+}
+
+.animate-scale{
+    animation: 2s animate-scale ease-in-out infinite;
+}
+
+.animate-swim{
+    animation: 4s animate-swim ease-in-out infinite; 
+}
+
+.animate-wave{
+    transform-origin: bottom center;
+    animation: 4s animate-wave ease-in-out infinite;
+}
+
+.animate-wave-sm{
+    transform-origin: bottom center;
+    animation: 3s animate-wave-sm ease-in-out infinite;
 }
 
 @keyframes animate-vertically {
     from {
-        transform: translateY(10px);
-    }
-    50%{
         transform: translateY(0px);
     }
-    to{
+    50%{
         transform: translateY(10px);
+        }
+    to{
+        transform: translateY(0px);
     }
 }
+
 @keyframes animate-vertically-inversely {
     from {
-        transform: translateY(-10px);
-    }
-    50%{
         transform: translateY(0px);
     }
+    50%{
+        transform: translateY(-15px);
+    }
     to{
-        transform: translateY(-10px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animate-scale {
+    from {
+        transform: scale(1.3);
+    }
+    50%{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.3);
+    }
+}
+
+@keyframes animate-swim {
+    from {
+        transform: translateX(0%);
+    }
+    49%{
+        transform: translateX(50%);
+    }
+    50%{
+        transform: translateX(50%);
+    }
+    55%{
+        transform: translateX(50%);
+    }
+    99%{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes animate-wave {
+    from {
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    to{
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes animate-wave-sm {
+    from {
+        transform: rotate(2deg);
+    }
+    50%{
+        transform: rotate(-2deg);
+    }
+    to{
+        transform: rotate(2deg);
     }
 }

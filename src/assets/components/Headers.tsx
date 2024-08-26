@@ -16,7 +16,7 @@ export const Headers:FC<headersInterface> = ({text, bg}) => {
                 </div>
             </Parallax>
             <Parallax id={TrimText(text)} type="left">
-                <h2 className="text-4xl font-bold uppercase text-gray-900 tracking-wide">{text}</h2>
+                <h2 className="text-4xl font-bold uppercase text-zinc-700 tracking-wide">{text}</h2>
             </Parallax>
             <Parallax id={TrimText(text)+"bottom"}>
             <p className={`h-1 ${bg == "primary" ? "bg-secondary" : "bg-primary"}  w-20 rounded-full mt-2`}></p>

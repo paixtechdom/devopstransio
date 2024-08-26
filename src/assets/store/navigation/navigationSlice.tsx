@@ -9,7 +9,8 @@ interface NavInterface {
     currentDropDownIndex: number,
     scrolledDown: boolean,
     currentDropDown: string,
-    currentService: number
+    currentService: number,
+    currentHoveredService: number,
 }
 
 const initialState: NavInterface  = {
@@ -18,7 +19,8 @@ const initialState: NavInterface  = {
     currentDropDownIndex: 0,
     scrolledDown: false,
     currentDropDown: "",
-    currentService: -1    
+    currentService: -1,
+    currentHoveredService: -1    
 }
 
  
@@ -45,11 +47,14 @@ const navigationSlice = createSlice({
         setCurrentService: (state, action: PayloadAction<number>) => {
             state.currentService = action.payload
         },
+        setCurrentHoveredService: (state, action: PayloadAction<number>) => {
+            state.currentHoveredService = action.payload
+        },
     }
 })
 
 
-export const { toggleShowNav, setCurrentNav, setCurrentDropDownIndex, toggleScrolledDown, setCurrentDropDown, setCurrentService } = navigationSlice.actions
+export const { toggleShowNav, setCurrentNav, setCurrentDropDownIndex, toggleScrolledDown, setCurrentDropDown, setCurrentService, setCurrentHoveredService } = navigationSlice.actions
 
 
 export default navigationSlice.reducer

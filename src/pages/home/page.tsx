@@ -5,7 +5,6 @@ import { Hero } from "./Hero"
 import { DevOpsTools } from "./DevOpsTools"
 import { Testimonials } from "./Testimonials"
 import { Headers } from "../../assets/components/Headers"
-import { ServicesList } from "../../assets/Constants"
 import { Services } from "../../assets/Interfaces"
 import { Link } from "react-router-dom"
 import { PainsDesires } from "./PainsDesires"
@@ -18,7 +17,8 @@ import stress from "../../assets/images/stress.jpg"
 import programmer from "../../assets/images/programmer.jpg"
 import programmer2 from "../../assets/images/programmer2.jpg"
 import three from "../../assets/images/three.jpg"
-import { SVGS } from "../../assets/SVGS"
+import { ServicesList } from "./ServicesListing"
+
 
 
 const HomePage: React.FC = () => {
@@ -32,15 +32,10 @@ const HomePage: React.FC = () => {
             </Helmet>
             <main className="center bg-secondary flex-col relative text-black">
                 
-                <SVGS />
+                
                 <Hero />
                 
-                {/* 
-                    Images:
-
-                    A dynamic image of a cloud infrastructure with interconnected nodes representing cloud migration and DevOps integration.
-                    A close-up shot of a developer’s hands typing code on a laptop, symbolizing CI/CD automation and continuous improvement.
-                */}
+                
                 <ImageText 
                     img1={eight}
                     header="Empowering Your Digital"
@@ -58,7 +53,8 @@ const HomePage: React.FC = () => {
                 />
 
                 <WhyUs />
-
+                    
+                
                 <section className="w-full center mt-[20vh]">
                 <div className="w-11/12 lg:w-10/12 center flex-col  gap-[10vh] ">
                     <div className="flex flex-col-reverse w-full lg:flex-row justify-between gap-[50px] gap-y-12 items-center">

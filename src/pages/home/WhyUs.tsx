@@ -19,7 +19,7 @@ export const WhyUs : React.FC =  () => {
                             className="w-full h-full lg:h-[47vh]">
                             <div className="w-full flex flex-col gap-1 bg-secondary shadow-xl border border-primary border-opacity-90 rounded-xl p-5 relative py-8 h-full">
                                 <div className="absolute top-5 right-5 rounded-full size-4 bg-primary border border-primary"></div>
-                                <div className="size-[18vh] rounded-full center overflow-hidden shadow-3xl">
+                                <div className="size-[20vh] rounded-full center overflow-hidden shadow-3xl">
                                     <img src={why.img} alt={`${why.title}`} className="h-full object-cover" />
                                 </div>
 

@@ -1,11 +1,11 @@
 import { FC, useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../assets/store/AppStore"
-import { ServicesList } from "../../assets/Constants"
 import { Button } from "../../assets/components/Button"
 import { setCurrentService } from "../../assets/store/navigation/navigationSlice"
 import { BiX } from "react-icons/bi"
 import { Link } from "react-router-dom"
+import { ServicesList } from "../home/ServicesListing"
 
 export const AService = () => {
     const navigation = useSelector((state: RootState) => state.navigation)

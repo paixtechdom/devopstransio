@@ -1,5 +1,5 @@
 export interface Services {
-    img: string,
+    svg: JSX.Element,
     title: string,
     desc: string
 }
