@@ -17,7 +17,7 @@ const Services = () => {
             <meta name="description" content="" />
         </Helmet>
         <main className='bg-secondary w-full min-h-screen center flex-col py-[10vh] pt-[15vh] lg:pt-[20vh]'>
-        <div className="w-11/12 lg:w-10/12 flex flex-col gap-9 text-">
+        <div className="w-11/12 lg:w-10/12 flex flex-col gap-9">
 
             <div className="flex min-h-[70vh] flex-col gap-4 w-full lg:w-9/12">
                 <Headers 

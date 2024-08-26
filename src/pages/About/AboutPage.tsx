@@ -100,10 +100,10 @@ const AboutPage = () => {
                     <div className="grid md:grid-cols-2 gap-6 w-full">
                         {
                             whyUsInfo.map((why, i) => (
-                                <Parallax id={TrimText(why.title)} type={
+                                <Parallax key={i} id={TrimText(why.title)} type={
                                     i % 2 == 0 ? "left" : "right"
                                 }>
-                                    <div key={i} className="flex p-7 shadow-xl rounded-xl lg:min-h-[25vh] bg-secondary gap-3 items-start relative">
+                                    <div className="flex p-7 shadow-xl rounded-xl lg:min-h-[25vh] bg-secondary gap-3 items-start relative">
 
                                         <div className="absolute top-5 right-5 rounded-full size-4 bg-primary border border-primary"></div>
                                         <div className="flex flex-col">

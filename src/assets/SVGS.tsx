@@ -3,18 +3,7 @@ import { FC } from 'react'
 import './animation.css'
 import { RootState } from './store/AppStore'
 
-export const SVGS = () => {
-  return (
-    <div className="grid grid-cols-2 w-full gap-[50px] mt-[20vh]">
- 
-       <DevOpsSVG /> 
-       <Kubernetes /> 
-       <Infrastructure /> 
-       <Testing /> 
-       <SceneSupport /> 
-    </div>  
-  )
-}
+
 
 export const DevOpsSVG:FC<any> = ({i}) => {
     const currentHoveredService = useSelector((state: RootState) => state.navigation.currentHoveredService)

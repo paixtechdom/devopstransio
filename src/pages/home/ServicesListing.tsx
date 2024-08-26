@@ -282,7 +282,7 @@ export const ServicesListing = () => {
                 </div>
 
 
-                <div className="xl:w-11/12 flex flex-col gap-y-[10vh] xl:gap-y-[15vh] lg:gap-[2 0vh]">
+                <div className="w-11/12 flex flex-col gap-y-[10vh] xl:gap-y-[15vh] lg:gap-[2 0vh]">
                     {
                         ServicesList.map((service: Services, i) => (
                             <ServicesComponent 
@@ -327,16 +327,16 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
                 dispatch(setCurrentHoveredService(-1))
             }}
             className={`cursor-pointer flex items-center relative lg:justify-between flex-col
-            ${index % 2 == 0 ? "lg:flex-row justify-start" : "lg:flex-row-reverse justify-end"} bg- red-500 
-        `}>
-            <Parallax id={TrimText(title)} type={index % 2 == 0 ? "left" : "right"} className="w-fit full lg:w-5/ 12 xl:w- 4/12">
-                <div className="h-fit [50vh] lg:h- [45vh] w-full  rounded-2xl overflow-hidden shadow-xl bg-primary"> 
+            ${index % 2 == 0 ? "lg:flex-row justify-start" : "lg:flex-row-reverse justify-end"} w-full`}>
+                
+            <Parallax id={TrimText(title)} type={index % 2 == 0 ? "left" : "right"} className="w-fit ">
+                <div className="h-fit [50vh] lg:h- [45vh] w-full  rounded-2xl overflow-hidden shadow-xl bg-primary  lg:scale-[1]"> 
                     {svg}
                 </div>
             </Parallax>
-            <div className={`flex flex-col p-6 transition-all duration-1000 ease-in-out rounded-2xl gap-6 shadow-xl w-11/12 lg:w-6/12 relative bg-opacity-40 backdrop-blur-xl
-                ${index % 2 == 0 ? "bg-secondary lg:-translate-x-[50%]" : 
-                "bg-primary lg:translate-x-[50%]"}
+            <div className={`flex flex-col p-6 transition-all duration-1000 ease-in-out rounded-2xl gap-6 shadow-xl w-full lg:w-6/12 relative bg-opacity-40 backdrop-blur-xl bg-secondary
+                ${index % 2 == 0 ? "lg:-translate-x-[50%]" : 
+                "lg:translate-x-[50%]"}
 
                 ${currentHoveredService == index ? "lg:-translate-x-[0]" : ""}
                 `}>
@@ -355,38 +355,3 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
 
 }
 
-
-
-
-// const ServicesComponent:FC<serviceInterface> = ({img, title, desc, index}) => {
-//     const dispatch = useDispatch()
-
-//     return(        
-//         <div 
-//             onClick={() => 
-//                 dispatch(setCurrentService(index))
-//             } 
-//             className={`cursor-pointer flex items-center relative lg:justify-between
-//             ${index % 2 == 0 ? "lg:flex-row justify-start" : "lg:flex-row-reverse justify-end"} bg- red-500 
-//         `}>
-//             <Parallax id={TrimText(title)} type={index % 2 == 0 ? "left" : "right"} className="w-full lg:w-5/12 xl:w-4/12">
-//                 <div className="h-[50vh] lg:h-[45vh] w-full  rounded-2xl overflow-hidden shadow-xl"> 
-//                     <img src={img} alt={title} className="object-cover h-full w-full"/>
-//                 </div>
-//             </Parallax>
-//             <div className={`flex flex-col p-6 rounded-2xl gap-6 shadow-xl w-11/12 lg:w-6/12 absolute lg:relative bg-opacity-40 backdrop-blur-xl
-//                 ${index % 2 == 0 ? "bg-secondary lg:-translate-x-[50%]" : 
-//                 "bg-primary lg:translate-x-[50%]"}
-//                 `}>
-//                 <h2 className="font-bold text-xl">{title}</h2>
-//                 <p>{desc}</p>
-//                 <Button 
-//                     text="read more"
-//                     btnType={index % 2 == 0 ? "primary" : "secondary"}
-//                 />
-//             </div>
-            
-//         </div>
-//     )
-
-// }
