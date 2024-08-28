@@ -4,18 +4,18 @@ import { lazy, Suspense, useEffect } from 'react';
 import { HelmetProvider  } from 'react-helmet-async';
 import { PageNotFound } from './pages/PageNotFound';
 import { Navbar } from './assets/components/Navbar';
-import ContactPage from './pages/Contact/ContactPage';
-import CoursesPage from './pages/Courses/CoursesPage';
 import { Footer } from './assets/components/Footer';
 import { BiLoaderCircle } from 'react-icons/bi';
-import AboutPage from './pages/About/AboutPage';
-import Services from './pages/services/Services';
 import Alert from './assets/components/Alert';
 // import BlogsPage from './pages/blogs/BlogsPage';
 // import BlogPage from './pages/blogs/BlogPage';
 
 
 const HomePage = lazy(() => import("./pages/home/page"))
+const AboutPage = lazy(() => import("./pages/About/AboutPage"))
+const Services = lazy(() => import("./pages/services/Services"))
+const CoursesPage = lazy(() => import("./pages/Courses/CoursesPage"))
+const ContactPage = lazy(() => import("./pages/Contact/ContactPage"))
 
 
 export const AppRouter = () => {  

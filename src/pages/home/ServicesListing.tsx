@@ -1,18 +1,29 @@
 import { Services } from "../../assets/Interfaces"
 import { Headers } from "../../assets/components/Headers"
-import { FC } from "react"
+import { FC, lazy, Suspense } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { setCurrentHoveredService, setCurrentService } from "../../assets/store/navigation/navigationSlice"
 import { Button } from "../../assets/components/Button"
 import { Parallax } from "../../assets/components/Parallax"
 import { TrimText } from "../../assets/Functions"
-import { DevOpsSVG, Infrastructure, Kubernetes, Testing, SceneSupport, K8s, LoadTesting, AppModernization } from "../../assets/SVGS"
 import { RootState } from "../../assets/store/AppStore"
+const Infrastructure = lazy(() => import("../../assets/components/svgs/Infrastructure"))
+const Kubernetes = lazy(() => import("../../assets/components/svgs/Kubernetes"))
+const DevOpsSVG = lazy(() => import("../../assets/components/svgs/DevOpsSVG"))
+const Testing = lazy(() => import("../../assets/components/svgs/Testing"))
+const AppModernization = lazy(() => import("../../assets/components/svgs/AppModernization"))
+const LoadTesting = lazy(() => import("../../assets/components/svgs/LoadTesting"))
+const K8s = lazy(() => import("../../assets/components/svgs/K8s"))
+const SceneSupport = lazy(() => import("../../assets/components/svgs/SceneSupport"))
 
+
+{/* <Suspense fallback={<></>}> */}
 
 export const ServicesList = [
     {
-        svg: <Infrastructure i={0}/>,
+        svg: <Suspense fallback={<></>}> 
+                <Infrastructure i={0}/> 
+            </Suspense>,
         title: 'CI/CD Automation',
         desc: "Enabling application deployment and management easier and faster like never before",
         body: [
@@ -66,7 +77,9 @@ export const ServicesList = [
     },
 
     {
-        svg: <Kubernetes i={1}/> ,
+        svg: <Suspense fallback={<></>}> 
+                <Kubernetes i={1}/>  
+            </Suspense>,
         title: 'DevSecOps',
         desc: "Integrating Multi-Layered Security with Automation",
         body: [
@@ -103,7 +116,9 @@ export const ServicesList = [
     },
     
     {
-        svg: <DevOpsSVG i={2}/> ,
+        svg: <Suspense fallback={<></>}> 
+                <DevOpsSVG i={2}/>  
+            </Suspense>,
         title: '24X7 Server Monitoring & Support',
         desc: "24/7 Support over 1000 servers and 300 webprojects: from small corporate sites to major online stores, media sites and complex microservices projects. Do you want to be online 24/7 and sleep well? You’re at the right place!",
         body: [
@@ -121,7 +136,9 @@ export const ServicesList = [
     },
 
     {
-        svg: <Testing i={3}/> ,
+        svg: <Suspense fallback={<></>}> 
+                <Testing i={3}/>  
+            </Suspense>,
         title: 'Cloud Migration',
         desc: "In today's fast-paced digital world, keeping up means quickly and smartly adapting to new trends. As you navigate the constantly changing tech landscape, consider the huge advantages of migrating your workload from on-premise infrastructure to the cloud.",
         body: [
@@ -137,7 +154,9 @@ export const ServicesList = [
     },
 
     {
-        svg: <SceneSupport i={4}/>,
+        svg: <Suspense fallback={<></>}> 
+                <SceneSupport i={4}/> 
+            </Suspense>,
         title: 'DevOps & CI/CD',
         desc: 'We help companies adopt the best DevOps practices and CI/CD automation techniques to speed up development and make services more reliable in production.',
         body: [ 
@@ -169,11 +188,11 @@ export const ServicesList = [
         ]
     },
 
-    //  NO SVGS YET
 
     {
-        // svg: <img src={devopschats} alt="K8s image"/>,
-        svg: <K8s i={5}/>,
+        svg: <Suspense fallback={<></>}> 
+                <K8s i={5}/> 
+            </Suspense>,
         title: 'Fault-Tolerant Infrastructure',
         desc: "Your project will be exceptionally stable and resilient, capable of withstanding the failure of multiple servers. You won't need to worry, not even if a meteorite were to strike the data center.",
         body: [
@@ -203,7 +222,9 @@ export const ServicesList = [
     },
 
     {
-        svg: <LoadTesting i={6}/>,
+        svg: <Suspense fallback={<></>}> 
+                <LoadTesting i={6}/> 
+            </Suspense>,
         title: 'Load & Stress Testing',
         desc: "We’ll help you see what your project can handle! Using specialized tools, we simulate real user behavior on your site to see how it performs. We observe where it might slow down or fail and identify the load that causes these issues. Then, we analyze the data and provide expert recommendations.",
         body: [
@@ -247,7 +268,9 @@ export const ServicesList = [
 
 
     {
-        svg: <AppModernization i={7}/>,
+        svg: <Suspense fallback={<></>}> 
+                <AppModernization i={7}/> 
+            </Suspense>,
         title: "App Modernization",
         desc: "Switching to microservices can make your app faster and more efficient. Microservices break down your app into smaller, independent parts, each handling a specific function. This allows for quicker updates, better performance, and easier scaling. Start by identifying key components of your app that can be separated, choose the right technologies, and plan a gradual transition.",
         body: [
@@ -338,10 +361,13 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
                 ${index % 2 == 0 ? "lg:-translate-x-[50%]" : 
                 "lg:translate-x-[50%]"}
 
-                ${currentHoveredService == index ? "lg:-translate-x-[0]" : ""}
-                `}>
+                ${currentHoveredService == index ?
+                    index % 2 == 0 ?
+                    "lg:translate-x-[0%]" : 
+                    "lg:-translate-x-[0%]" : 
+                ""}`}>
                     
-                <h2 className="font-bold text-xl">{title}</h2>
+                <h2 className="font-bold text-xl">{title} {currentHoveredService == index && "current"}</h2>
                 <p>{desc}</p>
 
                 <Button 
