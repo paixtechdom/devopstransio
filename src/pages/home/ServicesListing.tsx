@@ -25,7 +25,7 @@ export const ServicesList = [
                 <Infrastructure i={0}/> 
             </Suspense>,
         title: 'CI/CD Automation',
-        desc: "Enabling application deployment and management easier and faster like never before",
+        desc: "Enabling application deployment and management easier and faster like never before. CI/CD stands for Continuous Integration and Continuous Deployment. It's a method that helps software development teams improve their efficiency and deliver products to users more quickly.",
         body: [
             {
                 type: "heading",
@@ -81,7 +81,7 @@ export const ServicesList = [
                 <Kubernetes i={1}/>  
             </Suspense>,
         title: 'DevSecOps',
-        desc: "Integrating Multi-Layered Security with Automation",
+        desc: "Integrating Multi-Layered Security with Automation. DevSecOps focuses on integrating security into every stage of software development and operations, using automation to ensure thorough and continuous protection",
         body: [
             {   
                 type: "heading",
@@ -311,7 +311,7 @@ export const ServicesListing = () => {
                             <ServicesComponent 
                                 key={i}
                                 title={service.title}
-                                desc={service.desc.slice(0, 100)+"..."}
+                                desc={service.desc.slice(0, 150)+"..."}
                                 index={i}
                                 svg={service.svg}                                
                             />
@@ -367,7 +367,7 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
                     "lg:-translate-x-[0%]" : 
                 ""}`}>
                     
-                <h2 className="font-bold text-xl">{title} {currentHoveredService == index && "current"}</h2>
+                <h2 className="font-bold text-xl">{title}</h2>
                 <p>{desc}</p>
 
                 <Button 
