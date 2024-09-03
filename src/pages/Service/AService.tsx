@@ -34,7 +34,7 @@ export const AService = () => {
  
 
     return(
-        <main className={`${currentService == -1 ? "-top-[100vh]" : "top-0"} fixed h-screen overflow-y-auto overflow-x-hidden bg-primary bg-opacity-60 backdrop-blur-3xl border-primary border-opacity-60 w-full z-40 flex justify-center py-[10vh] lg:py-[15vh] transition-all duration-1000 ease-in-out`}>
+        <main className={`${currentService == -1 ? "-top-[100vh]" : "top-0"} fixed h-screen overflow-y-auto overflow-x-hidden bg-secondary bg-opacity-20 backdrop-blur-3xl border-primary border-opacity-60 w-full z-40 flex justify-center py-[10vh] lg:py-[15vh] transition-all duration-1000 ease-in-out`}>
 
             <div className="w-11/12 lg:w-9/12 xl:w-8/12 relative">
 

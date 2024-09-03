@@ -8,12 +8,13 @@ interface ImageTextInterface {
     header: string
     desc: string,
     btn: JSX.Element,
-    span?: string
+    span?: string,
+    subHeader?: string
 }
 
 // const imageClass = " font - color - navbar ( home services about ) - services on the home page"
 
-export const ImageText:FC<ImageTextInterface> = ({img1, img2, header, desc, btn, span}) => {
+export const ImageText:FC<ImageTextInterface> = ({img1, img2, header, desc, btn, span, subHeader}) => {
   return (
 
     <section className="w-full center my-[15vh] mb-[25vh]">
@@ -37,12 +38,17 @@ export const ImageText:FC<ImageTextInterface> = ({img1, img2, header, desc, btn,
                 <Parallax id={TrimText(header)} type="right">
                     <h2 className="text-zinc-900 font-bold text-4xl relative">{header} <br />
                         {
-                            span && <span className="text-primary">{span}</span>
+                            span && <span className="text-zinc-900">{span}</span>
                         }
                     </h2>
                 </Parallax>
+
+                <Parallax id={TrimText(header)+'subHeader'} type="left">
+                    <h3 className="font-bold text-xl text-zinc-700">{subHeader}</h3>
+                </Parallax>
+
                 <Parallax id={TrimText(header)+'desc'} type="left">
-                    <p className="tracking-wide leading-relaxed text-zinc-900">{desc}</p>
+                    <p className="tracking-wide leading-relaxed text-black">{desc}</p>
                 </Parallax>
                 <Parallax id={TrimText(header)+'btn'}>
                     {btn}

@@ -29,10 +29,11 @@ export const NavInfo = [
         title: 'About Us',
         link: 'about',
     },
-    {
-        title: 'Services',
-        link: 'services'
-    },
+    
+    // {
+    //     title: 'Services',
+    //     link: 'services'
+    // },
    
     {
         title: 'Courses',
@@ -71,9 +72,13 @@ export const whyWeStandOut = [
 export const AvailableCourses = [
     "DevOps Engineering",
     "Cloud Computing",
+    "Cyber Security",
+    "UI/UX Design",
     "Frontend Engineering",
     "Backend Engineering",
-    "Fullstack Engineering"
+    "Fullstack Engineering",
+    "Machine Learning",
+    "AI Development"
 ]
 
 

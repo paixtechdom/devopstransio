@@ -75,7 +75,7 @@ const Tools = [
 
 export const DevOpsTools = () => {
   return (
-    <section className='center w-full my-[20vh] lg:mt-[35vh]'>
+    <section className='center w-full lg:mt-[25vh]'>
         <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center gap-y-[50px] gap-[150px]">
           <div className="w-full lg:w-6/12">
             <Headers 

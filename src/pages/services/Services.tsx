@@ -62,7 +62,7 @@ const Services = () => {
 
         <ServicesListing />
 
-        <div className="mt-[15vh] lg:mt-[20vh]"></div>
+        <div className="mt-[10vh]"></div>
 
         <ImageText 
             img1={programmer2}

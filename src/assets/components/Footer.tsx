@@ -9,19 +9,19 @@ import { ServicesList } from "../../pages/home/ServicesListing"
 export const Footer = () => {
     const dispatch = useDispatch()
     return(
-        <section className="bg-primary bg-opacity-50 min-h-[40vh] center flex-col">
+        <section className="bg-zinc-900 b g-opacity-50 min-h-[40vh] center flex-col">
             <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row justify-between gap-x-[150px] gap-[10vh] py-[15vh]">
 
                 <div className="flex flex-col gap-6">
                     <img src={logo} alt="Cloud Transio Logo" className="h-fit w-fit"/>
                     <div className="flex flex-col gap-1">
-                        <div className="mb-2 text-xl text-zinc-700 font-bold">Contact Us</div>
+                        <div className="mb-2 text-xl text-primary font-bold">Contact Us</div>
                         {
                             contactInfo.map((contact, i ) => (
                                 <Parallax key={i} id={TrimText(contact.title)} type={
                                     i % 2 == 0 ? "right" : "left"
                                 }>
-                                    <a target="_blank" href={`/${contact.link}`} className="text-base">
+                                    <a target="_blank" href={`/${contact.link}`} className="text-zinc-300">
                                         {contact.title}
                                     </a>
                                 </Parallax>
@@ -32,7 +32,7 @@ export const Footer = () => {
 
                 
                 <div className="flex flex-col gap-3">
-                    <div className="mb-3 text-xl text-zinc-700 font-bold">Our Services</div>
+                    <div className="mb-3 text-xl text-primary font-bold">Our Services</div>
                     <div className="grid  gap-3">
 
                     {
@@ -40,7 +40,7 @@ export const Footer = () => {
                             <Parallax key={i} id={"footerServiceList"} type={
                                 i % 2 == 0 ? "right" : "left"
                             }>
-                                <Link to={"/services"}  className="text-base cursor-pointer"
+                                <Link to={"/services"}  className="text-zinc-300 cursor-pointer"
                                 onClick={() => dispatch(setCurrentService(i))} 
                                 >
                                     {service.title}
@@ -53,14 +53,14 @@ export const Footer = () => {
 
 
                 <div className="flex flex-col gap-3 ">
-                    <div className="mb-3 text-xl text-zinc-700 font-bold">Links</div>
+                    <div className="mb-3 text-xl text-primary font-bold">Links</div>
                     {
                         NavInfo.map((nav, i ) => (
                             <Parallax key={i} id={TrimText(nav.title)} type={
                                 i % 2 == 0 ? "right" : "left"
                             }>
 
-                                <Link to={`/${nav.link}`} className="text-base">
+                                <Link to={`/${nav.link}`} className="text-zinc-300">
                                     {nav.title}
                                 </Link>
                             </Parallax>
@@ -70,7 +70,7 @@ export const Footer = () => {
 
             </div>
 
-            <div className="center flex-col bg-zinc-900 text-secondary h-[10vh] md:h-[15vh] w-full">
+            <div className="center flex-col bg-zinc-900 text-secondary h-[10vh] md:h-[15vh] w-full border-t border-primary">
                 <p className="flex gap-1">
                     All rights reserved <span className="text-primary">{new Date().getFullYear()}</span>
                 </p>

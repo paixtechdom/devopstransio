@@ -23,7 +23,7 @@ function App() {
 
 
   return (
-    <div className='App bg-secondary relative overflow-hidden'>
+    <div className='App bg-primary relative overflow-hidden'>
         <AppRouter />
     </div>
   );

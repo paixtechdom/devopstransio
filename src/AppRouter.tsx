@@ -13,7 +13,7 @@ import Alert from './assets/components/Alert';
 
 const HomePage = lazy(() => import("./pages/home/page"))
 const AboutPage = lazy(() => import("./pages/About/AboutPage"))
-const Services = lazy(() => import("./pages/services/Services"))
+// const Services = lazy(() => import("./pages/services/Services"))
 const CoursesPage = lazy(() => import("./pages/Courses/CoursesPage"))
 const ContactPage = lazy(() => import("./pages/Contact/ContactPage"))
 
@@ -29,7 +29,7 @@ export const AppRouter = () => {
                     <Routes>
                         <Route path="/" element={<HomePage />}/>
                         <Route path="/about" element={<AboutPage />}/>
-                        <Route path="/services" element={<Services />}/>
+                        {/* <Route path="/services" element={<Services />}/> */}
                         <Route path="/courses" element={<CoursesPage />}/>
                         {/* <Route path="/blogs" element={<BlogsPage />}/> */}
                         {/* <Route path="/blogs/:id" element={<BlogPage />}/> */}
@@ -45,9 +45,9 @@ export const AppRouter = () => {
 
 const Loader= () => {
     return(
-        <div className="center h-screen w-full bg-secondary flex-col gap-5">
+        <div className="center h-screen w-full bg-primary flex-col gap-5">
             <BiLoaderCircle  
-                className="text-5xl text-primary animate-spin"
+                className="text-5xl text-zinc-900 animate-spin"
             />
             <h1 className="text-zinc-700 font-bold text-5xl uppercase">Cloud Transio</h1>
         </div>

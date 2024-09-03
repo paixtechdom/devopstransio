@@ -147,14 +147,15 @@ const CoursesPage = () => {
             <title>Courses | Cloud Transio</title>
             <meta name="description" content="" />
         </Helmet>
-        <main className='bg-secondary w-full min-h-screen center flex-col pb-[15vh] lg:pt-[10vh]'>
+        <main className='w-full min-h-screen center flex-col pb-[15vh] lg:pt-[10vh]'>
 
 
             <ImageText 
                 img1={training}
                 img2={training2}
-                header='Get started now'
-                span='with a course in tech'
+                header='Want to transit from'
+                span='"NON-IT" to "IT"?'
+                subHeader={"Get started now with a course in tech"}
                 desc="Join our free course on DevOps and Cloud Engineering. We also offer course on software engineeringt. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
                 btn={
                     <div className="flex items-center gap-4 mt-4">
@@ -168,7 +169,6 @@ const CoursesPage = () => {
                                 btnType="primary"
                             />
                         </div>
-
 
                         <div onClick={() => document.querySelector('#coursesintro')?.scrollIntoView({
                             behavior: "smooth"

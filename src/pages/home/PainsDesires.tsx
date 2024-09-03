@@ -36,8 +36,8 @@ export const PainsDesires = () => {
 
 
     return(
-        <section className="w-full center my-[15vh] min-h-[70vh]">
-            <div className="flex flex-col lg:flex-row w-11/12 lg:w-10/12 bg-primary bg-opacity-50 rounded-2xl relative h-full py-0 pb-[5vh] lg:py-[5vh] gap-9 lg:gap-0">
+        <section className="w-full center my-[10vh] md:my-[15vh] mt-[25vh] min-h-[70vh] bg-primary bg-opacity-20">
+            <div className="flex flex-col lg:flex-row w-11/12 lg:w-10/12 bg-secondary bg-opacity-50 rounded-2xl relative h-full py-0 pb-[5vh] lg:py-[5vh] gap-9 lg:gap-0">
 
                 <div className={`transition-all duration-500 center p-7 absolute lg:w-6/12 top-0 h-full ${
                         showFears ? "right-0" : "right-[50%]"
@@ -48,14 +48,14 @@ export const PainsDesires = () => {
 
                 
                 <div className={`flex flex-col gap-5 lg:m-4 p-7 pt-[7vh] lg:pt-7 rounded-t-2xl lg:rounded-t-none z-10 w-full 
-                    ${showFears ? "" : "lg:hidden"} bg-primary lg:bg-transparent`}>
+                    ${showFears ? "" : "lg:hidden"} bg-secondary lg:bg-transparent`}>
                     <Parallax id={"eliminateFear"} className="w-full">
                         <div className={`text-zinc-800 text-2xl capitalize font-bold w-full`}>
                             We eliminate your fears
                         </div>
                     </Parallax>
 
-                    <div className="flex flex-col divide-y-2 divide-secondary lg:divide-primary gap-2">
+                    <div className="flex flex-col divide-y-2 divide-primary lg:divide-primary gap-2">
                         {
                             Fears.map((fear, i) => (
                                 <Parallax key={i} id={TrimText(fear)} 

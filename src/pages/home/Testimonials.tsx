@@ -62,13 +62,13 @@ export const Testimonials = () => {
 
 
     return(
-        <main className="w-full bg-primary min-h-[70vh] center flex-col py-[10vh] mt-[15vh]">
+        <main className="w-full bg-primary min-h-[70vh] center flex-col py-[10vh] mt-[ 15vh]">
             <div className="w-11/12 lg:w-9/12  flex items-center flex-col gap-9 text-black">
 
                 <div className="flex flex-col gap-2 w-full">
                     <Headers 
                         text="Testimonials"
-                        bg="primary"
+                        // bg="primary"
                     />
                     
                     <Parallax id={"testimonialsheading"} type="right">
@@ -91,10 +91,10 @@ export const Testimonials = () => {
                                 <div className="flex w-screen gap-3 center">
                                     <div className="w-full center">
 
-                                    <div className="flex w-9/12 md:w-8/12 lg:w-6/12 xl:w-5/12 gap-3 items-start bg-secondary shadow-xl rounded-2xl p-7 py-12 min-h-[30vh]">
+                                    <div className="flex w-9/12 md:w-8/12 lg:w-6/12 xl:w-5/12 gap-3 items-start bg-secondary bg-opacity-50 shadow-xl rounded-2xl p-7 py-12 min-h-[30vh]">
 
                                         <div className="flex flex-col gap-3">
-                                            <h3 className="font-bold text-primary text-xl">
+                                            <h3 className="font-bold text-black text-xl">
                                                 {review.name}
                                             </h3>
                                             <p className="leading-relaxed tracking-wide text-zinc-900">{review.review}</p>
