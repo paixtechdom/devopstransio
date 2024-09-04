@@ -1,8 +1,8 @@
 // import cloudSecurity from "./images/cloudSecurity.jpg"
 import logoImg from "./images/logo.png"
-import devopschats from "./images/devopschats.png"
-import backup from "./images/backup.png"
-import automations from "./images/automations.jpeg"
+import expertKnowledge from "./images/expertKnowledge.jpg"
+import automation from "./images/automation.jpg"
+import security from "./images/security.jpg"
 
 export const logo = logoImg
 
@@ -33,17 +33,17 @@ export const NavInfo = [
 
 export const whyWeStandOut = [
     {
-        img: devopschats,
+        img: expertKnowledge,
         title: 'Expert Knowledge',
         desc: 'Enabling app deployment and management like never before.'
     },
     {
-        img: backup,
+        img: automation,
         title: 'Automations',
         desc: 'Automation that has multi-layered security integrated.'
     },
     {
-        img: automations,
+        img: security,
         title: 'Security',
         desc: 'Our cloud experts are available around the clock to assist you.'
     },
