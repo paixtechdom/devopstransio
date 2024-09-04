@@ -51,7 +51,7 @@ const Loader= () => {
                 <BiLoaderCircle  
                     className="text-5xl text-zinc-900 animate-spin"
                 />
-                <h1 className="text-zinc-900 font-bold text-5xl uppercase">Cloud Transio</h1>
+                <h1 className="text-zinc-900 font-bold text-4xl lg:text-5xl uppercase">Cloud Transio</h1>
             </div>
         </div>
     )
