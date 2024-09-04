@@ -110,6 +110,7 @@ export const DevOpsTools = () => {
           <div className="w-full lg:w-6/12">
             <Headers 
               text="Tools we use" 
+              bg="primary"
               />
           </div>
 
