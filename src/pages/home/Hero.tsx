@@ -7,7 +7,7 @@ import { Parallax } from "../../assets/components/Parallax"
 
 export const Hero: React.FC = () => {
     return(
-        <div className="min-h-[110vh] w-full center z-6 relative md:mt-[5vh] lg:mt-0 bg-hero bg-cover bg-no-repeat"> 
+        <div className="min-h-[110vh] w-full center z-6 relative md:mt-[5vh] lg:mt-0 bg-heroSm lg:bg-hero bg-center bg-cover bg-no-repeat"> 
             <div className="w-full lg:w-10/12 flex justify-center lg:justify-start">
 
                 <div className="w-11/12 xl:w-8/12 justify-center flex flex-col gap-4 p- min-h-screen mb-[15vh]">
