@@ -355,11 +355,11 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
             ${index % 2 == 0 ? "lg:flex-row justify-start" : "lg:flex-row-reverse justify-end"} w-full`}>
                 
             <Parallax id={TrimText(title)} type={index % 2 == 0 ? "left" : "right"} className="w-fit">
-                <div className="h-fit [50vh] lg:h- [45vh] w-full  rounded-2xl overflow-hidden shadow-xl bg-primary  lg:scale-[1]"> 
+                <div className="h-fit [50vh] lg:h- [45vh] w-full  rounded-2xl overflow-hidden lg:shadow-xl bg-primary"> 
                     {svg}
                 </div>
             </Parallax>
-            <div className={`flex flex-col p-6 transition-all duration-1000 ease-in-out rounded-2xl gap-6 shadow-xl w-full lg:w-6/12 relative bg-opacity-40 backdrop-blur-xl bg-secondary
+            <div className={`flex flex-col p-6 transition-all duration-1000 ease-in-out gap-6 shadow-xl w-full lg:w-6/12 relative bg-opacity-40 backdrop-blur-xl bg-secondary
                 ${index % 2 == 0 ? "lg:-translate-x-[50%]" : 
                 "lg:translate-x-[50%]"}
                 ${currentHoveredService == index ?
