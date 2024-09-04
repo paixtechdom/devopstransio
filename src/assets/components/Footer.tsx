@@ -5,6 +5,7 @@ import { setCurrentService } from "../store/navigation/navigationSlice"
 import { Parallax } from "./Parallax"
 import { TrimText } from "../Functions"
 import { ServicesList } from "../../pages/home/ServicesListing"
+import { Button } from "./Button"
 
 export const Footer = () => {
     const dispatch = useDispatch()
@@ -66,6 +67,9 @@ export const Footer = () => {
                             </Parallax>
                         ))
                     }
+                    <Parallax id={"contactus"} type={"left"}>
+                        <Link to="/contact" className="text-zinc-300">Contact Us</Link>
+                    </Parallax>
                 </div>
 
             </div>
