@@ -359,7 +359,7 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
                     {svg}
                 </div>
             </Parallax>
-            <div className={`flex flex-col p-6 transition-all duration-1000 ease-in-out gap-6 shadow-xl w-full lg:w-6/12 relative bg-opacity-40 backdrop-blur-xl bg-secondary
+            <div className={`flex flex-col p-6 transition-all duration-1000 ease-in-out rounded-2xl gap-6 shadow-xl w-full lg:w-6/12 relative bg-opacity-40 backdrop-blur-xl bg-secondary
                 ${index % 2 == 0 ? "lg:-translate-x-[50%]" : 
                 "lg:translate-x-[50%]"}
                 ${currentHoveredService == index ?
