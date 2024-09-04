@@ -13,7 +13,7 @@ const DevOpsSVG = lazy(() => import("../../assets/components/svgs/DevOpsSVG"))
 const Testing = lazy(() => import("../../assets/components/svgs/Testing"))
 const AppModernization = lazy(() => import("../../assets/components/svgs/AppModernization"))
 const LoadTesting = lazy(() => import("../../assets/components/svgs/LoadTesting"))
-const K8s = lazy(() => import("../../assets/components/svgs/K8s"))
+// const K8s = lazy(() => import("../../assets/components/svgs/K8s"))
 const SceneSupport = lazy(() => import("../../assets/components/svgs/SceneSupport"))
 
 
