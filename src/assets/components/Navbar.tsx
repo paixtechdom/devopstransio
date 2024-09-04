@@ -39,7 +39,7 @@ export const Navbar: React.FC = () => {
     return(
         <>
            <>
-        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all bg-secondary duration-1000   ${scrolledDown ? `shadow-xl bg-opacity-50 backdrop-blur-2xl` : 'bg-opacity-0'}`}>
+        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all bg-secondary duration-1000   ${scrolledDown ? `shadow-xl bg-opacity-50 backdrop-blur-2xl` : location.pathname !== "/" ? "" : 'bg-opacity-0'}`}>
             <div className="flex items-center justify-between w-11/12 lg:w-10/12">
 
                 <Link to={'/'} className='w-3/12 md:w-2/12'>

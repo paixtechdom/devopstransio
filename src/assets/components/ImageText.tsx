@@ -44,7 +44,7 @@ export const ImageText:FC<ImageTextInterface> = ({img1, img2, header, desc, btn,
                 </Parallax>
 
                 <Parallax id={TrimText(header)+'subHeader'} type="left">
-                    <h3 className="font-bold text-xl text-zinc-700">{subHeader}</h3>
+                    <h3 className="font-bold text-xl text-zinc-800">{subHeader}</h3>
                 </Parallax>
 
                 <Parallax id={TrimText(header)+'desc'} type="left">

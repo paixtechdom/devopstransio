@@ -30,7 +30,7 @@ export const InputField:FC<InputFieldInterface> = ({type, label, className, hand
                 {label}
             </label>
 
-            <div className={`flex rounded-full  w-full items-center relative shadow-xl bg-secondary bg-opacity-30 ${value !== "" ? "" : ""} cursor-pointer
+            <div className={`flex rounded-full  w-full items-center relative shadow-xl bg-primary bg-opacity-30 ${value !== "" ? "" : ""} cursor-pointer
                  ${func ? 'cursor-pointer' : ''} overflow-hidden`} onClick={() => func && func()}>
                      
                     <input 
@@ -73,7 +73,7 @@ export const Select:FC<selectInterface> = ({setShowPopUp, showPopUp, options, fo
     return(
             <div className={`absolute w-full flex flex-col bg-secondary bg-opacity-30 backdrop-blur-3xl border border-primary border-opacity-30 shadow-xl rounded-xl h-fit gap-6 p-9 transition-all duration-500 ${showPopUp == name ? 'z-20' : '-z-10 opacity-[0] scale-[0.8] translate-y-32'} max-h-[70vh] overflow-y-auto`}>
 
-                <div className="w-full flex justify-between items-center cursor-pointer sticky top-0 bg-secondary bg-opacity-10 backdrop-blur-3xl z-20 p-3 px-6 rounded-full" onClick={() => {setShowPopUp(false)}}>
+                <div className="w-full flex justify-between items-center cursor-pointer sticky top-0 bg-primary bg-opacity-80 backdrop-blur-3xl z-20 p-3 px-6 rounded-full" onClick={() => {setShowPopUp(false)}}>
                     <label htmlFor={label} className="font-bold text-zinc-900 text-xl">
                         {label}
                     </label>
@@ -125,7 +125,7 @@ export const RadioSelect:FC<radioSelectInterface> = ({options, formInputs, label
                                 [name]: o
                             })
                          }}>
-                            <div className={`size-5 transition-ll duration-1000 rounded-full border-2 ${formInputs[name] !== o ? "bg-primary" : "bg-secondary border border-gray-100"}`}></div>
+                            <div className={`size-5 transition-ll duration-1000 rounded-full border-2 ${formInputs[name] == o ? "bg-primary" : "bg-secondary border border-gray-100"}`}></div>
                             <span className={`${formInputs[name] == o ? "font-bold" : "last:"}`}>{o}</span>
                         </div>
                     ))
