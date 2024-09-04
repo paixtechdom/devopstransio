@@ -5,7 +5,7 @@ import { setCurrentService } from "../store/navigation/navigationSlice"
 import { Parallax } from "./Parallax"
 import { TrimText } from "../Functions"
 import { ServicesList } from "../../pages/home/ServicesListing"
-import { Button } from "./Button"
+
 
 export const Footer = () => {
     const dispatch = useDispatch()
