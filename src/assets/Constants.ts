@@ -1,19 +1,5 @@
 // import cloudSecurity from "./images/cloudSecurity.jpg"
 import logoImg from "./images/logo.png"
-import server from "./images/server.jpg"
-import benchmark from "./images/benchmark.jpg"
-import analytics from "./images/analytics.jpg"
-import gears from "./images/gears.jpg"
-// import six from "./images/six.jpg"
-// import three from "./images/three.jpg"
-// import stress from "./images/stress.jpg"
-import comboImg from "./images/comboImg.jpg"
-import cloouHead from "./images/cloudHead.jpg"
-// import serverMonitoring from "./images/serverMonitoring.jpg"
-// import cloudMigration from "./images/cloudMigration.jpg"
-import processes from "./images/processes.jpg"
-// import appModernization from "./images/appModernization.jpg"
-// import cloudHead from "./images/programmer.jpg"
 import devopschats from "./images/devopschats.png"
 import backup from "./images/backup.png"
 import automations from "./images/automations.jpeg"
@@ -295,49 +281,49 @@ export const Blogs = [
         title: "Blog zero Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
-        img: server
+        img: "server"
     },
     {
         id: "1",
         title: "Blog one Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
-        img: analytics
+        img: "analytics"
     },
     {
         id: "2",
         title: "Blog two Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
-        img: processes
+        img: "processes"
     },
     {
         id: "3",
         title: "Blog three Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
-        img: gears
+        img: "gears"
     },
     {
         id: "4",
         title: "Blog  four Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
-        img: cloouHead
+        img: "cloouHead"
     },
     {
         id: "5",
         title: "Blog cloudMigration Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
-        img: comboImg
+        img: "comboImg"
     },
     {
         id: "6",
         title: "Blog six Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         date: "12-34-2045",
         excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit architecto sed facere quisquam voluptates, rerum qui neque numquam perferendis quidem corrupti laudantium enim tenetur nulla placeat laborum velit esse culpa natus illo corporis modi, mollitia cumque aut. Officia harum quos vitae delectus fugit expedita minus, itaque, molestiae iste necessitatibus vero.",
-        img: benchmark
+        img: "benchmark"
     },
 ]
 

@@ -22,7 +22,7 @@ const SceneSupport = lazy(() => import("../../assets/components/svgs/SceneSuppor
 export const ServicesList = [
     {
         svg: <Suspense fallback={<></>}> 
-                <LoadTesting i={6}/> 
+                <LoadTesting i={0}/> 
             </Suspense>,
         title: 'CI/CD Automation',
         desc: "Enabling application deployment and management easier and faster like never before. CI/CD stands for Continuous Integration and Continuous Deployment. It's a method that helps software development teams improve their efficiency and deliver products to users more quickly.",
@@ -76,68 +76,69 @@ export const ServicesList = [
         ]
     },
 
-    // {
-    //     svg: <Suspense fallback={<></>}> 
-    //             <Kubernetes i={1}/>  
-    //         </Suspense>,
-    //     title: 'DevSecOps',
-    //     desc: "Integrating Multi-Layered Security with Automation. DevSecOps focuses on integrating security into every stage of software development and operations, using automation to ensure thorough and continuous protection",
-    //     body: [
-    //         {   
-    //             type: "heading",
-    //             content: "Integrating Multi-Layered Security with Automation",
-    //         },
-    //         {
-    //             type: "p",
-    //             content: [
-    //                 "DevSecOps focuses on integrating security into every stage of software development and operations, using automation to ensure thorough and continuous protection"
-    //             ]
-    //         },
-    //         {
-    //             type: "ul",
-    //             intro: "Here’s a straightforward overview:",
-    //             li: [
-    //                 {
-    //                     title: "DevSecOps employs automation and multi-layered security measures.",
-    //                     content: "Automated security checks run continuously throughout the development process, and multiple layers of security are integrated into every phase to detect and address vulnerabilities early."
-    //                 },
-    //                 {
-    //                     title: "DevSecOps incorporates security throughout the software development lifecycle.",
-    //                     content: "During development, developers write and update code with security in mind. Automated tools scan the code for vulnerabilities as it’s being developed. In operations, the code is managed in production with continuous security monitoring and updates."
-    //                 },
-    //                 {
-    //                     title: "There are several advantages to adopting DevSecOps practices.",
-    //                     content: "It enhances security by ensuring threats are identified and resolved early with multi-layered security measures. Automation speeds up the development process, allowing for quick and secure releases. Additionally, DevSecOps promotes collaboration among developers, security experts, and operations teams, ensuring that security is integrated effectively into operations."
-    //                 }
+    {
+        svg: <Suspense fallback={<></>}> 
+                <Kubernetes i={1}/>  
+            </Suspense>,
+        title: 'DevSecOps',
+        desc: "Integrating Multi-Layered Security with Automation. DevSecOps focuses on integrating security into every stage of software development and operations, using automation to ensure thorough and continuous protection",
+        body: [
+            {   
+                type: "heading",
+                content: "Integrating Multi-Layered Security with Automation",
+            },
+            {
+                type: "p",
+                content: [
+                    "DevSecOps focuses on integrating security into every stage of software development and operations, using automation to ensure thorough and continuous protection"
+                ]
+            },
+            {
+                type: "ul",
+                intro: "Here’s a straightforward overview:",
+                li: [
+                    {
+                        title: "DevSecOps employs automation and multi-layered security measures.",
+                        content: "Automated security checks run continuously throughout the development process, and multiple layers of security are integrated into every phase to detect and address vulnerabilities early."
+                    },
+                    {
+                        title: "DevSecOps incorporates security throughout the software development lifecycle.",
+                        content: "During development, developers write and update code with security in mind. Automated tools scan the code for vulnerabilities as it’s being developed. In operations, the code is managed in production with continuous security monitoring and updates."
+                    },
+                    {
+                        title: "There are several advantages to adopting DevSecOps practices.",
+                        content: "It enhances security by ensuring threats are identified and resolved early with multi-layered security measures. Automation speeds up the development process, allowing for quick and secure releases. Additionally, DevSecOps promotes collaboration among developers, security experts, and operations teams, ensuring that security is integrated effectively into operations."
+                    }
 
-    //             ]
-    //         }
-    //     ]
-    // },
+                ]
+            }
+        ]
+    },
     
-    // {
-    //     svg: <Suspense fallback={<></>}>         
-    //             <SceneSupport i={4}/> 
-    //         </Suspense>,
-    //     title: '24X7 Server Monitoring & Support',
-    //     desc: "24/7 Support over 1000 servers and 300 webprojects: from small corporate sites to major online stores, media sites and complex microservices projects. Do you want to be online 24/7 and sleep well? You’re at the right place!",
-    //     body: [
-    //         {
-    //             type: "p",
-    //             content: [
-    //                 "24/7 Server monitoring and support cater to a wide range of needs, spanning from small corporate websites to large-scale online stores, media sites, and complex microservices projects. If your goal is uninterrupted online presence and peace of mind, you've come to the right place!",
-    //                 "Server monitoring and support ensure that your website, application, or online platform runs smoothly without interruptions. It's like having a team of experts keeping an eye on your online presence round the clock. They are ready to tackle any issues promptly to minimize downtime and keep your services accessible.",
-    //                 "Anyone who relies on their online presence for their business can benefit from server monitoring and support. Whether you run a small business website, a bustling e-commerce store, a content-heavy media site, or a complex setup of microservices, these services ensure your operations remain uninterrupted.",
-    //                 "The benefits include minimizing downtime to ensure your website or application is always available, providing peace of mind knowing that experts are monitoring your systems, and swiftly resolving technical issues to reduce business impact. Additionally, regular updates, backups, and security checks prevent problems before they affect your operations. Optimization of server performance further enhances user experience with faster loading times and seamless functionality",
-    //                 "Expect continuous monitoring of your server's performance, security, and uptime, complemented by real-time alerts that notify you of any potential issues immediately. Expert support is available for quick resolution of technical issues, while scheduled maintenance ensures your systems stay up-to-date and secure. Ongoing performance optimization ensures your server operates at peak efficiency, supporting your business objectives effectively."
-    //             ]
-    //         }
-    //     ]
-    // },
+    {
+        svg: <Suspense fallback={<></>}>         
+                <SceneSupport i={2}/> 
+            </Suspense>,
+        title: '24X7 Server Monitoring & Support',
+        desc: "24/7 Support over 1000 servers and 300 webprojects: from small corporate sites to major online stores, media sites and complex microservices projects. Do you want to be online 24/7 and sleep well? You’re at the right place!",
+        body: [
+            {
+                type: "p",
+                content: [
+                    "24/7 Server monitoring and support cater to a wide range of needs, spanning from small corporate websites to large-scale online stores, media sites, and complex microservices projects. If your goal is uninterrupted online presence and peace of mind, you've come to the right place!",
+                    "Server monitoring and support ensure that your website, application, or online platform runs smoothly without interruptions. It's like having a team of experts keeping an eye on your online presence round the clock. They are ready to tackle any issues promptly to minimize downtime and keep your services accessible.",
+                    "Anyone who relies on their online presence for their business can benefit from server monitoring and support. Whether you run a small business website, a bustling e-commerce store, a content-heavy media site, or a complex setup of microservices, these services ensure your operations remain uninterrupted.",
+                    "The benefits include minimizing downtime to ensure your website or application is always available, providing peace of mind knowing that experts are monitoring your systems, and swiftly resolving technical issues to reduce business impact. Additionally, regular updates, backups, and security checks prevent problems before they affect your operations. Optimization of server performance further enhances user experience with faster loading times and seamless functionality",
+                    "Expect continuous monitoring of your server's performance, security, and uptime, complemented by real-time alerts that notify you of any potential issues immediately. Expert support is available for quick resolution of technical issues, while scheduled maintenance ensures your systems stay up-to-date and secure. Ongoing performance optimization ensures your server operates at peak efficiency, supporting your business objectives effectively."
+                ]
+            }
+        ]
+    },
 
     {
         svg: <Suspense fallback={<></>}> 
-                <K8s i={5}/> 
+                <K8s i={3}/> 
+                {/* <AppModernization i={3}/>  */}
             </Suspense>,
         title: 'Cloud Migration',
         desc: "In today's fast-paced digital world, keeping up means quickly and smartly adapting to new trends. As you navigate the constantly changing tech landscape, consider the huge advantages of migrating your workload from on-premise infrastructure to the cloud.",
@@ -153,119 +154,119 @@ export const ServicesList = [
         ]
     },
 
-    // {
-    //     svg: <Suspense fallback={<></>}> 
-    //             <DevOpsSVG i={2}/>  
-    //         </Suspense>,
-    //     title: 'DevOps & CI/CD',
-    //     desc: 'We help companies adopt the best DevOps practices and CI/CD automation techniques to speed up development and make services more reliable in production.',
-    //     body: [ 
-    //         {
-    //             type: "p",
-    //             content: [
-    //                 "DevOps combines development and operations to improve collaboration and productivity by automating processes and integrating teams. This approach helps in identifying and fixing issues quickly, leading to faster delivery of software and better product quality.",
-    //                 "CI/CD stands for Continuous Integration and Continuous Deployment. CI means regularly merging code changes into a shared repository, allowing for automatic testing and integration. CD takes it a step further by automatically deploying code changes to production, ensuring that updates are released quickly and consistently.",
-    //             ]
-    //         },
-    //         {
-    //             type: "ol",
-    //             intro: "By implementing DevOps and CI/CD, companies can:",
-    //             li: [
-    //                 {
-    //                     content: "Release new features and updates faster",
-    //                 },
-    //                 {
-    //                     content: "Improve the quality and stability of their software",
-    //                 },
-    //                 {
-    //                     content: "Enhance collaboration between development and operations teams",
-    //                 },
-    //                 {
-    //                     content: "Quickly respond to user feedback and market changes",
-    //                 },
-    //             ]
-    //         }
-    //     ]
-    // },
+    {
+        svg: <Suspense fallback={<></>}> 
+                <DevOpsSVG i={4}/>  
+            </Suspense>,
+        title: 'DevOps & CI/CD',
+        desc: 'We help companies adopt the best DevOps practices and CI/CD automation techniques to speed up development and make services more reliable in production.',
+        body: [ 
+            {
+                type: "p",
+                content: [
+                    "DevOps combines development and operations to improve collaboration and productivity by automating processes and integrating teams. This approach helps in identifying and fixing issues quickly, leading to faster delivery of software and better product quality.",
+                    "CI/CD stands for Continuous Integration and Continuous Deployment. CI means regularly merging code changes into a shared repository, allowing for automatic testing and integration. CD takes it a step further by automatically deploying code changes to production, ensuring that updates are released quickly and consistently.",
+                ]
+            },
+            {
+                type: "ol",
+                intro: "By implementing DevOps and CI/CD, companies can:",
+                li: [
+                    {
+                        content: "Release new features and updates faster",
+                    },
+                    {
+                        content: "Improve the quality and stability of their software",
+                    },
+                    {
+                        content: "Enhance collaboration between development and operations teams",
+                    },
+                    {
+                        content: "Quickly respond to user feedback and market changes",
+                    },
+                ]
+            }
+        ]
+    },
 
 
-    // {
-    //     svg: <Suspense fallback={<></>}> 
-    //             <Infrastructure i={0}/> 
-    //         </Suspense>,
-    //     title: 'Fault-Tolerant Infrastructure',
-    //     desc: "Your project will be exceptionally stable and resilient, capable of withstanding the failure of multiple servers. You won't need to worry, not even if a meteorite were to strike the data center.",
-    //     body: [
-    //         {
-    //             type: "p",
-    //             content: ["Fault-tolerant infrastructure ensures that your systems remain operational even if individual components fail. This reliability is achieved through redundant hardware, automatic failover mechanisms, and continuous monitoring. It's like having backups for your backups, ensuring uninterrupted service and peace of mind for your business operations."]
-    //         },
-    //         {
-    //             type: "ol",
-    //             intro: "Benefits of fault-tolerant infrastructure include:",
-    //             li: [
-    //                 {
-    //                     content: "Minimized downtime and improved reliability"
-    //                 },
-    //                 {
-    //                     content: "Enhanced data protection and disaster recovery capabilities"
-    //                 },
-    //                 {
-    //                     content: "Consistent performance under unexpected circumstances"
-    //                 },
-    //                 {
-    //                     content: "Greater confidence in handling peak loads or unexpected events"
-    //                 },
-    //             ]
-    //         }
-    //     ]
-    // },
+    {
+        svg: <Suspense fallback={<></>}> 
+                <Infrastructure i={5}/> 
+            </Suspense>,
+        title: 'Fault-Tolerant Infrastructure',
+        desc: "Your project will be exceptionally stable and resilient, capable of withstanding the failure of multiple servers. You won't need to worry, not even if a meteorite were to strike the data center.",
+        body: [
+            {
+                type: "p",
+                content: ["Fault-tolerant infrastructure ensures that your systems remain operational even if individual components fail. This reliability is achieved through redundant hardware, automatic failover mechanisms, and continuous monitoring. It's like having backups for your backups, ensuring uninterrupted service and peace of mind for your business operations."]
+            },
+            {
+                type: "ol",
+                intro: "Benefits of fault-tolerant infrastructure include:",
+                li: [
+                    {
+                        content: "Minimized downtime and improved reliability"
+                    },
+                    {
+                        content: "Enhanced data protection and disaster recovery capabilities"
+                    },
+                    {
+                        content: "Consistent performance under unexpected circumstances"
+                    },
+                    {
+                        content: "Greater confidence in handling peak loads or unexpected events"
+                    },
+                ]
+            }
+        ]
+    },
     
 
-    // {
-    //     svg: <Suspense fallback={<></>}> 
-    //             <Testing i={3}/>  
-    //         </Suspense>,
-    //     title: 'Load & Stress Testing',
-    //     desc: "We’ll help you see what your project can handle! Using specialized tools, we simulate real user behavior on your site to see how it performs. We observe where it might slow down or fail and identify the load that causes these issues. Then, we analyze the data and provide expert recommendations.",
-    //     body: [
-    //         {
-    //             type: "ul",
-    //             li: [
-    //                 {
-    //                     title: "Load Testing",
-    //                     content: "measures the system's performance under expected user loads. The goal is to ensure the site can handle normal traffic without issues. During this process, we simulate typical user activity to see if the site remains stable and responsive. The outcome is identifying performance bottlenecks and optimizing system capacity."
-    //                 },
-    //                 {
-    //                     title: "Stress Testing",
-    //                     content: "evaluates how the system performs under extreme or peak loads. The goal is to determine the breaking point and how the system recovers from failures. We push the system beyond its normal operational capacity to identify weak points. The outcome is finding out how much stress the system can handle before it crashes and improving its robustness."
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             type: "ol",
-    //             intro: "Key Benefits of load and stress testing include",
-    //             li: [
-    //                 {
-    //                     content: "Ensuring your site's reliability under varying loads"
-    //                 },
-    //                 {
-    //                     content: "Helping plan for future growth and higher traffic"
-    //                 },
-    //                 {
-    //                     content: "Identifying areas for performance optimization to enhance user experience."
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             type: "p",
-    //             content: [
-    //                 "Our approach involves using real-world scenarios to mimic user behavior, monitoring system performance to identify slowdowns and failures, analyzing collected data to understand performance limits and issues, and providing expert advice on optimizing performance and improving system resilience.",
-    //                 "By conducting load and stress tests, we ensure your site is ready to handle real-world challenges, keeping your users happy and your project successful."
-    //             ]
-    //         }
-    //     ]
-    // },
+    {
+        svg: <Suspense fallback={<></>}> 
+                <Testing i={6}/>  
+            </Suspense>,
+        title: 'Load & Stress Testing',
+        desc: "We’ll help you see what your project can handle! Using specialized tools, we simulate real user behavior on your site to see how it performs. We observe where it might slow down or fail and identify the load that causes these issues. Then, we analyze the data and provide expert recommendations.",
+        body: [
+            {
+                type: "ul",
+                li: [
+                    {
+                        title: "Load Testing",
+                        content: "measures the system's performance under expected user loads. The goal is to ensure the site can handle normal traffic without issues. During this process, we simulate typical user activity to see if the site remains stable and responsive. The outcome is identifying performance bottlenecks and optimizing system capacity."
+                    },
+                    {
+                        title: "Stress Testing",
+                        content: "evaluates how the system performs under extreme or peak loads. The goal is to determine the breaking point and how the system recovers from failures. We push the system beyond its normal operational capacity to identify weak points. The outcome is finding out how much stress the system can handle before it crashes and improving its robustness."
+                    },
+                ]
+            },
+            {
+                type: "ol",
+                intro: "Key Benefits of load and stress testing include",
+                li: [
+                    {
+                        content: "Ensuring your site's reliability under varying loads"
+                    },
+                    {
+                        content: "Helping plan for future growth and higher traffic"
+                    },
+                    {
+                        content: "Identifying areas for performance optimization to enhance user experience."
+                    }
+                ]
+            },
+            {
+                type: "p",
+                content: [
+                    "Our approach involves using real-world scenarios to mimic user behavior, monitoring system performance to identify slowdowns and failures, analyzing collected data to understand performance limits and issues, and providing expert advice on optimizing performance and improving system resilience.",
+                    "By conducting load and stress tests, we ensure your site is ready to handle real-world challenges, keeping your users happy and your project successful."
+                ]
+            }
+        ]
+    },
 
 
     {
@@ -364,7 +365,7 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
                 ${currentHoveredService == index ?
                     index % 2 == 0 ?
                     "lg:translate-x-[0%]" : 
-                    "lg:translate-x-[-%]" : 
+                    "lg:translate-x-[%]" : 
                 ""}`}>
                     
                 <h2 className="font-bold text-xl">{title}
@@ -374,7 +375,7 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
 
                 <Button 
                     text="read more"
-                    btnType={index % 2 == 0 ? "primary" : "secondary"}
+                    btnType={"primary"}
                 />
             </div>
             

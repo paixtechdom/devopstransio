@@ -369,21 +369,3 @@ const K8s:FC<any> = ({i}) => {
 }
 
 export default K8s
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

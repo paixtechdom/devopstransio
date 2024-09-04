@@ -29,15 +29,18 @@ const HomePage: React.FC = () => {
                 
                 <ServicesListing />
 
+                <div className="flex flex-col bg-secondary bg-opacity-50 mt-[15vh]">
+
                 <DevOpsTools />
 
                 <PainsDesires />
+                </div>
 
                 <Testimonials />
                 
             </main>
 
-            {/* <AService />             */}
+            <AService />            
         </>
     )
 }

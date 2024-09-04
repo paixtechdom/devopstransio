@@ -36,7 +36,7 @@ export const PainsDesires = () => {
 
 
     return(
-        <section className="w-full center my-[10vh] md:my-[15vh] mt-[25vh] min-h-[70vh] bg-primary bg-opacity-20">
+        <section className="w-full center my-[10vh] md:my-[15vh] mt-[25vh] min-h-[70vh] bg-prim ary bg-opac ity-20">
             <div className="flex flex-col lg:flex-row w-11/12 lg:w-10/12 bg-secondary bg-opacity-50 rounded-2xl relative h-full py-0 pb-[5vh] lg:py-[5vh] gap-9 lg:gap-0">
 
                 <div className={`transition-all duration-500 center p-7 absolute lg:w-6/12 top-0 h-full ${
