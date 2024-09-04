@@ -48,14 +48,14 @@ export const PainsDesires = () => {
 
                 
                 <div className={`flex flex-col gap-5 lg:m-4 p-7 pt-[7vh] lg:pt-7 rounded-t-2xl lg:rounded-t-none z-10 w-full 
-                    ${showFears ? "" : "lg:hidden"} bg-secondary lg:bg-transparent`}>
+                    ${showFears ? "" : "lg:hidden"} bg-primary lg:bg-transparent`}>
                     <Parallax id={"eliminateFear"} className="w-full">
                         <div className={`text-zinc-800 text-2xl capitalize font-bold w-full`}>
                             We eliminate your fears
                         </div>
                     </Parallax>
 
-                    <div className="flex flex-col divide-y-2 divide-primary lg:divide-primary gap-2">
+                    <div className="flex flex-col divide-y-2 divide-zinc-800 lg:divide-primary gap-2">
                         {
                             Fears.map((fear, i) => (
                                 <Parallax key={i} id={TrimText(fear)} 

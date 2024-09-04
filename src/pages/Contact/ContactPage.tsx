@@ -149,7 +149,7 @@ const ContactPage = () => {
                             Message                       
                         </label>
 
-                        <div className={`flex rounded-3xl w-full items-center relative ${formInputs.message !== "" ? "" : "text-zinc-900"}  cursor-pointer overflow-hidden min-h-[20vh] h-[20vh] bg-secondary bg-opacity-30 shadow-2xl pt-3 p-2`}>
+                        <div className={`flex rounded-3xl w-full items-center relative ${formInputs.message !== "" ? "" : "text-zinc-900"}  cursor-pointer overflow-hidden min-h-[20vh] h-[20vh] bg-primary bg-opacity-30 shadow-2xl pt-3 p-2`}>
                             <textarea 
                                 onChange={handleChange}
                                 name={'message'}
