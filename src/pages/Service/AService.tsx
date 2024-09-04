@@ -25,11 +25,10 @@ export const AService = () => {
             document.body.style.overflowY = "hidden"
         }
     }, [currentService])
-
+    
     const closeService = () => {
-        // setTimeout(() => {
-            dispatch(setCurrentService(-1))
-        // }, 1000);
+        document.body.style.overflowY="auto"
+        dispatch(setCurrentService(-1))
     }
  
 
