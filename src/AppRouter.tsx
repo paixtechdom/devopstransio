@@ -46,10 +46,13 @@ export const AppRouter = () => {
 const Loader= () => {
     return(
         <div className="center h-screen w-full bg-primary flex-col gap-5">
-            <BiLoaderCircle  
-                className="text-5xl text-zinc-900 animate-spin"
-            />
-            <h1 className="text-zinc-900 font-bold text-5xl uppercase">Cloud Transio</h1>
+            <div className="center h-[90vh] w-11/12 md:w-10/12 xl:w-9/12 bg-secondary bg-opacity-30 flex-col gap-5 rounded-xl">
+
+                <BiLoaderCircle  
+                    className="text-5xl text-zinc-900 animate-spin"
+                />
+                <h1 className="text-zinc-900 font-bold text-5xl uppercase">Cloud Transio</h1>
+            </div>
         </div>
     )
 }
