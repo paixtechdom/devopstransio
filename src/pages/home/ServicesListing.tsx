@@ -354,10 +354,8 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
             className={`cursor-pointer flex items-center relative lg:justify-between flex-col
             ${index % 2 == 0 ? "lg:flex-row justify-start" : "lg:flex-row-reverse justify-end"} w-full`}>
                 
-            <Parallax id={TrimText(title)} type={index % 2 == 0 ? "left" : "right"} className="w-fit">
-                <div className="h-fit lg:h-[55vh] w-full rounded-2xl overflow-hidden bg-primary center" style={{
-                    boxShadow: "0px 0px 10px 1.5px rgba(0,0,0,0.3)"
-                }}> 
+            <Parallax id={TrimText(title)} type={index % 2 == 0 ? "left" : "right"} className="w-11/12 lg:w-fit">
+                <div className="h-fit lg:h-[55vh] w-full rounded-2xl overflow-hidden bg-primary center shadow-around"> 
                     {svg}
                 </div>
             </Parallax>
