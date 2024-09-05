@@ -7,7 +7,7 @@ import hero from "../../assets/images/hero.jpg"
 
 export const Hero: React.FC = () => {
     return(
-        <div className="min-h-[110vh] w-full center z-6 relative md:mt-[5vh] lg:mt-0 bg-heroSm lg:bg-hero bg-ce nter bg-cover bg-no-repeat bg-fixed bg-[50%]"> 
+        <div className="h-screen w-full center z-6 relative md:mt-[5vh] lg:mt-0 bg-heroSm lg:bg-hero bg-ce nter bg-cover bg-no-repeat bg-fixed bg-[50%]"> 
 
             <div className="absolute top-0 w-full h-full center bg-zinc-700">
                 <div className="absolute top-0 h-full w-full bg-black bg-opacity-60 lg:bg-opacity-70"></div>
