@@ -355,32 +355,39 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
             ${index % 2 == 0 ? "lg:flex-row justify-start" : "lg:flex-row-reverse justify-end"} w-full`}>
                 
             <Parallax id={TrimText(title)} type={index % 2 == 0 ? "left" : "right"} className="w-fit">
-                <div className="h-fit [50vh] lg:h- [45vh] w-full  rounded-2xl overflow-hidden lg:shadow-xl bg-primary"> 
+                <div className="h-fit lg:h-[55vh] w-full rounded-2xl overflow-hidden bg-primary center" style={{
+                    boxShadow: "0px 0px 10px 1.5px rgba(0,0,0,0.3)"
+                }}> 
                     {svg}
                 </div>
             </Parallax>
-            <div className={`flex flex-col p-6 transition-all duration-1000 ease-in-out rounded-2xl gap-6 shadow-xl w-full lg:w-6/12 relative bg-opacity-40 backdrop-blur-xl bg-secondary
-                ${index % 2 == 0 ? "lg:-translate-x-[50%]" : 
-                "lg:translate-x-[50%]"}
+            <div className={`flex flex-col p-6 transition-all duration-1000 ease-in-out rounded-2xl gap-6 shadow-xl w-full lg:w-6/12 mt-5 lg:mt-0 bg-opacity-40 backdrop-blur-xl bg-secondary relative lg:absolute
+                ${index % 2 == 0 ? 
+                    "lg:right-[10%]" : 
+                    "lg:right-[40%]"
+                }
+
                 ${currentHoveredService == index ?
                     index % 2 == 0 ?
-                    "lg:translate-x-[0%]" : 
-                    "lg:translate-x-[%]" : 
-                ""}`}>
+                    "-lg:right-[5%]" : 
+                    "-lg:right-[-55%]" :
+                    ""}`}>
                     
                 <h2 className="font-bold text-xl">{title}
-                    {/* {currentHoveredService} . {index} */}
+                    {currentHoveredService} . {index}
                 </h2>
+                
                 <p>{desc}</p>
 
                 <Button 
                     text="read more"
                     btnType={"primary"}
                 />
+
             </div>
             
         </div>
+
     )
 
 }
-

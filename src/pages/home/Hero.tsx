@@ -1,16 +1,23 @@
 import { Link } from "react-router-dom"
 import { Button } from "../../assets/components/Button"
 import { Parallax } from "../../assets/components/Parallax"
-
+import hero from "../../assets/images/hero.jpg"
 
 
 
 export const Hero: React.FC = () => {
     return(
-        <div className="min-h-[110vh] w-full center z-6 relative md:mt-[5vh] lg:mt-0 bg-heroSm lg:bg-hero bg-center bg-cover bg-no-repeat"> 
+        <div className="min-h-[110vh] w-full center z-6 relative md:mt-[5vh] lg:mt-0 bg-heroSm lg:bg-hero bg-ce nter bg-cover bg-no-repeat bg-fixed bg-[50%]"> 
+
+            <div className="absolute top-0 w-full h-full center bg-zinc-700">
+                <div className="absolute top-0 h-full w-full bg-black bg-opacity-60 lg:bg-opacity-70"></div>
+                <img src={hero} alt="Cloud Infrastructure Image" className="w-full h-full object-cover sc ale-90"/>
+
+            </div>
+
             <div className="w-full lg:w-10/12 flex justify-center lg:justify-start">
 
-                <div className="w-11/12 xl:w-8/12 justify-center flex flex-col gap-4 p- min-h-screen mb-[15vh]">
+                <div className="w-11/12 xl:w-8/12 justify-center flex flex-col gap-4 p- min-h-screen mb-[10vh]">
 
                     <Parallax id={"hero"} type="left">
                         <p className="leading-relaxed tracking-wide text-zinc-300">
@@ -37,7 +44,7 @@ export const Hero: React.FC = () => {
                         <Link to="/contact" className="mt-4">
                             <Button
                                 text={"Start now"}
-                                btnType="primary"
+                                btnType="gold"
                                 baseTextColor="text-gray-300"
                             />
                         </Link>
