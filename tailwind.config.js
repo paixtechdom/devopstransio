@@ -10,11 +10,11 @@ export default {
       },
       boxShadow:{
         "around": "0px 0px 10px 1.5px rgba(0,0,0,0.3)"
+      },
+      backgroundImage: {
+        "hero" : "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/src/assets/images/xhero.jpg')",
+        "heroSm" : "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/src/assets/images/xhero.jpg')",
       }
-      // backgroundImage: {
-      //   "hero" : "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/src/assets/images/hero.jpg')",
-      //   "heroSm" : "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/src/assets/images/hero.jpg')",
-      // }
     },
   },
   plugins: [],

@@ -46,7 +46,7 @@ export const AppRouter = () => {
 const Loader= () => {
     return(
         <div className="center h-screen w-full bg-primary flex-col gap-5">
-            <div className="center h-[90vh] w-11/12 md:w-10/12 xl:w-9/12 bg-secondary bg-opacity-30 flex-col gap-5 rounded-xl">
+            <div className="center h-[90vh] w-11/12 bg-secondary bg-opacity-30 flex-col gap-5 rounded-xl">
 
                 <BiLoaderCircle  
                     className="text-5xl text-zinc-900 animate-spin"

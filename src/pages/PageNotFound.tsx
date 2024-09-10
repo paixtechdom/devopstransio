@@ -17,12 +17,11 @@ export const PageNotFound = () => {
             <Link className='' to='/'>
               <Button 
                 text={"Home Page"}
-                btnType="secondary"
+                btnType="primary"
               />
               </Link>
             </div>
 
-            {/* <img src={img} alt="Cloud Image" className="w-4/12"/> */}
           </div>
 
       </div>

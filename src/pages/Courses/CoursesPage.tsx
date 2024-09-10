@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { CountriesOption, InputField, RadioSelect, Select } from "../../assets/components/FormInputs"
-import { AvailableCourses } from "../../assets/Constants"
 import { Headers } from "../../assets/components/Headers"
 import { Button } from "../../assets/components/Button"
 import { ImageText } from "../../assets/components/ImageText"
@@ -14,6 +13,16 @@ import { Helmet } from "react-helmet-async"
 import axios from "axios"
 import { Parallax } from "../../assets/components/Parallax"
 import { TrimText } from "../../assets/Functions"
+import { CourseListing } from "./CoursesListing"
+import ai from "../../assets/images/courses/ai.jpg"
+import backend from "../../assets/images/courses/backend.jpg"
+import cloudComputing from "../../assets/images/courses/cloudComputing.jpg"
+import cyberSecurity from "../../assets/images/courses/cyberSecurity.jpg"
+import devops from "../../assets/images/courses/devops.jpg"
+import fullstack from "../../assets/images/courses/fullstack.jpg"
+import machineLearning from "../../assets/images/courses/machineLearning.jpg"
+import uiux from "../../assets/images/courses/uiux.jpg"
+import frontend from "../../assets/images/courses/frontend.jpg"
 
 const courses = [
     {
@@ -28,16 +37,77 @@ const courses = [
             "Continuous learning is key in the ever-evolving tech industry. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps. By investing in upskilling with Cloud Transio, you're setting yourself up for greater efficiency, more innovation, and better career prospects.",
         ]
     },
+    // {
+    //     title: "Software Engineering",
+    //     body: [
+    //         "In today’s digital world, software engineering skills are in high demand. Whether you're looking to build visually stunning websites or robust web applications, mastering both frontend and backend technologies is crucial. Our courses are designed to equip you with the skills needed to excel in modern software enginering, covering everything from the basics to advanced techniques.",
+    //         "Learn how to create engaging and responsive user interfaces with HTML, CSS, JavaScript, React, and Next.js. These technologies are the backbone of frontend development, allowing you to design and build websites that not only look great but also provide seamless user experiences. Through our hands-on courses, you'll gain practical knowledge in building dynamic web pages, managing state with React, and optimizing your applications with Next.js for better performance and SEO.",
+    //         "Dive into the world of backend development with our comprehensive courses on Node.js, PHP or Python. These technologies are essential for creating the server-side logic and databases that power your web applications. You'll learn how to manage data, build APIs, and ensure secure and efficient communication between the frontend and backend. With Node.js, PHP or Python, you’ll be able to create dynamic and data-driven websites that meet the demands of modern users.",
+    //         "Our software engineering courses offer a blend of theory and practice, ensuring you understand the underlying principles while gaining hands-on experience. Whether you're a beginner or looking to advance your skills, our structured learning path will guide you through each stage of development, preparing you for a successful career in software engineering."
+    //     ]
+    // }
+]
+
+
+export const OtherCourses = [
     {
-        title: "Software Engineering",
-        body: [
-            "In today’s digital world, software engineering skills are in high demand. Whether you're looking to build visually stunning websites or robust web applications, mastering both frontend and backend technologies is crucial. Our courses are designed to equip you with the skills needed to excel in modern software enginering, covering everything from the basics to advanced techniques.",
-            "Learn how to create engaging and responsive user interfaces with HTML, CSS, JavaScript, React, and Next.js. These technologies are the backbone of frontend development, allowing you to design and build websites that not only look great but also provide seamless user experiences. Through our hands-on courses, you'll gain practical knowledge in building dynamic web pages, managing state with React, and optimizing your applications with Next.js for better performance and SEO.",
-            "Dive into the world of backend development with our comprehensive courses on Node.js, PHP or Python. These technologies are essential for creating the server-side logic and databases that power your web applications. You'll learn how to manage data, build APIs, and ensure secure and efficient communication between the frontend and backend. With Node.js, PHP or Python, you’ll be able to create dynamic and data-driven websites that meet the demands of modern users.",
-            "Our software engineering courses offer a blend of theory and practice, ensuring you understand the underlying principles while gaining hands-on experience. Whether you're a beginner or looking to advance your skills, our structured learning path will guide you through each stage of development, preparing you for a successful career in software engineering."
-        ]
+        title: "DevOps Engineering",
+        desc: "DevOps is about making sure software development and IT operations teams work together smoothly. DevOps engineers use tools and processes to automate and speed up the release of new software. Think of it as a way to make apps and websites get better faster while reducing mistakes.",
+        img: devops,
+        price: "250,000"
+    },
+    {
+        title: "Cloud Computing",
+        desc: "Cloud computing means using the internet to store data and run programs instead of using a personal computer or local server. Imagine all your files and apps available anywhere, anytime – that’s the power of the cloud. Professionals in this field help manage and improve cloud services like Google Drive, Dropbox, or Netflix’s streaming platform.",
+        img: cloudComputing,
+        price: "250,000"
+    },
+    {
+        title: "Cyber Security",
+        desc: "Cybersecurity is about protecting computers, networks, and data from bad actors (hackers). Cybersecurity experts build systems to keep information safe and secure, like the digital bodyguards for companies and individuals who don’t want their private information stolen.",
+        img: cyberSecurity,
+        price: "270,000"
+    },
+    {
+        title: "UI/UX Design",
+        desc: "UI (User Interface) and UX (User Experience) design is about how a website or app looks and feels. UI designers focus on creating attractive, easy-to-use layouts (like buttons and menus), while UX designers ensure the entire experience is smooth and enjoyable. If you’ve ever been frustrated by a confusing app, that’s poor UI/UX design!",
+        img: uiux,
+        price: "200,000"
+    },
+    {
+        title: "Frontend Web Development",
+        desc: "Frontend web development involves building the part of websites that you see and interact with – everything from text and images to buttons and forms. Frontend developers use tools like HTML, CSS, and JavaScript to make websites visually appealing and easy to navigate.",
+        img: frontend,
+        price: "250,000"
+    },
+    {
+        title: "Backend Web Development",
+        desc: "Backend web development is like the behind-the-scenes of a website. It involves building the databases, servers, and other things users don’t see but are essential to making a website or app work. Backend developers ensure that the data flows correctly between the front end (what users see) and the server.",
+        img: backend,
+        price: "270,000"
+    },
+    {
+        title: "Fullstack Web Development",
+        desc: "Fullstack web development combines both frontend and backend development. A fullstack developer can build a complete website or app, handling both what the users see and the inner workings behind the scenes.",
+        img: fullstack,
+        price: "500,000"
+    },
+    {
+        title: "Machine Learning",
+        desc: "Machine learning is a part of artificial intelligence (AI) where computers learn from data. Instead of following strict instructions, machine learning models learn from past information to predict or make decisions. For example, Netflix suggesting shows you might like is based on machine learning.",
+        img: machineLearning,
+        price: "300,000"
+    },
+    {
+        title: "AI Development",
+        desc: "AI (Artificial Intelligence) development is the process of creating intelligent systems that can think and solve problems like humans. AI can be used in various areas, from virtual assistants like Siri and Alexa to self-driving cars.",
+        img: ai,
+        price: "300,000"
     }
 ]
+
+
+
 
 const CoursesPage = () => {
     const [ loading, setLoading ] = useState(false)
@@ -156,7 +226,7 @@ const CoursesPage = () => {
                 header='Want to transit from'
                 span='"NON-IT" to "IT"?'
                 subHeader={"Get started now with a course in tech"}
-                desc="Join our free course on DevOps and Cloud Engineering. We also offer course on software engineeringt. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
+                desc="JLorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus id doloribus deserunt dolor facere similique, a tenetur ducimus, nisi numquam cupiditate labore! Amet dignissimos laborum vel? Modi sunt est veritatis.oin our free course on DevOps and Cloud Engineering. We also offer course on software engineeringt. Cloud Transio offers access to online communities, webinars, blogs, and forums to help you stay updated with the latest trends and developments in cloud and DevOps."
                 btn={
                     <div className="flex items-center gap-4 mt-4">
 
@@ -186,10 +256,10 @@ const CoursesPage = () => {
             />
 
 
-            <div id="coursesintro" className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-[20vh] text-zinc-900 pt-[15vh]">
+            <div id="coursesintro" className="w-11/12 lg:w-10/12 flex  flex-col gap-[20vh] text-zinc-900 pt-[15vh]">
                 {
                     courses.map((course, i) => (
-                    <div key={i} className="flex flex-col gap-9 w-full">
+                    <div key={i} className="flex flex-col gap-9 w-full xl:w-9/12">
                         <Headers 
                             text={course.title}
                         />
@@ -210,8 +280,10 @@ const CoursesPage = () => {
                 }
             </div>
 
+            <CourseListing setFormInputs={setFormInputs} formInputs={formInputs}/>
+
                     
-            <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col text-zinc-900 pt-[15vh]">
+            <div id={'registrationForm'} className="w-11/12 lg:w-10/12 center flex-col text-zinc-900 pt-[15vh]">
 
                 <div id="registration" className="w-full py-[15vh]">
                     <Headers 
@@ -312,7 +384,7 @@ const CoursesPage = () => {
                         >
 
                             <Select 
-                                options={AvailableCourses}
+                                options={OtherCourses.map((a) => a.title)}
                                 showPopUp={showPopUp}
                                 setShowPopUp={setShowPopUp}
                                 formInputs={formInputs}
