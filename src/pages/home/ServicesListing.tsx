@@ -13,7 +13,7 @@ const DevOpsSVG = lazy(() => import("../../assets/components/svgs/DevOpsSVG"))
 const Testing = lazy(() => import("../../assets/components/svgs/Testing"))
 const AppModernization = lazy(() => import("../../assets/components/svgs/AppModernization"))
 const LoadTesting = lazy(() => import("../../assets/components/svgs/LoadTesting"))
-// const K8s = lazy(() => import("../../assets/components/svgs/K8s"))
+const K8s = lazy(() => import("../../assets/components/svgs/K8s"))
 const SceneSupport = lazy(() => import("../../assets/components/svgs/SceneSupport"))
 
 
@@ -137,8 +137,8 @@ export const ServicesList = [
 
     {
         svg: <Suspense fallback={<></>}> 
-                {/* <K8s i={3}/>  */}
-                <AppModernization i={3}/> 
+                <K8s i={3}/> 
+                {/* <AppModernization i={3}/>  */}
             </Suspense>,
         title: 'Cloud Migration',
         desc: "In today's fast-paced digital world, keeping up means quickly and smartly adapting to new trends. As you navigate the constantly changing tech landscape, consider the huge advantages of migrating your workload from on-premise infrastructure to the cloud.",
