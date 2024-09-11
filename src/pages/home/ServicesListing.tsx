@@ -343,8 +343,7 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
         <div 
             onClick={() => {
                 dispatch(setCurrentService(index))
-            }
-            } 
+            }} 
             onMouseOver={() => {
                 dispatch(setCurrentHoveredService(index))
             }}
@@ -367,13 +366,11 @@ const ServicesComponent:FC<serviceInterface> = ({svg, title, desc, index}) => {
 
                 ${currentHoveredService == index ?
                     index % 2 == 0 ?
-                    "-lg:right-[5%]" : 
-                    "-lg:right-[-55%]" :
+                    "lg:right-[-5%]" : 
+                    "lg:right-[55%]" :
                     ""}`}>
                     
-                <h2 className="font-bold text-xl">{title}
-                    {currentHoveredService} . {index}
-                </h2>
+                <h2 className="font-bold text-xl">{title}</h2>
                 
                 <p>{desc}</p>
 

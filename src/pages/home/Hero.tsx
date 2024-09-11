@@ -1,19 +1,26 @@
 import { Link } from "react-router-dom"
 import { Button } from "../../assets/components/Button"
 import { Parallax } from "../../assets/components/Parallax"
-// import hero from "../../assets/images/hero.jpg"
+// import vid from "../../assets/videos/abstract 1.mp4"
+import video from "../../assets/videos/abstract 5.mp4"
+
 
 
 
 export const Hero: React.FC = () => {
     return(
-        <div className="h-screen w-full center z-6 relative md:mt-[5vh] lg:mt-0 bg-heroSm lg:bg-hero bg-ce nter bg-cover bg-no-repeat bg-fixed bg-[50%]"> 
+    <div className="h-screen w-full center z-6 relative md:mt-[5vh] lg:mt-0 bg-heroSm lg:bg-hero bg-ce nter bg-cover bg-no-repeat bg-fixed bg-[50%]"> 
 
-            {/* <div className="absolute top-0 w-full h-full center bg-zinc-700">
-                <div className="absolute top-0 h-full w-full bg-black bg-opacity-60 lg:bg-opacity-70"></div>
-                <img src={hero} alt="Cloud Infrastructure Image" className="w-full h-full object-cover scale-90"/>
+            <div className="absolute top-0 w-full h-full center bg- zinc-700">
+                <div className="absolute top-0 h-full w-full bg-black bg-opacity-70 lg:bg-opacity-80"></div>
+                <video loop={true} autoPlay={true} controls={false} muted={true}
 
-            </div> */}
+                    src={video}
+
+                    className={"w-full h-full object-cover"}
+                    
+                ></video>
+            </div>
 
             <div className="w-full lg:w-10/12 flex justify-center lg:justify-start">
 
